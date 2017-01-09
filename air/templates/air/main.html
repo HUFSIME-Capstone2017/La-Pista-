@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<ul class="w3-navbar w3-white w3-large">
+  <li><a href="#" class="w3-red"><i class="fa fa-bed w3-margin-right"></i>Logo</a></li>
+  <li><a href="#rooms">Rooms</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li class="w3-right w3-light-grey"><a href="#contact">Book Now</a></li>
+</ul>
+
+<!-- Header -->
+<header class="w3-display-container w3-content" style="max-width:1500px;">
+  <img class="w3-image" src="airline.jpg" alt="The Hotel" style="min-width:1000px" width="1900" height="500">
+  <div class="w3-display-left w3-padding w3-col l6 m8">
+    <div class="w3-container w3-red">
+      <h2><i class="fa fa-bed w3-margin-right"></i>Hotel Name</h2>
+    </div>
+    <div class="w3-container w3-white w3-padding-16">
+      <form action="form.asp" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-calendar-o"></i> Check In</label>
+            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>
+          </div>
+          <div class="w3-half">
+            <label><i class="fa fa-calendar-o"></i> Check Out</label>
+            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>
+          </div>
+        </div>
+        <div class="w3-row-padding" style="margin:8px -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-male"></i> Adults</label>
+            <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">
+          </div>
+          <div class="w3-half">
+            <label><i class="fa fa-child"></i> Kids</label>
+          <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+          </div>
+        </div>
+        <button class="w3-btn w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button>
+      </form>
+    </div>
+  </div>
+<link rel='canonical' href='http://www.w3schools.com/w3css/tryw3css_templates_hotel.htm' />
+<script data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-80950036-41";</script>
+<script data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['e._setAccount', 'UA-80950036-41']);
+_gaq.push(['f._setAccount', 'UA-38339005-1']);
+_gaq.push(['e._setDomainName', 'w3schools.com']);
+_gaq.push(['f._setDomainName', 'w3schools.com']);
+_gaq.push(['e._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['e._setCustomVar',2,'t','126',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod9',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['f._setCustomVar',2,'domain','w3schools.com',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+var ez_tos_track_count = 0;
+var ez_last_activity_count = 0;
+(function (__ez_tos) {
+  window.setInterval(function () {
+    __ez_tos = (function (t) {
+      return t[0] == 45 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 15);
+    })(__ez_tos.split(':').reverse());
+
+    ez_tos_track_count++;
+    if(ez_tos_track_count > 1 && ez_tos_track_count < (ez_last_activity_count + 4) && ez_tos_track_count < 240)
+    {
+        if(window.pageTracker)
+        {
+            pageTracker._trackEvent('Time', 'Log', __ez_tos);
+
+        }
+        else
+        {
+           _gaq.push(['e._trackEvent', 'Time', 'Log', __ez_tos]);
+           _gaq.push(['f._trackEvent', 'Time', 'Log', __ez_tos]);
+
+        }
+
+		if(typeof(_paq) != 'undefined')
+        {
+            _paq.push(['trackEvent', 'Time', __ez_tos, 'TimeOnPage']);
+        }
+
+    }
+  }, 15000);
+})('00');
+
+</script>
+<script type="text/javascript">var ezouid = "1136604758";</script><base href="http://www.w3schools.com/w3css/tryw3css_templates_hotel.htm"><!--[if lt IE 9]>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+<!--[if (gte IE 9) | (!IE)]><!-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!--<![endif]--><script type='text/javascript'>
+var ezoTemplate = 'old_site_gc';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script>
+
+<script>
+var old_jquery = null;
+var old_jquery_sign = null;
+function open_jquery_wrapper()
+{
+    if(typeof $ezJQuery != 'undefined')
+    {
+        old_jquery = jQuery;
+        old_jquery_sign = $;
+        $ = $ezJQuery;
+        jQuery = $ezJQuery;
+    }
+}
+function close_jquery_wrapper()
+{
+    if(typeof $ezJQuery != 'undefined')
+    {
+        $ = old_jquery_sign;
+        jQuery = old_jquery;
+    }
+}
+</script><!-- START EZHEAD -->
+<script type='text/javascript'>
+var soc_app_id = '0';
+var did = 34890;
+var ezdomain = 'w3schools.com';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD --><script src="//www.w3schools.com/utilcave_com/templates/js/ezjquery-noconflict.js"></script>
+<script type="text/javascript" cf-async="false">var _ezaq = {"ab_test_id":"mod9","ab_test_val":"","adgroup_rank_id":-1,"country":"KR","device_height":528,"device_width":1280,"domain_id":34890,"forensiq_score":-1,"form_factor_id":1,"ip":"220.120.112.4","landing_page_url":"http://www.w3schools.com/w3css/tryw3css_templates_start_page.htm","page_ad_positions":"","page_view_id":"3c7de4ad-e3b6-465b-78e3-7b68cdcc4ccb","pv_event_count":0,"referrer_id":0,"referring_domain":"w3schools.com","region":"us-east-1","serverid":"54.162.44.56:13359","t_epoch":1483944314,"template_id":126,"url":"http://www.w3schools.com/w3css/tryw3css_templates_hotel.htm","user_agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36","user_id":1136604758,"visit_id":29680721,"visit_uuid":"ba63202e-4845-4cae-5212-d042f983152d"};var _ezExtraQueries = "&ez_orig=1";</script><script data-cfasync='false' type="text/javascript" src="/ezoic/imp2.js?cb=143-0&v=1"></script></header>
+
+</body>
+</html>

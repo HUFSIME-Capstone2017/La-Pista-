@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<title>¡La Pista!</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Jon Phillips is a maker of fine internet stuffs. A designer, developer, entrepreneur, lover of typography." />
+  <meta name="keywords" content="Jon Phillips, design, designer, developer, Montreal, Canada, UX, usability, typography, css, html, jQuery, user experience, BuySellAds, Contrastly" />
+  <meta name="author" content="Jon Phillips" />
+  <meta name="have-i-been-pwned-verification" value="50aca1d82b15575c6f9ce23cd3659e58">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="apple-touch-icon" href="//jonphillips.ca/apple-touch-icon.png?v=654312" />
+  <link rel="Shortcut Icon" href="//jonphillips.ca/favicon.ico?v=654312" type="image/x-icon" />
+  <link rel="stylesheet" href="//jonphillips.ca/css/style.css?v=654312" type="text/css" media="screen" />
+  <script type="text/javascript" src="//jonphillips.ca/js/jquery-1.6.2.min.js?v=654312"></script>
+  <script type="text/javascript" src="//jonphillips.ca/js/jquery.vegas.js?v=654312"></script>
+
+<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none;z-index:2" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+  <a href="#">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <ul class="w3-navbar w3-theme-d2 w3-left-align">
+  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+    <a class="w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  </li>
+  <li><a href="#" class="w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a></li>
+  <li class="w3-hide-small"><a href="#my page" class="w3-hover-white">Team</a></li>
+  <li class="w3-hide-small"><a href="#my travel list" class="w3-hover-white">Work</a></li>
+  <li class="w3-hide-small"><a href="#search" class="w3-hover-white">Price</a></li>
+  <li class="w3-hide-small"><a href="#logout" class="w3-hover-white">Contact</a></li>
+  <li class="w3-hide-small w3-dropdown-hover">
+    <a href="javascript:void(0);" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></a>     
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </div>
+  </li>
+  <li class="w3-hide-small w3-right"><a href="#" class="w3-hover-teal" title="Search"><i class="fa fa-search"></i></a></li>
+ </ul>
+</head> 
+<body>
+<div class="content">
+  <div class="logo"><h1><a href='main/' title="¡La Pista!"> La Pista </a></h1></div>
+  <p><strong>We will travel with you <br> Get flight plans with optimized route!!</strong></p>
+  
+  <ul>
+    <li> <a href="http://www.naver.com/"> ho </a> </li> </ul>
+</div>
+<script type="text/javascript">
+$( function() {
+  $.vegas('slideshow', {
+    backgrounds:[
+      { src:'//jonphillips.ca/images/background.jpg' }
+    ]
+    })('overlay');
+  });
+  $(document).ready(function() { 
+    $(".content").css("display", "none");
+    $(".content").fadeIn(1500);
+  });
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3211837-14', 'jonphillips.ca');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body> 
+</html>
