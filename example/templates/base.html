@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<title>La Pista</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<ul class="w3-navbar w3-white w3-large" >
+  <li><a href="#" class="w3-blue"><i class="fa fa-plane w3-margin-right"></i>La Pista</a></li>
+  <li><a href="#rooms">My Page</a></li>
+  <li><a href="index2/">My Travel list</a></li>
+  <li><a href="#contact">Sign out</a></li>
+  <li class="w3-right w3-light-grey"><a href="#contact">Book Now</a></li>
+</ul>
+
+<!-- Header -->
+{% load static from staticfiles %}
+{% load i18n %}
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{% static 'packages/bootstrap/css/bootstrap.css' %}"/>
+  <link rel="stylesheet" href="{% static 'packages/font-awesome/css/font-awesome.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+  {% block extra_style %}{% endblock %}
+</head>
+<body>
+<div class="">
+  {% block content %}
+
+  {% endblock %}
+</div>
+</body>
+<script type="application/javascript" src="{% static 'js/angular.js' %}"></script>
+<script type="application/javascript" src="{% static 'js/app.js' %}"></script>
+<script type="application/javascript" src="{% static 'js/controllers.js' %}"></script>
+{% block extra_script %}{% endblock %}
+  <div class="w3-display-right w3-padding w3-col l6 m8" style="max-width:617px">
+    <div class="w3-container w3-blue">
+      <h2><i class="fa fa-plane w3-margin-right"></i> Departure&Arrival</h2>
+    </div>
+    <div class="w3-container w3-white w3-padding-16">
+      <form action="form.asp" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-calendar-o"></i> Departure</label>
+            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="Departure" required>
+          </div>
+          <div class="w3-half">
+            <label><i class="fa fa-calendar-o"></i> Arrival</label>
+            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="Arrival" required>
+          </div>
+        </div>
+        <div class="w3-row-padding" style="margin:8px -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-male"></i> Adults</label>
+            <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">
+          </div>
+          <div class="w3-half">
+            <label><i class="fa fa-child"></i> Kids</label>
+          <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+          </div>
+          <br><br><br><br><br>
+          <h4> Options </h4>
+          <h5>Stops :   </h5>
+          <input type ="checkbox" name="Non-Stop" checked="checked" /> Non-Stop
+           <input type ="checkbox" name="1 Stop" checked="checked" /> 1 Stop
+            <input type ="checkbox" name="Non-Stop" checked="checked" /> 2Stops
+<br><br>
+           <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-calendar-o"></i> Max Flight Time</label>
+            <input class="w3-input w3-border" type="text" placeholder="Hours Miniutes" name="Departure" required>
+          </div>
+<br><br><br><br>
+           <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-calendar-o"></i> Max Layover Time</label>
+            <input class="w3-input w3-border" type="text" placeholder="Hours Miniutes" name="Departure" required>
+          </div>
+
+          <br><br><br><br>
+           <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-calendar-o"></i> Luggage weight</label>
+            <input class="w3-input w3-border" type="text" placeholder="Hours Miniutes" name="Departure" required>
+          </div>
+
+
+        </div>
+
+        <button class="w3-btn w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"><a href='template4/'></i> Search</a></button>
+      </form>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
