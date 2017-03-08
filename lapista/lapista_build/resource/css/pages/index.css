@@ -1,0 +1,119 @@
+.iu-center-box {
+  width:1280px;
+}
+.iu-page {
+  min-width:1280px;
+}
+.index {
+  height:100%;
+}
+.header {
+  color:#333333;
+  height:75px;
+  left:0px;
+  position:relative;
+  top:0px;
+  width:100%;
+}
+.text-4 {
+  color:#969696;
+  float:none;
+  font-family:'Helvetica', sans-serif;
+  font-size:24px;
+  height:30px;
+  left:0px;
+  position:fixed;
+  text-align:center;
+  top:0px;
+  width:100%;
+  z-index:11;
+}
+.floating-image {
+  background-image:url('/resource/project/LaPista_logo_navy.png');
+  background-position:center center;
+  background-size:contain;
+  height:35px;
+  left:30px;
+  top:22px;
+  width:130px;
+}
+.pg-button {
+  background-color:#FFFFFF;
+  border-color:#FFFFFF;
+  border-width:-1px;
+  color:#6D6D6D;
+  height:30px;
+  left:1130px;
+  opacity:1;
+  top:22px;
+  width:100px;
+}
+.page-content {
+  background-color:#FFFFFF;
+  height:960px;
+}
+.section {
+  height:720px;
+}
+.floating-image-12 {
+  -webkit-transform:rotate(0deg);
+  background-image:url('/resource/project/03195_upintheairsunset_2560x1600.jpg');
+  background-position:center center;
+  background-size:100% 100%;
+  float:none;
+  height:100%;
+  left:0px;
+  top:0%;
+  transform:rotate(0deg);
+  width:100%;
+}
+.text-21 {
+  color:#FFFFFF;
+  font-family:'Montserrat', sans-serif;
+  font-size:18px;
+  font-weight:700;
+  height:192px;
+  left:0px;
+  margin-left:auto;
+  margin-right:auto;
+  right:0px;
+  text-align:center;
+  top:134px;
+  width:322px;
+}
+.cell-17 > a {
+  line-height:48px;
+}
+.cell-17.iux-hover, .cell-17.iux-active {
+  opacity:1;
+}
+.cell-17 {
+  border-color:#FFFFFF;
+  border-width:2px;
+  color:#FFFFFF;
+  font-family:'Montserrat', sans-serif;
+  height:48px;
+  left:385px;
+  opacity:0.90;
+  text-align:center;
+  top:435px;
+  width:230px;
+}
+.cell {
+  border-color:#FFFFFF;
+  border-width:2px;
+  color:#FFFFFF;
+  font-family:'Montserrat', sans-serif;
+  height:48px;
+  left:675px;
+  opacity:0.90;
+  text-align:center;
+  top:435px;
+  width:230px;
+}
+.cell.iux-hover, .cell.iux-active {
+  opacity:1;
+}
+.cell > a {
+  line-height:48px;
+}

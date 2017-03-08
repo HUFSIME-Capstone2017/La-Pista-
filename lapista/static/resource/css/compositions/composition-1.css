@@ -1,0 +1,26 @@
+.floating-image-58 {
+  background-image:url('/static/resource/project/965136c9.png');
+  background-position:center center;
+  background-size:contain;
+  float:none;
+  height:100%;
+  margin-left:0px;
+  margin-top:0px;
+  position:relative;
+  width:100%;
+}
+@media screen and (max-width:1279px) {
+  .floating-image-58 {
+    background-position:center center;
+    background-size:contain;
+    float:none;
+    height:100px;
+    margin-left:initial;
+    margin-left:auto;
+    margin-top:initial;
+    margin-top:auto;
+    position:absolute;
+    width:100px;
+  }
+
+}
