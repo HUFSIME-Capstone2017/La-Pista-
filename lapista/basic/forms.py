@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
 
-class NameForm(forms.Form):
-    your_name = forms.CharField(label='Your name', max_length=100)
+class MainForm(forms.Form):
+	adult_num = forms.IntegerField(label='adult_num', )
+	kid_num = forms.IntegerField(label='kid_num', )

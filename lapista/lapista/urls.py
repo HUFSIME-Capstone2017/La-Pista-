@@ -29,5 +29,6 @@ urlpatterns = [
     url(r'^result', views.result),
     url(r'^list', views.list),
     url(r'^detail', views.detail),
-    url(r'^geo', views.geo),
+    url(r'^deo', views.warehouse),
+    url(r'^logo', views.logo),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

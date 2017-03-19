@@ -185,6 +185,42 @@
             ]
           },
           "label" : "Sign In"
+        },
+        {
+          "c_" : "IUFBLike",
+          "htmlID" : "fb-like",
+          "positionStorages" : {
+            "c_" : "JDMutableArrayDict",
+            "array" : [
+              {
+                "c_" : "IUPositionStorage",
+                "position" : 0,
+                "xUnit" : 0,
+                "yUnit" : 0,
+                "top" : 12,
+                "left" : 801
+              }
+            ],
+            "keys" : [
+              1280
+            ]
+          },
+          "styleStorages" : {
+            "c_" : "JDMutableArrayDict",
+            "array" : [
+              {
+                "c_" : "IUStyleStorage",
+                "widthUnit" : 0,
+                "heightUnit" : 0,
+                "width" : 320,
+                "height" : 80
+              }
+            ],
+            "keys" : [
+              1280
+            ]
+          },
+          "showFriendsFace" : true
         }
       ],
       "positionStorages" : {

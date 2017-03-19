@@ -19,7 +19,7 @@
       },
       {
         "c_" : "IUPage",
-        "file_" : "result-C76ACB57-59F5-46F8-830D-8E6EC8909458.json",
+        "file_" : "result1-C76ACB57-59F5-46F8-830D-8E6EC8909458.json",
         "m_" : "C76ACB57-59F5-46F8-830D-8E6EC8909458"
       },
       {
@@ -31,6 +31,11 @@
         "c_" : "IUPage",
         "file_" : "detail-779C8DDD-FD7B-46F6-998B-DC525F18A004.json",
         "m_" : "779C8DDD-FD7B-46F6-998B-DC525F18A004"
+      },
+      {
+        "c_" : "IUPage",
+        "file_" : "result-F062B801-5296-4369-B702-409F20D854B0.json",
+        "m_" : "F062B801-5296-4369-B702-409F20D854B0"
       }
     ]
   },
@@ -75,11 +80,11 @@
   },
   "_htmlData" : {
     "c_" : "IUProjectHTMLData",
+    "enableHashForCSS" : true,
     "buildPath" : "$CurrentFolder\/$AppName_build",
     "resourcePrefix" : "\/resource",
     "resourceBuildPath" : "$CurrentFolder\/$AppName_build\/resource",
-    "_port" : 29713,
-    "_cdnJSAttribute" : 1
+    "_port" : 29713
   },
   "_favoriteColors" : [
     {
