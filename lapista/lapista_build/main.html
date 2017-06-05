@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/resource/common/iu.css?iuv=1.3">
+    <link rel="stylesheet" type="text/css" href="/resource/css/pages/main.css?iusha=36d4be1">
+    <script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header" );
+        document.createElement("footer" );
+        document.createElement("section");
+        document.createElement("nav"    );
+        document.createElement("article");
+      </script>
+      <noscript>
+        <strong>Warning !</strong>
+        Because your browser does not support HTML5, some elements are simulated using JScript.
+        Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+      </noscript>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- iuname : main -->
+    <div class="iu-page main">
+      <header class="iu-header header">
+        <div class="iu-center-box center-box">
+          <div class="iu-text text-4"></div>
+          <div class="iu-floating-image floating-image">
+            <a class="iux-inner-link" href="/index">
+            </a>
+          </div>
+          <input class="iu-pg-button pg-button" type="button" value="Sign In">
+        </div>
+      </header>
+      <section class="iu-page-content page-content">
+        <section class="iu-section section">
+          <div class="iu-center-box center-box-13">
+            <div class="iu-box box">
+              <div class="iu-googlemap googlemap" data-iu-map-apikey="AIzaSyAMQ-x96aS6dyp_Txngu7SJZhELW2c7SDM" data-iu-map-longitude="8.685996" data-iu-map-latitude="50.108359" data-iu-map-zoom-level="4" data-iu-map-street="false" data-iu-map-zoom="false" data-iu-map-icon="false"></div>
+              <input class="iu-pg-text-field pg-text-field" type="text" placeholder="City, Nation">
+              <a class="iux-outer-link" href="search">
+                <img class="iu-image image" src="/resource/project/698627-icon-111-search-128.png">
+              </a>
+              <div class="iu-box box-19"></div>
+              <!-- iuname : MainForm -->
+              <form class="iu-pg-form MainForm pg-form" enctype="multipart/form-data" name="MainForm" action="result" method="post">
+                <div class="iu-box box-21">
+                  <div class="iu-cell cell">
+                    <p><span style="font-size: 24px; color: #ffffff;">Departure &amp; Arrival</span></p>
+                  </div>
+                </div>
+                <!-- iuname : calendar_Image -->
+                <div class="iu-floating-image floating-image-23"></div>
+                <!-- iuname : calendar_image -->
+                <div class="iu-floating-image floating-image-24"></div>
+                <div class="iu-text text-24">
+                  <p>&nbsp;<span style="font-size: 18px;">Departure Day</span></p>
+                </div>
+                <div class="iu-text text-26">
+                  <p><span style="font-size: 18px;">Arrival Day</span></p>
+                </div>
+                <!-- iuname : input_dep -->
+                <input class="iu-pg-text-field depday pg-text-field-49" type="date" name="depday" placeholder="YY/MM/DD" maxlength="8" max="20201231">
+                <!-- iuname : Input_arr -->
+                <input class="iu-pg-text-field arrday pg-text-field-28" type="date" name="arrday" placeholder="YY/MM/DD" maxlength="8" max="20201231">
+                <!-- iuname : adult_image -->
+                <div class="iu-floating-image floating-image-29"></div>
+                <div class="iu-text text-30">
+                  <p><span style="font-size: 18px;">Adult</span></p>
+                </div>
+                <!-- iuname : kid_image -->
+                <div class="iu-floating-image floating-image-31"></div>
+                <div class="iu-text text-32">
+                  <p>Kid</p>
+                </div>
+                <!-- iuname : select_adult_num -->
+                <select id="pg-select" class="iu-pg-select adult_num pg-select" name="adult_num">
+                  <option value="0">value0</option>
+                  <option value="1">value1</option>
+                  <option value="2">value2</option>
+                  <option value="3">value3</option>
+                  <option value="4">value4</option>
+                  <option value="5">value5</option>
+                  <option value="6">value6</option>
+                  <option value="7">value7</option>
+                  <option value="8">value8</option>
+                  <option value="9">value9</option>
+                </select>
+                <!-- iuname : select_kid_num -->
+                <select class="iu-pg-select kid_num pg-select-34" name="kid_num">
+                  <option value="0">value0</option>
+                  <option value="1">value1</option>
+                  <option value="2">value2</option>
+                  <option value="3">value3</option>
+                  <option value="4">value4</option>
+                  <option value="5">value5</option>
+                  <option value="6">value6</option>
+                  <option value="7">value7</option>
+                  <option value="8">value8</option>
+                  <option value="9">value9</option>
+                </select>
+                <div class="iu-cell cell-35">
+                  <p>Options</p>
+                </div>
+                <div class="iu-cell cell-36">
+                  <p>Stop :&nbsp;</p>
+                </div>
+                <!-- iuname : Checkbox_Non_stop -->
+                <input class="iu-pg-check-box pg-check-box" checked type="checkbox" name="Non_stop" value="1">
+                <div class="iu-cell cell-38">
+                  <p>Non-Stop</p>
+                </div>
+                <!-- iuname : Checkbox_1_stop -->
+                <input class="iu-pg-check-box pg-check-box-39" checked type="checkbox" name="1_stop" value="2">
+                <div class="iu-cell cell-40">
+                  <p>1 Stop</p>
+                </div>
+                <!-- iuname : Checkbox_2_stop -->
+                <input class="iu-pg-check-box pg-check-box-41" checked type="checkbox" name="2_stop" value="3">
+                <div class="iu-cell cell-42">
+                  <p>2+ Stops</p>
+                </div>
+                <div class="iu-cell cell-43">
+                  <p>Daytime Landing</p>
+                </div>
+                <!-- iuname : Checkbox_daytime_Landing -->
+                <input class="iu-pg-check-box pg-check-box-44" type="checkbox">
+                <div class="iu-cell cell-45">
+                  <p>Max Flight Time</p>
+                </div>
+                <div class="iu-cell cell-46">
+                  <p>Max Layover Time</p>
+                </div>
+                <!-- iuname : Select_Max_Layover_Time -->
+                <select class="iu-pg-select pg-select-47">
+                  <option value="Error">Nothing</option>
+                </select>
+                <!-- iuname : Select_Max_Flight_Time -->
+                <select class="iu-pg-select pg-select-48">
+                  <option value="Error">Nothing</option>
+                </select>
+                <input class="iu-pg-button pg-button-49" type="submit" value="Search">
+              </form>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </body>
+</HTML>

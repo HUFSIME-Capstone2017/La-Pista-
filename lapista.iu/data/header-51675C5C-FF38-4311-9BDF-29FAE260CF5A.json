@@ -151,8 +151,13 @@
                 "position" : 0,
                 "xUnit" : 0,
                 "yUnit" : 0,
+<<<<<<< HEAD:lapista.iu/data/header-51675C5C-FF38-4311-9BDF-29FAE260CF5A.json
                 "top" : 0,
                 "left" : 800
+=======
+                "top" : 12,
+                "left" : 801
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista.iu/data/header-51675C5C-FF38-4311-9BDF-29FAE260CF5A.json
               }
             ],
             "keys" : [

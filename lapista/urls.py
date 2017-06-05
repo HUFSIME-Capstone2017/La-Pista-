@@ -37,6 +37,7 @@ urlpatterns = [
     url(r'^final', views.final),
     url(r'^list', views.list),
     url(r'^detail', views.detail),
+<<<<<<< HEAD:lapista/urls.py
     url(r'^apiresult', views.apiresult),
     url(r'^research', views.research),
     url(r'^desearch', views.desearch),
@@ -50,4 +51,8 @@ urlpatterns = [
     url(r'^graph/$', views.graph),
     url(r'^fordb', views.fordb),
 
+=======
+    url(r'^deo', views.warehouse),
+    url(r'^logo', views.logo),
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista/urls.py
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

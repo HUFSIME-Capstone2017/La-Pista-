@@ -36,6 +36,7 @@
         "c_" : "IUPage",
         "file_" : "result-F062B801-5296-4369-B702-409F20D854B0.json",
         "m_" : "F062B801-5296-4369-B702-409F20D854B0"
+<<<<<<< HEAD:backup temp/lapista.iu/iu.json
       },
       {
         "c_" : "IUPage",
@@ -46,6 +47,8 @@
         "c_" : "IUPage",
         "file_" : "explain-05F98BBC-120D-43D6-BE85-3477EC2AC2E2.json",
         "m_" : "05F98BBC-120D-43D6-BE85-3477EC2AC2E2"
+=======
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista.iu/iu.json
       }
     ]
   },

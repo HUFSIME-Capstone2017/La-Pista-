@@ -1429,7 +1429,11 @@
                           "xUnit" : true,
                           "yUnit" : 0,
                           "top" : 0,
+<<<<<<< HEAD:backup temp/lapista.iu/data/main-D92762F1-B030-4CD7-94D9-1898897B2CC3.json
                           "left" : 65.04791259765625
+=======
+                          "left" : 65
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista.iu/data/main-D92762F1-B030-4CD7-94D9-1898897B2CC3.json
                         }
                       ],
                       "keys" : [

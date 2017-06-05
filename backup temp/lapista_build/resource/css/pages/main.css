@@ -73,6 +73,7 @@
   top:0px;
   width:100%;
 }
+<<<<<<< HEAD:backup temp/lapista_build/resource/css/pages/main.css
 .box-19 {
   height:0px;
   left:884px;
@@ -88,6 +89,37 @@
 .pg-form {
   height:100%;
   left:65%;
+=======
+.googlemap {
+  height:100%;
+  left:2px;
+  top:0px;
+  width:65%;
+}
+.pg-text-field {
+  height:40px;
+  left:10px;
+  padding-left:8px;
+  padding-right:8px;
+  top:10px;
+  width:200px;
+}
+.image {
+  height:40px;
+  left:185px;
+  top:10px;
+  width:40px;
+}
+.box-19 {
+  height:0px;
+  left:884px;
+  top:130px;
+  width:0px;
+}
+.pg-form {
+  height:100%;
+  left:65.14%;
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista_build/resource/css/pages/main.css
   top:0px;
   width:35%;
 }
@@ -191,6 +223,7 @@
   left:20px;
   top:200px;
   width:190px;
+<<<<<<< HEAD:backup temp/lapista_build/resource/css/pages/main.css
 }
 .pg-select-34 {
   height:30px;
@@ -198,6 +231,15 @@
   top:200px;
   width:190px;
 }
+=======
+}
+.pg-select-34 {
+  height:30px;
+  left:230px;
+  top:200px;
+  width:190px;
+}
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista_build/resource/css/pages/main.css
 .cell-35 {
   height:30px;
   left:0px;
@@ -222,7 +264,11 @@
 }
 .cell-38 {
   height:30px;
+<<<<<<< HEAD:backup temp/lapista_build/resource/css/pages/main.css
   left:177px;
+=======
+  left:95px;
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista_build/resource/css/pages/main.css
   line-height:30px;
   text-align:center;
   top:300px;
@@ -230,18 +276,77 @@
 }
 .pg-check-box-39 {
   height:30px;
+<<<<<<< HEAD:backup temp/lapista_build/resource/css/pages/main.css
   left:299px;
+=======
+  left:195px;
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista_build/resource/css/pages/main.css
   top:300px;
   width:100px;
 }
 .cell-40 {
   height:30px;
+<<<<<<< HEAD:backup temp/lapista_build/resource/css/pages/main.css
   left:319px;
+=======
+  left:215px;
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista_build/resource/css/pages/main.css
   line-height:30px;
   text-align:center;
   top:300px;
   width:80px;
 }
+<<<<<<< HEAD:backup temp/lapista_build/resource/css/pages/main.css
+.cell-43 {
+  height:30px;
+  left:6px;
+=======
+.pg-check-box-41 {
+  height:30px;
+  left:315px;
+  top:300px;
+  width:100px;
+}
+.cell-42 {
+  height:30px;
+  left:337px;
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista_build/resource/css/pages/main.css
+  line-height:30px;
+  text-align:center;
+  top:350px;
+  width:125px;
+}
+<<<<<<< HEAD:backup temp/lapista_build/resource/css/pages/main.css
+.pg-check-box-44 {
+  height:30px;
+  left:157px;
+  top:350px;
+  width:30px;
+}
+.cell-45 {
+  height:30px;
+  left:1px;
+  line-height:30px;
+  text-align:center;
+  top:423px;
+  width:135px;
+}
+.cell-46 {
+  height:30px;
+  left:10px;
+  line-height:30px;
+  text-align:center;
+  top:500px;
+  width:135px;
+}
+.pg-select-47 {
+  height:30px;
+  left:157px;
+  top:500px;
+  width:200px;
+}
+.pg-select-48 {
+=======
 .cell-43 {
   height:30px;
   left:6px;
@@ -273,17 +378,21 @@
   width:135px;
 }
 .pg-select-47 {
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista_build/resource/css/pages/main.css
   height:30px;
   left:157px;
-  top:500px;
+  top:423px;
   width:200px;
 }
+<<<<<<< HEAD:backup temp/lapista_build/resource/css/pages/main.css
+=======
 .pg-select-48 {
   height:30px;
   left:157px;
   top:423px;
   width:200px;
 }
+>>>>>>> 57411476c987063ea112aac01b3144f73def7658:lapista/lapista_build/resource/css/pages/main.css
 .pg-button-49 {
   background-color:#6D6D6D;
   color:#FFFFFF;
