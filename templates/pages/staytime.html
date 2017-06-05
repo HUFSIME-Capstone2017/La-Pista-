@@ -1,0 +1,691 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+    <link rel="stylesheet" type="text/css" href="/static/resource/css/pages/result.css">
+    <script type="text/JavaScript" scrc = "jquery-3.2.0.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+    #cont {position:relative; max-width: 920px; width: 100%; margin: 0 auto; left:200px;}
+.four { 
+  width: 18%; max-width: 17%;
+  background-color: lightgrey;
+}
+.five { 
+  width: 18%; max-width: 17%;
+  background-color: white;
+}
+/* COLUMNS */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-of-type { margin-left: 0; }
+/* CLEARFIX */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+.form .plan input, .form .payment-plan input, .form .payment-type input{
+  display: none;
+}
+.form label{
+  position: relative;
+  text-align: center;
+  font-size:13px;
+  height: 70px;
+  display: block;
+  cursor: pointer;
+  padding: 3px 3px 3px 3px;
+  border: 1px solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form .plan input:checked + label, .form .payment-plan input:checked + label, .form .payment-type input:checked + label{
+  border: 3px solid #333;
+  background-color: skyblue;
+}
+.form .plan input:checked + label:after, form .payment-plan input:checked + label:after, .form .payment-type input:checked + label:after{
+  content: "\2713";
+  color: #fff;
+  font-size:20px;
+  line-height: 14px;
+  width: 30px;
+  height: 30px;
+  line-height: 40px;
+  border-radius: 100%;
+  border: 2px solid #333;
+  background-color: #2fcc71;
+  z-index: 999;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+/*
+  css-only-tooltip version 1.0.0
+  ⓒ 2015 AHN JAE-HA http://github.com/eu81273
+  MIT License
+*/
+
+
+[data-tooltip-text]:hover {
+  position: relative;
+}
+
+[data-tooltip-text]:after {
+  -webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+  -moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+  transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-size: 12px;
+  margin-bottom: 10px;
+  padding: 7px 12px;
+  position: absolute;
+  width: 255px;
+  min-width: 50px;
+  max-width: 300px;
+  word-wrap: break-word;
+  text-align: left;
+  z-index: 9999;
+  opacity: 0;
+  left: -9999px;
+  top: 90%;
+  content: attr(data-tooltip-text);
+}
+
+[data-tooltip-text]:hover:after {
+  top: 130%;
+  left: -1px;
+  opacity: 1;
+}
+.text-desc, [class*="reaction-"], .field-reactions, .field-reactions:checked:focus ~ .text-desc {
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.field-reactions:focus ~ .text-desc, .box:hover [class*="reaction-"], .field-reactions:checked ~ [class*="reaction-"] {
+  clip: auto;
+  overflow: visible;
+  opacity: 1;
+}
+
+.main-title {
+  background: #3a5795;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.text-desc {
+  font-weight: normal;
+  text-align: center;
+  transform: translateY(-50px);
+  white-space: nowrap;
+  font-size: 13px;
+  width: 100%;
+}
+
+[class*="reaction-"] {
+  border: none;
+  background-image: url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yh/r/sqhTN9lgaYm.png);
+  background-color: transparent;
+  display: block;
+  cursor: pointer;
+  height: 48px;
+  position: absolute;
+  width: 48px;
+  z-index: 11;
+  top: -28;
+  transform-origin: 50% 100%;
+  transform: scale(0.1);
+  transition: all 0.3s;
+  outline: none;
+  will-change: transform;
+  opacity: 0;
+}
+@charset "UTF-8";
+:focus {
+  outline: none;
+}
+
+.toggle-icon {
+  width: 45pt;
+  height: 45pt;
+  font-size: 45pt;
+  position: relative;
+  color: gray;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.toggle-icon:before, .toggle-icon:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .3s ease-out;
+  content: "💘";
+  font-family: fontawesome;
+}
+.toggle-icon:hover:before {
+  transform: scale(1.2);
+}
+.toggle-icon:active:before {
+  transition: none;
+  transform: scale(1);
+}
+.toggle-icon:after {
+  opacity: 0;
+}
+.toggle-icon.-checked {
+  color: #A12C2C;
+}
+.toggle-icon.-checked:before {
+  content: "💘";
+}
+.toggle-icon.-checked:after {
+  content: "💘";
+  animation: likeFly .6s ease-in;
+}
+
+@keyframes heartbeat {
+  from {  
+    opacity: 1;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+@keyframes likeFly {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: scale(3) rotate(45deg) translateY(-90px);
+    opacity: 0;
+  }
+}
+.scrollspy-example {
+height: 580px;
+overflow: auto;
+position: relative;
+}
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+body {
+  background: #f1f1f1;
+  font-family: 'Roboto', sans-serif;
+}
+
+.loading-bro {
+  margin: 50px auto;
+  width: 150px;
+}
+.loading-bro > h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  font-weight: 300;
+  color: #8E8E8E;
+}
+
+#load {
+  width: 150px;
+  animation: loading 3s linear infinite;
+}
+#load #loading-inner {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 300;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+  stroke-linecap: round;
+  animation: loading-circle 2s linear infinite;
+  stroke: #51BBA7;
+  fill: transparent;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading-circle {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -600;
+  }
+}
+.range-slider {
+  position:relative;
+  width: 190px;
+  top:5px;
+  left:5px;
+}
+
+.range-slider__range {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 5px;
+  border-radius: 5px;
+  background: #d7dcdf;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+.range-slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2c3e50;
+  cursor: pointer;
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+.range-slider__range::-webkit-slider-thumb:hover {
+  background: #1abc9c;
+}
+.range-slider__range:active::-webkit-slider-thumb {
+  background: #1abc9c;
+}
+.range-slider__range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  background: #2c3e50;
+  cursor: pointer;
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+.range-slider__range::-moz-range-thumb:hover {
+  background: #1abc9c;
+}
+.range-slider__range:active::-moz-range-thumb {
+  background: #1abc9c;
+}
+
+.range-slider__value {
+  display: inline-block;
+  position: absolute;
+  left:200px;
+  top:-10px;
+  width: 30px;
+  height:20px;
+  color: #fff;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 3px;
+  background: #2c3e50;
+  padding: 3px 7px;
+  margin-left: 5px;
+}
+.range-slider__value:after {
+  position: absolute;
+  top: -3px;
+  left: 300px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #2c3e50;
+  border-bottom: 7px solid transparent;
+  content: '';
+}
+
+::-moz-range-track {
+  background: #d7dcdf;
+  border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
+}
+
+</style>
+<script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header" );
+        document.createElement("footer" );
+        document.createElement("section");
+        document.createElement("nav"    );
+        document.createElement("article");
+      </script>
+      <noscript>
+        <strong>Warning !</strong>
+        Because your browser does not support HTML5, some elements are simulated using JScript.
+        Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+      </noscript>
+    <![endif]-->
+</head>
+<body>
+      <header class="iu-header header">
+        {% include './compositions/header.html' %}
+
+      </header>
+  <!-- iuname : result -->
+  <div class="iu-page result">
+    <section class="iu-page-content page-content">
+      <section class="iu-section section" style=""overflow:hidden;"></div>">
+        <div class="iu-center-box center-box-14">
+          <form class="iu-pg-form pg-form" action="/research" enctype="multipart/form-data" method="post" style="border-radius:10px; padding:8px 8px 8px 8px;">
+            {% csrf_token %}
+              <p style="color: #ffffff; font-size:25px">옵 션</p></br>
+              <p style="color: #ffffff; font-size:18px">머무는 기간(Day)</p>
+              {% for a,b,c in results3 %}
+              <div>
+              <p style="color: #ffffff; font-size:13px">{{a}}</p>
+              <input type="range" name={{c}} min="1" max="10" value={{b}} step="1" onchange="showValue{{a}}(this.value)" style="color:white;"/>
+              <span id="{{a}}" style="color: white">{{b}}</span>
+              <script type="text/javascript">
+              function showValue{{a}}(newValue)
+              {
+                document.getElementById("{{a}}").innerHTML=newValue;
+              }
+              </script>
+              </div>
+              {% endfor %}
+              <p style="color: #ffffff; font-size:18px">순서 변경</p>
+              <div>
+              <p style="color: #ffffff; font-size:13px">마지막으로 방문 하고 싶은 도시</p>
+              <select style="width:180px; height:30px" name="lastcity">
+              <option value='100'>상관없음</option>
+                {% for a,b,c in results3 %}
+                <option value={{c}}>{{a}}</option>
+                {% endfor %}
+              </select>
+              </div>
+              <div>
+              <br><p style="position:absolute; color: white; left:8px; font-size:16px; font-style:bold">여러분의 중요도를 선택해주세요!!🔊</p><br>
+<br/><font color="#ffffff">머무르는 기간 : &nbsp;&nbsp;</font>
+<div class="range-slider">
+  <input class="range-slider__range" name="st" type="range" value="5" min="1" max="10">
+  <span class="range-slider__value"></span>
+</div><br />
+<br/><font color="#ffffff">가격 : &nbsp;&nbsp;</font>
+<div class="range-slider">
+  <input class="range-slider__range" name="pc" type="range" value="5" min="1" max="10">
+  <span class="range-slider__value"></span>
+</div><br />
+<script>
+var rangeSlider = function(){
+  var slider = $('.range-slider'),
+      range = $('.range-slider__range'),
+      value = $('.range-slider__value');
+    
+  slider.each(function(){
+
+    value.each(function(){
+      var value = $(this).prev().attr('value');
+      $(this).html(value);
+    });
+
+    range.on('input', function(){
+      $(this).next(value).html(this.value);
+    });
+  });
+};
+
+rangeSlider();
+</script>
+</div>
+       <button type="submit">재검색</button>
+          </form>
+          <div class="iu-simple-tabview simple-tabview" data-iu-show-animation="transition.slideDownIn">
+            <div class="iu-simple-tab-header simple-tab-header">
+              <div class="iu-simple-tab-button simple-tab-button">
+                <div class="iu-cell cell">
+                  <a href="apiresult">La Pista의 추천 경로</a>
+                </div>
+              </div>
+              <div class="iu-simple-tab-button simple-tab-button-21">
+                <div class="iu-cell cell-25">
+                <a href="price">항공권 가격을 더 고려</a>
+                </div>
+              </div>
+              <div class="iu-simple-tab-button simple-tab-button-27">
+                <div class="iu-cell cell-28">
+                  <p>머무르는 기간을 더 고려</p>
+                </div>
+              </div>
+            </div>
+            <div class="iu-simple-tab-content simple-tab-content">
+              <div class="iu-simple-tab-content-item simple-tab-content-item">
+                <div class="iu-box box-59" style="background-color:#D4EDFF; border-radius:10px; height:100px; left:0px; top:20px; width:1000px; z-index:1;" form="form1">
+<button class="toggle-icon" title="❤ Toggle Like!" form="like" style="top:10px; left:10px"></button>
+                <div style="position:absolute; left:80px; top:23px; font-weight:bold;"><h3>$ </h3></div>
+                <input type="text" style="font-weight:bold; font-size:23px; width:80px; position:absolute; background-color:#D4EDFF;left:100px; top:28px" name="sum" />
+                <div style="position:absolute; left:190px; top:-2px">
+                <h5>인천</h5><p id="example"></p>
+                <img src="{% static 'point.jpg' %}" style="width:20px; height:20px">
+                </div>
+                <ul style="position:absolute; left:210px; top:1px; list-style:none; margin:0; padding:0;">
+{%if list_num <= 4%}
+{% for a,b in results2 %}
+<li style="margin:1px 20px 0px 10px;float:left;">
+<div style="text-align:right; font-size:15px">
+<div style="position:relative;  left:calc(100px/{{list_num}}); top:10px; width:80px">{{a}}</div>
+<img src="{% static 'next.jpg' %}" style="width:calc(300px/{{list_num}}); height:15px; position:relative;top:15px"><br>
+<img src="{% static 'point.jpg' %}" style="left:20px; top:-5px; width:20px; height:20px;position:relative;">
+<div style="position:relative; top:0px; left:calc(100px/{{list_num}}); width:80px">{{b}}일</span>
+</div>
+</li>
+{% endfor %}
+{% else%}
+{% for a,b in results2 %}
+<li style="margin:1px 20px 0px -20px;float:left;">
+<div style="text-align:right; font-size:15px">
+<div style="position:relative;  left:calc(100px/{{list_num}}); top:10px; width:80px">{{a}}</div>
+<img src="{% static 'next.jpg' %}" style="width:calc(300px/{{list_num}}); height:15px; position:relative;top:15px"><br>
+<img src="{% static 'point.jpg' %}" style="left:20px; top:-5px; width:20px; height:20px;position:relative;">
+<div style="position:relative; top:0px; left:calc(100px/{{list_num}}); width:80px">{{b}}일</span>
+</div>
+</li>
+{% endfor %}
+{%endif%}
+
+                <li style="margin:1px 0px 1px 1px; padding:0 0 0 0; border:0; float:left;">
+                <div style="text-align:right; font-size:15px">
+                <span style="top:10px; position:relative; left:100px">인천</span>
+                <img src="{% static 'next.jpg' %}" style="width:80px; height:20px; top:37px; position:relative;"><br>
+                <img src="{% static 'point.jpg' %}" style="width:20px; height:20px; left:19px; position:relative; top:13px">
+                </div>
+                </li>
+                </ul>
+                </div>
+                <div class="iu-box box-84" style="background-color:#D4EDFF; border-radius:10px; height:2000px; left:0px; top:318px; width:1000px;">
+                <div data-spy="scroll" data-target="#navbarExample1" data-offset="0" class="scrollspy-example">
+                 <form class="form cf" accept-charset="utf-8" name="dbForm" action="fordb" method="post" id="like">
+                {% csrf_token %}
+                <img src="{% static 'airplanelist.jpg' %}" style="position:relative; left:240px; width:450px; height:60px">
+                <img src="{% static 'urail.png' %}" style="position:relative; left:300px; width:140px; height:50px">
+                <ul style="position:absolute; left:20px;top:47px; list-style:none; margin:0; padding:0;">
+                {% for i,j,k in real_air %}
+                <li style="margin:1px 30px 58px 1px; padding:0 0 0 0; border:0;">
+                <div style="font-size:15px">
+                <span style="top:15px; position:relative; top:37px">{{i}}</span>
+                <img src="{% static 'next.jpg' %}" style="width:125px; height:30px; top:35px; position:relative; left:10px">
+                <span style="position:relative; left:-125px; top:55px">{{k}}일</span>
+                <sapn style="position:relative; left:-100px; top:35px">{{j}}</sapn>
+                </div>
+                </li>
+                {% endfor %}
+                </ul>
+                {% for i in kkk %}
+                 <div id="cont">
+                    <section class="plan cf">
+                    {% for price,stop,carrier,carriers,arrival,departure,duration,radio,second_departuretime,second_arrivaltime,second_duration,second_carrier,layover in i %}
+                      {% if price > 0 %}
+                      {% if not forloop.last %}
+                       {% if stop = 20000 %}
+                         <input class="calc" type="radio" name={{radio}} id={{carrier}} value={{price}}><label class="four col" for={{carrier}}><span data-tooltip-text="출발시간 : {{departure}} 도착시간 : {{arrival}} 소요시간 : {{duration}}   항공편 : {{carrier}}">${{price}}<br>{{carrier}}<br>
+                        
+                        직항
+                        {% else %}
+                         <input class="calc" type="radio" name={{radio}} id={{carrier}} value={{price}}><label class="four col" for={{carrier}}><span data-tooltip-text="출발시간 : {{departure}} 도착시간 : {{arrival}} 소요시간 : {{duration}}  항공편 : {{carrier}} ----------------------------------------경유도시 : {{layover}} / 환승시간 : {{stop}} ----------------------------------------출발시간 : {{second_departuretime}} 도착시간 : {{second_arrivaltime}} 소요시간 : {{second_duration}}  항공편 : {{second_carrier}}">${{price}}<br>{{carrier}}<br>
+                        
+                        경유
+                        {% endif %}</span></label>
+                      {% else %}
+                        <input class="calc" type="radio" name={{radio}} id={{price}} value={{price}}><label class="five col" for={{price}}><span data-tooltip-text="{{layover}}">${{price}}<br>{{carrier}}<br>{{duration}}
+                        <script>
+                        $(document).ready(function(){
+                            $('[data-toggle="tooltip"]').tooltip();   
+                        });
+                        </script></label>
+                      {% endif %}
+                      {% endif %}
+                      </a>
+                      {% endfor %}
+                      </section>
+                </div>
+                {% endfor %}
+                </form>
+    <script type="text/javascript"> //sum
+                 function calcscore(){
+    var score = 0;
+    $(".calc:checked").each(function(){
+        score+=parseInt($(this).val(),10);
+    });
+    $("input[name=sum]").val(score)
+}
+$().ready(function(){
+    $(".calc").change(function(){
+        calcscore()
+    });
+});
+      </script>
+                </div>
+              </div>
+              <div id="map" style="position:relative; width:100%; height:175px; top:130px;"></div>
+            </div>
+            <div class="iu-simple-tab-content-item simple-tab-content-item-24">
+                <div class="loading-bro">
+                <h1>Loading</h1>
+                <svg id="load" x="0px" y="0px" viewBox="0 0 150 150">
+                  <circle id="loading-inner" cx="75" cy="75" r="60"/>
+               </svg>
+              </div>
+              </div>
+            </div>
+            <div class="iu-tab-content-item tab-content-item">
+               <div class="loading-bro">
+                <h1>Loading</h1>
+                <svg id="load" x="0px" y="0px" viewBox="0 0 150 150">
+                  <circle id="loading-inner" cx="75" cy="75" r="60"/>
+               </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+<div style="position:absolute; background-color:#D4EDFF;height:30px; left:270px;top:75px;width:1000px; border-radius:10px">
+          <div class="iu-html html">
+            <div style="text-align:center;"> {{depday}}  ~  {{arrday}} </div>
+          </div>
+          <div class="iu-text text-143">
+            <p>From : 서울 (ICN)</p>
+          </div>
+          <div class="iu-html html-153">
+            <div> 
+            {% for i in air_result_kor %}
+            <span id="map_list" value={{i}}>{{i}}</span>
+            {% endfor%}
+            </div>
+          </div>
+          <div class="iu-cell cell-175">
+            <p>To :</p>
+          </div>
+        </div>
+        <div class="iu-floating-image floating-image-175">
+          <a class="iux-inner-link" href="/index">
+          </a>
+        </div>
+        <div class="iu-fb-like fb-like-209">
+          <iframe src="//www.facebook.com/plugins/like.php?href=http://www.iueditor.org+&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;colorscheme=light&amp;" scrolling="no" frameborder="0" allowTransparency="true" style="border:none;overflow:hidden;height:80px"></iframe>
+        </div>
+        <div class="iu-tweet-button tweet-button">
+          <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
+            Tweet
+          </a>
+        </div>
+      </div>
+    </section>
+  </section>
+</div>
+<script type="text/javascript">
+ $('.toggle-icon').click(function(){
+  $(this).toggleClass('-checked');
+});
+
+  function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 3,
+          center: {lat: 43.961702, lng: 3.375080},
+          mapTypeId: 'terrain'
+        });
+
+        var flightPlanCoordinates = {{location_real|safe}};
+        var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+        var s_marker = '../../../static/s_marker.png'
+        var first_dep = {{first_dep|safe}};
+        var marker = new google.maps.Marker({
+        position: first_dep,icon:s_marker,map:map,animation:google.maps.Animation.BOUNCE
+        });
+        marker.setMap(map);
+        flightPath.setMap(map);
+      }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZArLA-li5nkjRx3v0MOPGn0BAyBcjK8&callback=myMap"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZArLA-li5nkjRx3v0MOPGn0BAyBcjK8&callback=initMap">
+  </script>
+</body>
+</HTML>

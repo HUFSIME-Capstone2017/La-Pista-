@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.mySlides1 {display:none;}
+/* The Modal (background) */
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+.left{
+position:relative;
+left:20px;
+}
+
+</style>
+</head>
+
+<body>
+{% load staticfiles %}
+<h1>La Pista</h1>
+<div class="container">
+  <!-- Modal London -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">London Heathrow Airport</h4>
+        </div>
+        <div class="modal-body">
+        <center>
+<div class="w3-content w3-section" style="max-width:600px">
+      <img class="mySlides1" src="{% static 'london1.jpeg' %}" style="width:500px; height: 300px; ">
+      <img class="mySlides1" src="{% static 'london2.jpeg' %}" style="width:500px; height: 300px; ">
+      <img class="mySlides1" src="{% static 'london3.jpg' %}" style="width:500px; height: 300px; ">
+      <img class="mySlides1" src="{% static 'london4.jpeg' %}" style="width:500px; height: 300px; ">
+      </div>
+      </center>
+        </div></p>
+        <div class="left" >
+        <h4>Event</h4>
+        <div style="height:auto; width:370px; border:1px solid blue;">
+        <ul>
+        <li>세인트 패트릭스 데이 행사 (3/17)<a href="http://justcuration.tistory.com/92" target="_blank"> (상세보기) </a><input type="checkbox" name="vehicle2" value="event1"></li>
+        <li>큐 가든 봄 꽃 축제 (3/21 ~ 24)<a href="http://www.kew.org/kew-gardens/whats-on" target="_blank"> (상세보기) </a><input type="checkbox" name="vehicle1" value="event2"></li>
+        <li>옥스퍼드&캠브리지 대학 보트 경주 (4/2) <a href="https://www.britishrowing.org/2017/02/a-guide-to-the-university-boat-races-2017/" target="_blank"> (상세보기) </a><input type="checkbox" name="vehicle2" value="event3"></li>
+        </ul>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="submit" id="onsubmit" class="btn btn-default" data-dismiss="modal">Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+<div id="map" style="width:60%;height:600px;background:yellow"></div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides1");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+function myMap() {
+  var myCenter = new google.maps.LatLng(51.650,14.709);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 4};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var image = '../../../static/dot9.png'
+  var marker1 = new google.maps.Marker({position:{lat: 51.27159, lng: -0.20443}, icon:image});
+    marker1.setMap(map);
+  google.maps.event.addListener(marker1, 'click', function() {
+    $('#myModal1').modal('toggle')
+    });
+    $('#onsubmit').on({ 
+    'click': function(){ 
+    marker1.setIcon("../../../static/dot10.png");}
+  });
+    $('#cancel').on({ 
+    'click': function(){ 
+    marker1.setIcon("../../../static/dot9.png");}
+  });
+  var marker2 = new google.maps.Marker({position:{lat: 48.646, lng: 2.330},
+                icon:image});
+    marker2.setMap(map);
+  google.maps.event.addListener(marker2, 'click', function() {
+    $('#myModal2').modal('toggle')
+    });
+  var submit = document.getElementById("onsubmit");
+  var cancel = document.getElementById("cancel");
+
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZArLA-li5nkjRx3v0MOPGn0BAyBcjK8&callback=myMap"></script>
+
+<!— The Modal —>
+<!— The Modal —>
+
+</body>
+</html>

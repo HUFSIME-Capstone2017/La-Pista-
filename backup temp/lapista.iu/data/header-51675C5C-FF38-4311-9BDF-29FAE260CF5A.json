@@ -1,0 +1,302 @@
+{
+  "htmlID" : "header",
+  "name" : "header",
+  "children" : [
+    {
+      "c_" : "IUCenterBox",
+      "htmlID" : "center-box",
+      "children" : [
+        {
+          "c_" : "IUText",
+          "htmlID" : "text-4",
+          "positionStorages" : {
+            "c_" : "JDMutableArrayDict",
+            "array" : [
+              {
+                "c_" : "IUPositionStorage",
+                "position" : 2,
+                "secondPosition" : 0,
+                "xUnit" : 0,
+                "yUnit" : 0,
+                "top" : 0,
+                "left" : 0
+              }
+            ],
+            "keys" : [
+              1280
+            ]
+          },
+          "styleStorages" : {
+            "c_" : "JDMutableArrayDict",
+            "array" : [
+              {
+                "c_" : "IUStyleStorage",
+                "widthUnit" : 1,
+                "heightUnit" : 0,
+                "width" : 100,
+                "height" : 30,
+                "fontName" : "Helvetica",
+                "fontSize" : 24,
+                "fontColor" : {
+                  "c_" : "NSColor",
+                  "R" : 0.5882353186607361,
+                  "G" : 0.5882353186607361,
+                  "B" : 0.5882353186607361,
+                  "A" : 1
+                },
+                "fontAlign" : 1
+              }
+            ],
+            "keys" : [
+              1280
+            ]
+          }
+        },
+        {
+          "c_" : "IUFloatingImage",
+          "htmlID" : "floating-image",
+          "linkString" : "\/index",
+          "clickType" : 2,
+          "positionStorages" : {
+            "c_" : "JDMutableArrayDict",
+            "array" : [
+              {
+                "c_" : "IUPositionStorage",
+                "position" : 0,
+                "xUnit" : 0,
+                "yUnit" : 0,
+                "top" : 22,
+                "left" : 30
+              }
+            ],
+            "keys" : [
+              1280
+            ]
+          },
+          "styleStorages" : {
+            "c_" : "JDMutableArrayDict",
+            "array" : [
+              {
+                "c_" : "IUStyleStorage",
+                "widthUnit" : 0,
+                "heightUnit" : 0,
+                "width" : 130,
+                "height" : 35,
+                "imageName" : "\/LaPista_logo_navy.png",
+                "imageType" : 0,
+                "imageHPosition" : 1,
+                "imageVPosition" : 1,
+                "imageSizeType" : 2
+              }
+            ],
+            "keys" : [
+              1280
+            ]
+          }
+        },
+        {
+          "c_" : "PGButton",
+          "htmlID" : "pg-button",
+          "positionStorages" : {
+            "c_" : "JDMutableArrayDict",
+            "array" : [
+              {
+                "c_" : "IUPositionStorage",
+                "position" : 0,
+                "xUnit" : 0,
+                "yUnit" : 0,
+                "top" : 22,
+                "left" : 1130
+              }
+            ],
+            "keys" : [
+              1280
+            ]
+          },
+          "styleStorages" : {
+            "c_" : "JDMutableArrayDict",
+            "array" : [
+              {
+                "c_" : "IUStyleStorage",
+                "opacity" : 1,
+                "widthUnit" : 0,
+                "heightUnit" : 0,
+                "width" : 100,
+                "height" : 30,
+                "bgColor1" : {
+                  "c_" : "NSColor",
+                  "R" : 1,
+                  "G" : 1,
+                  "B" : 1,
+                  "A" : 1
+                },
+                "borderType" : 0,
+                "topBorderColor" : {
+                  "c_" : "NSColor",
+                  "R" : 1,
+                  "G" : 1,
+                  "B" : 1,
+                  "A" : 1
+                },
+                "leftBorderColor" : {
+                  "c_" : "NSColor",
+                  "R" : 1,
+                  "G" : 1,
+                  "B" : 1,
+                  "A" : 1
+                },
+                "rightBorderColor" : {
+                  "c_" : "NSColor",
+                  "R" : 1,
+                  "G" : 1,
+                  "B" : 1,
+                  "A" : 1
+                },
+                "bottomBorderColor" : {
+                  "c_" : "NSColor",
+                  "R" : 1,
+                  "G" : 1,
+                  "B" : 1,
+                  "A" : 1
+                },
+                "topBorderWidth" : -1,
+                "leftBorderWidth" : -1,
+                "rightBorderWidth" : -1,
+                "bottomBorderWidth" : -1,
+                "fontColor" : {
+                  "c_" : "NSColor",
+                  "R" : 0.4274509847164154,
+                  "G" : 0.4274509847164154,
+                  "B" : 0.4274509847164154,
+                  "A" : 1
+                },
+                "shadowColor" : {
+                  "c_" : "NSColor",
+                  "R" : 1,
+                  "G" : 1,
+                  "B" : 1,
+                  "A" : 1
+                },
+                "shadowInsetOutset" : 0
+              }
+            ],
+            "keys" : [
+              1280
+            ]
+          },
+          "label" : "Sign In"
+        },
+        {
+          "c_" : "IUFBLike",
+          "htmlID" : "fb-like",
+          "positionStorages" : {
+            "c_" : "JDMutableArrayDict",
+            "array" : [
+              {
+                "c_" : "IUPositionStorage",
+                "position" : 0,
+                "xUnit" : 0,
+                "yUnit" : 0,
+                "top" : 12,
+                "left" : 801
+              }
+            ],
+            "keys" : [
+              1280
+            ]
+          },
+          "styleStorages" : {
+            "c_" : "JDMutableArrayDict",
+            "array" : [
+              {
+                "c_" : "IUStyleStorage",
+                "widthUnit" : 0,
+                "heightUnit" : 0,
+                "width" : 320,
+                "height" : 80
+              }
+            ],
+            "keys" : [
+              1280
+            ]
+          },
+          "showFriendsFace" : true
+        }
+      ],
+      "positionStorages" : {
+        "c_" : "JDMutableArrayDict",
+        "array" : [
+          {
+            "c_" : "IUPositionStorage",
+            "position" : 1,
+            "horizontalCenter" : true,
+            "xUnit" : 0,
+            "yUnit" : 0,
+            "top" : 0,
+            "left" : 0
+          }
+        ],
+        "keys" : [
+          1280
+        ]
+      },
+      "styleStorages" : {
+        "c_" : "JDMutableArrayDict",
+        "array" : [
+          {
+            "c_" : "IUStyleStorage",
+            "widthUnit" : 0,
+            "heightUnit" : 0
+          }
+        ],
+        "keys" : [
+          1280
+        ]
+      }
+    }
+  ],
+  "positionStorages" : {
+    "c_" : "JDMutableArrayDict",
+    "array" : [
+      {
+        "c_" : "IUPositionStorage",
+        "position" : 0,
+        "xUnit" : 0,
+        "yUnit" : 0,
+        "top" : 0,
+        "left" : 0
+      }
+    ],
+    "keys" : [
+      1280
+    ]
+  },
+  "styleStorages" : {
+    "c_" : "JDMutableArrayDict",
+    "array" : [
+      {
+        "c_" : "IUStyleStorage",
+        "widthUnit" : 1,
+        "heightUnit" : 0,
+        "width" : 100,
+        "height" : 75,
+        "fontColor" : {
+          "c_" : "NSColor",
+          "R" : 0.2000000029802322,
+          "G" : 0.2000000029802322,
+          "B" : 0.2000000029802322,
+          "A" : 1
+        }
+      }
+    ],
+    "keys" : [
+      1280
+    ]
+  },
+  "eventVariable" : {
+
+  },
+  "ghostOpacity" : 0.5,
+  "m_" : "51675C5C-FF38-4311-9BDF-29FAE260CF5A",
+  "c_" : "IUClass"
+}

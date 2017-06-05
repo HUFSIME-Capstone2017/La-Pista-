@@ -1,0 +1,20 @@
+a={u'kind': u'qpxExpress#tripsSearch', u'trips': {u'tripOption': [{u'saleTotal': u'USD761.60', u'kind': u'qpxexpress#tripOption', u'slice': [{u'duration': 800, u'kind': u'qpxexpress#sliceInfo', u'segment': [{u'kind': u'qpxexpress#segmentInfo', u'bookingCodeCount': 9, u'flight': {u'carrier': u'OZ', u'number': u'561'}, u'leg': [{u'origin': u'ICN', u'departureTime': u'2017-08-19T12:30+09:00', u'destinationTerminal': u'3', u'destination': u'FCO', u'kind': u'qpxexpress#legInfo', u'meal': u'Lunch', u'aircraft': u'77L', u'mileage': 5568, u'arrivalTime': u'2017-08-19T18:50+02:00', u'duration': 800, u'id': u'LMeJRECdekQYTrUa'}], u'bookingCode': u'K', u'duration': 800, u'id': u'G8CJg6B5lp9bwkZb', u'cabin': u'COACH', u'marriedSegmentGroup': u'0'}]}], u'id': u'MiWcZOwUb5HSzjfjtaxrCF001', u'pricing': [{u'fare': [{u'origin': u'SEL', u'basisCode': u'KKWOKP', u'kind': u'qpxexpress#fareInfo', u'destination': u'ROM', u'carrier': u'OZ', u'id': u'AL36rVBgVrZ0DxWLdckISKGsMFEiXJlExTIYhN/6e9ds'}], u'saleTotal': u'USD761.60', u'kind': u'qpxexpress#pricingInfo', u'segmentPricing': [{u'kind': u'qpxexpress#segmentPricing', u'fareId': u'AL36rVBgVrZ0DxWLdckISKGsMFEiXJlExTIYhN/6e9ds', u'segmentId': u'G8CJg6B5lp9bwkZb'}], u'passengers': {u'kind': u'qpxexpress#passengerCounts', u'adultCount': 1}, u'ptc': u'ADT', u'tax': [{u'kind': u'qpxexpress#taxInfo', u'code': u'YQ', u'id': u'YQ_F', u'chargeType': u'CARRIER_SURCHARGE', u'salePrice': u'USD5.40'}, {u'kind': u'qpxexpress#taxInfo', u'code': u'BP', u'country': u'KR', u'salePrice': u'USD25.20', u'chargeType': u'GOVERNMENT', u'id': u'BP_001'}], u'fareCalculation': u'SEL OZ ROM M 696.20KKWOKP NUC 696.20 END ROE 1167.753 FARE KRW 813000 EQU USD 731.00 XT 25.20BP 5.40YQ', u'saleFareTotal': u'USD731.00', u'baseFareTotal': u'KRW813000', u'refundable': True, u'saleTaxTotal': u'USD30.60', u'latestTicketingTime': u'2017-08-18T23:29-04:00'}]}], u'kind': u'qpxexpress#tripOptions', u'data': {u'city': [{u'kind': u'qpxexpress#cityData', u'code': u'ROM', u'name': u'Rome'}, {u'kind': u'qpxexpress#cityData', u'code': u'SEL', u'name': u'Seoul'}], u'kind': u'qpxexpress#data', u'tax': [{u'kind': u'qpxexpress#taxData', u'id': u'BP_001', u'name': u'South Korea International Psc Departure Tax And Global Disease Eradication Fund'}, {u'kind': u'qpxexpress#taxData', u'id': u'YQ_F', u'name': u'OZ YQ surcharge'}], u'airport': [{u'city': u'ROM', u'kind': u'qpxexpress#airportData', u'code': u'FCO', u'name': u'Rome Leonardo da Vinci-Fiumicino'}, {u'city': u'SEL', u'kind': u'qpxexpress#airportData', u'code': u'ICN', u'name': u'Seoul Incheon International'}], u'aircraft': [{u'kind': u'qpxexpress#aircraftData', u'code': u'77L', u'name': u'Boeing 777'}], u'carrier': [{u'kind': u'qpxexpress#carrierData', u'code': u'OZ', u'name': u'Asiana Airlines Inc.'}]}, u'requestId': u'E3gQuZ8btTOKvzsi80QGaB'}}
+
+b=a.get('trips')
+c=b.get('data')
+print(b)
+
+# d=c.get('city')
+# print(d)
+# e=c.get('kind')
+# print(e)
+# f=c.get('tax')
+# print(f)
+# g=c.get('airport')
+# print(g)
+# h=c.get('aircraft')
+# print(h)
+# i=c.get('carrier')
+# print(i)
+# j=b.get('tripOption')
+# k=j.get('saleTatal')

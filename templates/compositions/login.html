@@ -1,0 +1,113 @@
+{% load staticfiles %}
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+    <link rel="stylesheet" type="text/css" href="/static/resource/css/pages/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/resource/css/compositions/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:700,400|Montserrat:700" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+@charset "UTF-8";
+/* CSS Document */
+
+.spacing {
+  padding-top:7px;
+  padding-bottom:7px;
+}
+.middlePage {
+  width: 680px;
+    height: 500px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.logo {
+  color:#CCC;
+}
+</style>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">:라 피스타 로그인</h4>
+        </div>
+        <div class="modal-body">
+ <div class="row">
+  
+<div class="col-md-4" >
+<img src="{% static 'logo.png' %}" style="width:220px; height: 70px;">
+</div>
+
+<div class="col-md-4" style="border-left:1px solid #ccc;height:160px">
+<form class="form-horizontal" action="\">
+<h3>소셜 로그인</h3>
+  <div class="spacing"></div>
+<a id="kakao-login-btn"></a>
+<a href="http://developers.kakao.com/logout"></a>
+<script type='text/javascript'>
+  //<![CDATA[
+    // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init(' 94d385a28e2c14a4bd0ffa0a34459082');
+    // 카카오 로그인 버튼을 생성합니다.
+    Kakao.Auth.createLoginButton({
+      container: '#kakao-login-btn',
+      success: function(authObj) {
+        alert(JSON.stringify(authObj));
+      },
+      fail: function(err) {
+         alert(JSON.stringify(err));
+      }
+    });
+  //]]>
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.9&appId=1156023751190682";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    var accessToken = response.authResponse.accessToken;
+  } 
+} );</script>
+<div class="fb-login-button" data-width="90" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+</div>
+<div class="col-md-4" >
+<h3>로그인</h4>
+  <div class="spacing"></div>
+  <input id="textinput" name="textinput" type="text" placeholder="ID" class="form-control input-md">
+  <div class="spacing"></div>
+  <input id="textinput" name="textinput" type="text" placeholder="Password" class="form-control input-md">
+  <div class="spacing"><br/></div>
+</div>
+
+</div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+        </div>
+        </form>
+</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

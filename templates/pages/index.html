@@ -1,0 +1,296 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+<link rel="stylesheet" type="text/css" href="/static/resource/css/pages/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/resource/css/compositions/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:700,400|Montserrat:700" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 80%;
+
+ 
+}
+section h1 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font : normal 300 60px/1 'Josefin Sans', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+section h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font : normal 300 32px/1 'Josefin Sans';
+  text-align: center;
+  white-space: nowrap;
+}
+
+#section07 { background: url("{% static 'indexlogo.png' %}") center center / cover no-repeat;}
+#section08 { background: url("{% static 'help5.png' %}") center center / cover no-repeat;}
+#section09 { background: url("{% static 'help6.png' %}") center center / cover no-repeat;}
+#section10 { background: url("{% static 'help4.png' %}") center center / cover no-repeat;}
+
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+
+#section07 a {
+  padding-top: 80px;
+}
+#section07 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+#section07 a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+#section07 a span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+#section07 a span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+@-webkit-keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+#section08 a {
+  padding-top: 80px;
+}
+#section08 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+#section08 a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section09 a {
+  padding-top: 80px;
+}
+#section09 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+#section09 a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section10 a {
+  padding-top: 80px;
+}
+#section a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+#section10 a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+
+
+
+    </style>
+
+
+    <div class="iu-page index">
+      <header class="iu-header header">
+        {% include './compositions/header.html' %}
+
+      </header>
+      </div>
+  </head>
+  <body>
+  <script>
+    
+$(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
+
+  </script>
+  <section id="section07" class="demo">
+  <h1><p>Welcome to 'La Pista'.&nbsp; ✈️</p></h1>
+     {%if not user.is_anonymous  %}
+     <h3>
+<p>[:라 피스타]는 <b style="color: gray" >{{request.user}}님</b>에게 최적의 경로를 제공합니다</p></h3>
+{%endif%}
+        
+  <a href="#section08"><span></span><span></span>How to ENJOY La Pista </a>
+</section>
+<section id="section08" class="demo">
+  <a href="#section09"><span></span><span></span>How to ENJOY La Pista </a>
+</section>
+<section id="section09" class="demo">
+
+  <a href="#section10"><span></span><span></span>How to ENJOY La Pista </a>
+</section>
+<section id="section10" class="demo">
+ <div style="position:relative; text-align:center; font-size:20px; border:solid; width:250px; color:white; top:500px; left:210px; height:65px; z-index:9">
+ <a href="/main" style="position:relative; left:-5px; top:-5px">항 공 권 &nbsp; 검 색</a>
+ </div>
+  <div style="position:relative; text-align:center; font-size:20px; border:solid; width:250px; color:white; top:435px; height:65px; left:820px; padding:20px 30px 20px 30px; z-index:9">
+<a href="/course" style="position:relative; left:-1px; top:-25px">여 행 코 스 &nbsp; 추 천</a>
+ </div>
+
+</section>
+
+
+<!--   <div>
+<img src="{% static 'background.jpg' %}" style="position:relative; width:1400px; height:680px; top:-25px">
+</div> -->
+  </body>
+</HTML>

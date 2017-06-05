@@ -1,0 +1,43 @@
+.iu-center-box {
+  width:1280px;
+}
+.text-4 {
+  color:#969696;
+  float:none;
+  font-family:'Helvetica', sans-serif;
+  font-size:24px;
+  height:30px;
+  left:0px;
+  position:fixed;
+  text-align:center;
+  top:0px;
+  width:100%;
+  z-index:11;
+}
+.floating-image {
+  background-image:url('/static/resource/project/LaPista_logo_navy.png');
+  background-position:center center;
+  background-size:contain;
+  height:35px;
+  left:30px;
+  top:22px;
+  width:130px;
+}
+.pg-button {
+  background-color:#FFFFFF;
+  border-color:#FFFFFF;
+  border-width:-1px;
+  color:#6D6D6D;
+  height:30px;
+  left:1130px;
+  opacity:1;
+  top:22px;
+  width:100px;
+}
+.fb-like > iframe {
+  position:relative;
+}
+.fb-like {
+  left:801px;
+  top:12px;
+}

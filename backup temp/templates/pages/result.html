@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+    <link rel="stylesheet" type="text/css" href="/static/resource/css/pages/result.css">
+    <link rel="stylesheet" type="text/css" href="/static/resource/css/compositions/header.css">
+    <script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header" );
+        document.createElement("footer" );
+        document.createElement("section");
+        document.createElement("nav"    );
+        document.createElement("article");
+      </script>
+      <noscript>
+        <strong>Warning !</strong>
+        Because your browser does not support HTML5, some elements are simulated using JScript.
+        Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+      </noscript>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- iuname : result -->
+    <div class="iu-page result">
+      <header class="iu-header header">
+        {% include './compositions/header.html' %}
+      </header>
+      <section class="iu-page-content page-content">
+        <section class="iu-section section">
+          <div class="iu-center-box center-box-14">
+            <div class="iu-box box-53">
+              <div class="iu-html html">
+                <div style="text-align:center;">{{depday}}   ~   {{arrday}}</div> 
+              </div>
+            </div>
+            <div class="iu-box box-54">
+              <div class="iu-text text-55">
+                <p>From : Seoul(ICN)</p>
+              </div>
+            </div>
+            <form class="iu-pg-form pg-form" enctype="multipart/form-data" method="post">
+              {% csrf_token %}
+              <div class="iu-text text-34">
+                <p><em><span style="color: #ffffff;">Filter</span></em></p>
+              </div>
+              <div class="iu-text text-35">
+                <p><strong><span style="color: #ffffff;">Staytime(Day)</span></strong></p>
+              </div>
+              <div class="iu-box box"></div>
+              <div class="iu-text text-36">
+                <p><span style="color: #ffffff;">London</span></p>
+              </div>
+              <div class="iu-pg-range-slide pg-range-slide" data-iu-slide-min-value="0" data-iu-slide-max-value="30" data-iu-range-slide-default-start-value="3" data-iu-range-slide-default-end-value="10">
+                <div class="iu-pg-range-slide-bar pg-range-slide-bar">
+                  <div class="iux-pg-range-slidebar-innerbar">
+                    <div class="iu-pg-range-slide-point-start pg-range-slide-point-start">
+                      <div class="iux-pg-slidepoint-toucharea"></div>
+                    </div>
+                    <div class="iu-pg-range-slide-point-end pg-range-slide-point-end">
+                      <div class="iux-pg-slidepoint-toucharea"></div>
+                    </div>
+                  </div>
+                </div>
+                <input class="iu-pg-range-slide-text-field-start pg-range-slide-text-field-start" type="text" value="3">
+                <input class="iu-pg-range-slide-text-field-end pg-range-slide-text-field-end" type="text" value="10">
+              </div>
+              <div class="iu-box box-44">
+                <div class="iu-text text-46">
+                  <p><strong><span style="color: #ffffff;">Stop</span></strong></p>
+                </div>
+                <div class="iu-text text-47">
+                  <p><span style="color: #ffffff;">London</span></p>
+                </div>
+                <div class="iu-text text-48">
+                  <p><span style="color: #ffffff;">Non-Stop</span></p>
+                </div>
+                <div class="iu-text text-49">
+                  <p><span style="color: #ffffff;">Stop</span></p>
+                </div>
+                <input class="iu-pg-check-box pg-check-box" type="checkbox">
+                <input class="iu-pg-check-box pg-check-box-51" type="checkbox">
+              </div>
+              <input class="iu-pg-button pg-button-45" type="submit" value="Search">
+            </form>
+            <div class="iu-simple-tabview simple-tabview" data-iu-show-animation="transition.slideDownIn">
+              <div class="iu-simple-tab-header simple-tab-header">
+                <div class="iu-simple-tab-button simple-tab-button">
+                  <div class="iu-cell cell">
+                    <p>Optimal Route</p>
+                  </div>
+                </div>
+                <div class="iu-simple-tab-button simple-tab-button-21">
+                  <div class="iu-cell cell-25">
+                    <p>Lowest Price</p>
+                  </div>
+                </div>
+                <div class="iu-simple-tab-button simple-tab-button-27">
+                  <div class="iu-cell cell-28">
+                    <p>Shortest Time</p>
+                  </div>
+                </div>
+              </div>
+              <div class="iu-simple-tab-content simple-tab-content">
+                <div class="iu-simple-tab-content-item simple-tab-content-item">
+                  <div class="iu-box box-59">
+                    <div class="iu-box box-70">
+                      <div class="iu-cell cell-69">
+                        <p><strong><span style="font-size: 21px;">서울</span></strong></p>
+                      </div>
+                      <!-- iuname : depcity -->
+                      <div class="iu-floating-image floating-image-60"></div>
+                      <div class="iu-html html-71">
+                        <div style="text-align:center;"> {{depday}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : city1_arrow -->
+                    <div class="iu-floating-image floating-image-61"></div>
+                    <!-- iuname : city2_arrow -->
+                    <div class="iu-floating-image floating-image-63"></div>
+                    <!-- iuname : city3_arrow -->
+                    <div class="iu-floating-image floating-image-65"></div>
+                    <!-- iuname : dep_arrow -->
+                    <div class="iu-floating-image floating-image-67"></div>
+                    <div class="iu-box box-72">
+                      <!-- iuname : city1 -->
+                      <div class="iu-floating-image floating-image-62"></div>
+                      <div class="iu-cell cell-73">
+                        <p><strong><span style="font-size: 21px;">런던</span></strong></p>
+                      </div>
+                      <div class="iu-html html-74">
+                        <div style="text-align:center;"> Date Form </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-75">
+                      <!-- iuname : city2 -->
+                      <div class="iu-floating-image floating-image-64"></div>
+                      <div class="iu-cell cell-76">
+                        <p><strong><span style="font-size: 21px;">파리</span></strong></p>
+                      </div>
+                      <div class="iu-html html-77">
+                        <div style="text-align:center;"> Date Form </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-78">
+                      <!-- iuname : city3 -->
+                      <div class="iu-floating-image floating-image-66"></div>
+                      <div class="iu-cell cell-79">
+                        <p><span style="font-size: 21px;"><strong>로마</strong></span></p>
+                      </div>
+                      <div class="iu-html html-80">
+                        <div style="text-align:center;"> Date Form </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-81">
+                      <!-- iuname : dep -->
+                      <div class="iu-floating-image floating-image-68"></div>
+                      <div class="iu-cell cell-82">
+                        <p><strong><span style="font-size: 21px;">서울</span></strong></p>
+                      </div>
+                      <div class="iu-html html-83">
+                        <div style="text-align:center;"> {{arrday}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-floating-image floating-image-132"></div>
+                  </div>
+                  <div class="iu-box box-58">
+                    <div class="iu-html html-59">
+                      <div style="text-align:center;">$ Total Cost </div>
+                    </div>
+                  </div>
+                  <div class="iu-box box-84">
+                    <!-- iuname : route3_box2 -->
+                    <div class="iu-box box-105">
+                      <div class="iu-html html-139">
+                        <div style="text-align:center;"> {{Price11}}  </div>
+                      </div>
+                      <div class="iu-html html-140">
+                        <div style="text-align:center;"> {{Carriers11}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-cell cell-111">
+                      <p><span style="font-size: 18px;">서울</span></p>
+                    </div>
+                    <div class="iu-cell cell-101">
+                      <p><span style="font-size: 18px;">파리</span></p>
+                    </div>
+                    <div class="iu-cell cell-103">
+                      <p>로마</p>
+                    </div>
+                    <div class="iu-cell cell-109">
+                      <p>로마</p>
+                    </div>
+                    <div class="iu-floating-image floating-image-87"></div>
+                    <div class="iu-floating-image floating-image-94"></div>
+                    <div class="iu-floating-image floating-image-102"></div>
+                    <div class="iu-floating-image floating-image-110"></div>
+                    <!-- iuname : route1_box1 -->
+                    <div class="iu-box box-89">
+                      <div class="iu-html html-148">
+                        <div style="text-align:center;"> {{Price1}} </div>
+                      </div>
+                      <div class="iu-html html-170">
+                        <div style="text-align:center;"> {{Carriers1}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route2_box1 -->
+                    <div class="iu-box box-96">
+                      <div class="iu-html html-123">
+                        <div style="text-align:center;"> {{Price5}} </div>
+                      </div>
+                      <div class="iu-html html-124">
+                        <div style="text-align:center;"> {{Carriers5}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route3_box1 -->
+                    <div class="iu-box box-104">
+                      <div class="iu-html html-135">
+                        <div style="text-align:center;"> {{Price9}} </div>
+                      </div>
+                      <div class="iu-html html-136">
+                        <div style="text-align:center;"> {{Carriers9}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route4_box1 -->
+                    <div class="iu-box box-112">
+                      <div class="iu-html html-143">
+                        <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                      </div>
+                      <div class="iu-html html-144">
+                        <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route2_box2 -->
+                    <div class="iu-box box-90">
+                      <div class="iu-html html-149">
+                        <div style="text-align:center;"> {{Price3}} </div>
+                      </div>
+                      <div class="iu-html html-173">
+                        <div style="text-align:center;"> {{Carriers3}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route2_box2 -->
+                    <div class="iu-box box-97">
+                      <div class="iu-html html-131">
+                        <div style="text-align:center;"> {{Price7}} </div>
+                      </div>
+                      <div class="iu-html html-132">
+                        <div style="text-align:center;"> {{Carriers7}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route4_box2 -->
+                    <div class="iu-box box-113">
+                      <div class="iu-html html-147">
+                        <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                      </div>
+                      <div class="iu-html html-150">
+                        <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                      </div>
+                    </div>
+                    <input class="iu-pg-button pg-button-171" type="submit" value="submit">
+                    <div class="iu-box box-129">
+                      <div class="iu-html html-127">
+                        <div style="text-align:center;"> {{Price2}} </div>
+                      </div>
+                      <div class="iu-html html-128">
+                        <div style="text-align:center;"> {{Carriers2}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-124">
+                      <div class="iu-html html-125">
+                        <div style="text-align:center;"> {{Price6}} </div>
+                      </div>
+                      <div class="iu-html html-126">
+                        <div style="text-align:center;"> {{Carriers6}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-125">
+                      <div class="iu-html html-137">
+                        <div style="text-align:center;"> {{Price10}}  </div>
+                      </div>
+                      <div class="iu-html html-138">
+                        <div style="text-align:center;"> {{Carriers10}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-126">
+                      <div class="iu-html html-145">
+                        <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                      </div>
+                      <div class="iu-html html-146">
+                        <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-123">
+                      <div class="iu-html html-129">
+                        <div style="text-align:center;"> {{Price4}} </div>
+                      </div>
+                      <div class="iu-html html-130">
+                        <div style="text-align:center;"> {{Carriers4}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-127">
+                      <div class="iu-html html-133">
+                        <div style="text-align:center;"> {{Price8}} </div>
+                      </div>
+                      <div class="iu-html html-134">
+                        <div style="text-align:center;"> {{Carriers8}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-128">
+                      <div class="iu-html html-141">
+                        <div style="text-align:center;"> {{Price12}} </div>
+                      </div>
+                      <div class="iu-html html-142">
+                        <div style="text-align:center;"> {{Carriers12}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-130">
+                      <div class="iu-html html-151">
+                        <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                      </div>
+                      <div class="iu-html html-152">
+                        <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                      </div>
+                    </div>
+                    <div class="iu-html html-154">
+                      <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                    </div>
+                    <div class="iu-html html-155">
+                      <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                    </div>
+                    <div class="iu-html html-156">
+                      <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                    </div>
+                    <div class="iu-html html-157">
+                      <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+                    </div>
+                  </div>
+                  <div class="iu-googlemap googlemap" data-iu-map-apikey="AIzaSyAMQ-x96aS6dyp_Txngu7SJZhELW2c7SDM" data-iu-map-longitude="-74.0059413" data-iu-map-latitude="40.7127837" data-iu-map-zoom-level="12" data-iu-map-street="false" data-iu-map-zoom="false" data-iu-map-icon="true" data-iu-map-title="New York"></div>
+                </div>
+                <div class="iu-simple-tab-content-item simple-tab-content-item-24">
+                  <div class="iu-text text-27">
+                    <p>Tab Contents 2</p>
+                  </div>
+                  <div class="iu-html html-174">
+                    <div style="text-align:center;"> {{result_st)) </div>
+                  </div>
+                </div>
+                <div class="iu-tab-content-item tab-content-item">
+                  <div class="iu-text text-30">
+                    <p>Tab Contents 3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="iu-box box-56">
+              <div class="iu-html html-153">
+                <div style="text-align:center;"> Edit HTML Code on developer mode. </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </body>
+</HTML>

@@ -1,0 +1,476 @@
+.iu-center-box {
+  width:1280px;
+}
+.iu-page {
+  min-width:1280px;
+}
+.header {
+  color:#333333;
+  height:75px;
+  left:0px;
+  position:relative;
+  top:0px;
+  width:100%;
+}
+.page-content {
+  background-color:#FFFFFF;
+}
+.section {
+  height:720px;
+}
+.box-16 {
+  background-color:#000000;
+  height:7px;
+  left:129px;
+  top:700px;
+  width:1013px;
+}
+.box {
+  background-color:#000000;
+  height:7px;
+  left:129px;
+  top:52px;
+  width:1013px;
+}
+.text-17 {
+  font-family:'Jeju Hallasan', serif;
+  font-size:36px;
+  height:57px;
+  left:147px;
+  text-align:left;
+  top:10.83%;
+  width:625px;
+}
+.box-18 {
+  -webkit-transform:rotate(0deg);
+  background-color:#AADBFF;
+  border-radius:15px;
+  border-width:2px;
+  height:45px;
+  left:130px;
+  padding:1px;
+  top:150px;
+  transform:rotate(0deg);
+  width:100px;
+}
+.text-21 {
+  font-size:24px;
+  height:40px;
+  left:0px;
+  text-align:center;
+  top:4px;
+  width:100px;
+}
+.text-33 {
+  font-size:18px;
+  height:50px;
+  left:260px;
+  top:151px;
+  width:772px;
+}
+.text-35 {
+  font-size:21px;
+  height:30px;
+  left:260px;
+  top:229px;
+  width:175px;
+}
+.box-48 {
+  background-color:#AADBFF;
+  border-radius:15px;
+  border-width:2px;
+  height:45px;
+  left:130px;
+  top:220px;
+  width:100px;
+}
+.text-48 {
+  font-size:17px;
+  height:30px;
+  left:6px;
+  top:7px;
+  width:100px;
+}
+.box-49 {
+  background-color:#AADBFF;
+  border-radius:15px;
+  border-width:2px;
+  height:45px;
+  left:130px;
+  top:290px;
+  width:100px;
+}
+.text-50 {
+  height:30px;
+  left:2px;
+  text-align:center;
+  top:7px;
+  width:100px;
+}
+.tabview {
+  height:321px;
+  left:130px;
+  top:346px;
+  width:1012px;
+}
+.tab-header {
+  font-size:14px;
+  height:20%;
+  left:0px;
+  position:relative;
+  top:0px;
+}
+.tab-header-item {
+  float:left;
+  height:30px;
+  margin-top:15px;
+  position:relative;
+  width:100px;
+}
+.cell {
+  background-color:#FFFFFF;
+  color:#969696;
+  height:30px;
+  left:0px;
+  line-height:30px;
+  text-align:center;
+  top:0px;
+  width:100%;
+}
+.tab-header-active-item {
+  display:none;
+}
+.cell-42 {
+  background-color:#B4B4B4;
+  color:#FFFFFF;
+  height:30px;
+  left:0px;
+  line-height:30px;
+  text-align:center;
+  top:0px;
+  width:100%;
+}
+.tab-header-item-31 {
+  float:left;
+  height:30px;
+  margin-top:15px;
+  position:relative;
+  width:100px;
+}
+.cell-39 {
+  color:#969696;
+  height:30px;
+  left:0px;
+  line-height:30px;
+  text-align:center;
+  top:0px;
+  width:100%;
+}
+.tab-header-active-item-41 {
+  display:none;
+}
+.cell-43 {
+  background-color:#B4B4B4;
+  color:#FFFFFF;
+  height:30px;
+  left:0px;
+  line-height:30px;
+  text-align:center;
+  top:0px;
+  width:100%;
+}
+.tab-header-item-44 {
+  float:left;
+  height:30px;
+  margin-top:15px;
+  position:relative;
+  width:100px;
+}
+.cell-47 {
+  color:#969696;
+  height:30px;
+  left:0px;
+  line-height:30px;
+  text-align:center;
+  top:0px;
+  width:100%;
+}
+.tab-header-active-item-46 {
+  display:none;
+}
+.cell-48 {
+  background-color:#B4B4B4;
+  color:#FFFFFF;
+  height:30px;
+  left:0px;
+  line-height:30px;
+  text-align:center;
+  top:0px;
+  width:100%;
+}
+.tab-header-item-70 {
+  float:left;
+  height:30px;
+  margin-top:15px;
+  position:relative;
+  width:100px;
+}
+.cell-73 {
+  color:#969696;
+  height:30px;
+  left:0px;
+  line-height:30px;
+  text-align:center;
+  top:0px;
+  width:100%;
+}
+.tab-header-active-item-72 {
+  display:none;
+}
+.cell-74 {
+  background-color:#B4B4B4;
+  color:#FFFFFF;
+  height:30px;
+  left:0px;
+  line-height:30px;
+  text-align:center;
+  top:0px;
+  width:100%;
+}
+.tab-content {
+  background-color:#F0F0F0;
+  height:80%;
+  left:0px;
+  margin-left:0px;
+  margin-top:0px;
+  position:relative;
+  top:0px;
+}
+.tab-content-item {
+  display:none;
+  height:100%;
+  left:0px;
+  position:relative;
+  top:0px;
+}
+.floating-image-50 {
+  background-image:url('/static/resource/project/paris1.jpg');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:70px;
+  top:25px;
+  width:230px;
+}
+.floating-image-51 {
+  background-image:url('/static/resource/project/paris2.jpg');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:390px;
+  top:25px;
+  width:230px;
+}
+.floating-image-52 {
+  background-image:url('/static/resource/project/paris3.jpg');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:710px;
+  top:25px;
+  width:230px;
+}
+.html {
+  height:25px;
+  left:105px;
+  top:200px;
+  width:160px;
+}
+.html-54 {
+  height:25px;
+  left:406px;
+  top:200px;
+  width:188px;
+}
+.html-55 {
+  height:25px;
+  left:745px;
+  top:200px;
+  width:160px;
+}
+.tab-content-item-33 {
+  background-color:#FFFFFF;
+  display:none;
+  height:100%;
+  left:0px;
+  position:relative;
+  top:0px;
+}
+.floating-image-56 {
+  background-image:url('/static/resource/project/KakaoTalk_Photo_2017-04-04-21-47-38.png');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:70px;
+  top:25px;
+  width:230px;
+}
+.floating-image-57 {
+  background-image:url('/static/resource/project/KakaoTalk_Photo_2017-04-04-21-47-44.png');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:390px;
+  top:25px;
+  width:230px;
+}
+.floating-image-58 {
+  background-image:url('/static/resource/project/KakaoTalk_Photo_2017-04-04-21-47-51.png');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:710px;
+  top:25px;
+  width:230px;
+}
+.html-59 {
+  height:25px;
+  left:105px;
+  top:200px;
+  width:160px;
+}
+.html-60 {
+  height:25px;
+  left:426px;
+  top:200px;
+  width:160px;
+}
+.html-61 {
+  height:25px;
+  left:745px;
+  top:200px;
+  width:160px;
+}
+.tab-content-item-49 {
+  background-color:#FFFFFF;
+  display:none;
+  height:100%;
+  left:0px;
+  position:relative;
+  top:0px;
+}
+.floating-image-61 {
+  background-image:url('/static/resource/project/rome1.jpg');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:70px;
+  top:25px;
+  width:230px;
+}
+.floating-image-62 {
+  background-image:url('/static/resource/project/rome2.jpg');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:392px;
+  top:25px;
+  width:230px;
+}
+.floating-image-63 {
+  background-image:url('/static/resource/project/rome3.jpg');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:710px;
+  top:25px;
+  width:230px;
+}
+.html-64 {
+  height:25px;
+  left:105px;
+  top:200px;
+  width:160px;
+}
+.html-65 {
+  height:25px;
+  left:426px;
+  top:200px;
+  width:160px;
+}
+.html-66 {
+  height:25px;
+  left:745px;
+  top:200px;
+  width:160px;
+}
+.tab-content-item-75 {
+  background-color:#FFFFFF;
+  display:none;
+  height:100%;
+  left:0px;
+  position:relative;
+  top:0px;
+}
+.floating-image-75 {
+  background-image:url('/static/resource/project/BC1.jpg');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:70px;
+  top:25px;
+  width:230px;
+}
+.floating-image-76 {
+  background-image:url('/static/resource/project/BC2.jpg');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:392px;
+  top:25px;
+  width:230px;
+}
+.floating-image-77 {
+  background-image:url('/static/resource/project/BC3.jpg');
+  background-position:center center;
+  background-size:contain;
+  height:156px;
+  left:710px;
+  top:25px;
+  width:230px;
+}
+.html-78 {
+  height:25px;
+  left:745px;
+  top:200px;
+  width:160px;
+}
+.html-79 {
+  height:25px;
+  left:426px;
+  top:200px;
+  width:160px;
+}
+.html-80 {
+  height:25px;
+  left:105px;
+  top:200px;
+  width:160px;
+}
+.pg-form {
+  height:30px;
+  left:1150px;
+  top:620px;
+  width:100px;
+}
+.pg-button-67 {
+  background-color:#FF862A;
+  border-color:#242424;
+  border-radius:15px;
+  border-width:2px;
+  color:#FFFFFF;
+  height:30px;
+  left:0px;
+  top:0px;
+  width:100px;
+}

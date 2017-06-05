@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<HTML>
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+   <link rel="stylesheet" type="text/css" href="/static/resource/css/pages/list.css">
+   <link rel="stylesheet" type="text/css" href="/static/resource/css/compositions/header.css">
+   <script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+   <style>
+   .center {
+       margin: auto;
+       width: 60%;
+       background-color: #ffbb00 ;
+       padding: 10px;
+   }
+   </style>
+ </head>
+ <body>
+{% load staticfiles %}
+   <div class="iu-page list">
+     <header class="iu-header header">
+       {% include './compositions/header.html' %}
+     </header>
+   <section>
+            <p style="text-align: center; position:relative; top:50px">
+             <img src="{% static 'travellogo.jpg' %}" style="width: 80%; height: 80%; top: 20%; "> </p>
+           <ul style="position:relative; top:20px">
+               {% for a,b in detail_zip %}
+     <li style="float:left; margin:20px">
+ <div style="left:30px; width:340px; height:300px; border-radius:10px; background-color:#eaeaea ; position: relative; text-align:center; padding:0 -20px 0 0;">
+     {% for i in b %}
+     <img src="{{i}}" style="width:80px; height: 70px;">
+     {% endfor %}
+     <h3> ${{a.total_cost}}</h3>
+   {{a.dep_date}} 에서 {{a.arr_date}}<br>
+
+<form class="iu-pg-form MainForm pg-form" enctype="multipart/form-data" name="MainForm" action="/detail" method="post">
+{% csrf_token %}
+<input name="listid" value={{a.list_id}} type="hidden">
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<button type="submit" value="자세히 보기"> 자세히 보기</button>
+</form>
+<font style="position:relative; top:60px; left:80px;" color="darkgrey">
+   {{a.save_date}}에 저장
+   </font>
+ </div>
+   </li>
+               {%endfor%}
+         <li style="float:left; margin:20px">
+ <div style="left:30px; width:220px; height:250px; border-radius:10px; background-color:#eaeaea  ; position: relative;"><b><br><br>
+<a href="/main">
+ <img src="{% static '여행추가.jpg' %}" style="position:relative; left:30px; top:60px; width:160px; height:40px">
+ </a>
+   </div>
+   </li>
+   </ul>
+       </section>
+   </div>
+ </body>
+</HTML>

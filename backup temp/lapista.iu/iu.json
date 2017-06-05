@@ -1,0 +1,120 @@
+{
+  "c_" : "IUProject",
+  "viewPorts" : [
+    1280
+  ],
+  "_pageGroup" : {
+    "c_" : "IUSheetGroup",
+    "name" : "pages",
+    "_children" : [
+      {
+        "c_" : "IUPage",
+        "file_" : "index-67A3C015-23C3-46BD-A5A4-C8659B28DEDA.json",
+        "m_" : "67A3C015-23C3-46BD-A5A4-C8659B28DEDA"
+      },
+      {
+        "c_" : "IUPage",
+        "file_" : "main-D92762F1-B030-4CD7-94D9-1898897B2CC3.json",
+        "m_" : "D92762F1-B030-4CD7-94D9-1898897B2CC3"
+      },
+      {
+        "c_" : "IUPage",
+        "file_" : "result1-C76ACB57-59F5-46F8-830D-8E6EC8909458.json",
+        "m_" : "C76ACB57-59F5-46F8-830D-8E6EC8909458"
+      },
+      {
+        "c_" : "IUPage",
+        "file_" : "list-B90381A8-1CE0-453E-BCE1-A6C5CAB2E4C0.json",
+        "m_" : "B90381A8-1CE0-453E-BCE1-A6C5CAB2E4C0"
+      },
+      {
+        "c_" : "IUPage",
+        "file_" : "detail-779C8DDD-FD7B-46F6-998B-DC525F18A004.json",
+        "m_" : "779C8DDD-FD7B-46F6-998B-DC525F18A004"
+      },
+      {
+        "c_" : "IUPage",
+        "file_" : "result-F062B801-5296-4369-B702-409F20D854B0.json",
+        "m_" : "F062B801-5296-4369-B702-409F20D854B0"
+      },
+      {
+        "c_" : "IUPage",
+        "file_" : "course-61E4F38B-E9AE-4827-AEDC-08D1AC3315F3.json",
+        "m_" : "61E4F38B-E9AE-4827-AEDC-08D1AC3315F3"
+      },
+      {
+        "c_" : "IUPage",
+        "file_" : "explain-05F98BBC-120D-43D6-BE85-3477EC2AC2E2.json",
+        "m_" : "05F98BBC-120D-43D6-BE85-3477EC2AC2E2"
+      }
+    ]
+  },
+  "_classGroup" : {
+    "c_" : "IUSheetGroup",
+    "name" : "compositions",
+    "_children" : [
+      {
+        "m_" : "51675C5C-FF38-4311-9BDF-29FAE260CF5A",
+        "c_" : "IUClass",
+        "file_" : "header-51675C5C-FF38-4311-9BDF-29FAE260CF5A.json"
+      },
+      {
+        "m_" : "CDFECF87-5B9C-4FE6-9065-4E02A21CC6C6",
+        "c_" : "IUClass",
+        "file_" : "footer-CDFECF87-5B9C-4FE6-9065-4E02A21CC6C6.json"
+      },
+      {
+        "m_" : "D625CBA4-14AF-4667-9AD8-4821C449C9A6",
+        "c_" : "IUClass",
+        "file_" : "sidebar-D625CBA4-14AF-4667-9AD8-4821C449C9A6.json"
+      },
+      {
+        "m_" : "A7FB64B7-29F1-47F7-853D-10372900B6E9",
+        "c_" : "IUClass",
+        "file_" : "composition-A7FB64B7-29F1-47F7-853D-10372900B6E9.json"
+      },
+      {
+        "m_" : "30F3CA24-5389-47DA-BF66-57DE08C43FBB",
+        "c_" : "IUClass",
+        "file_" : "list_image-30F3CA24-5389-47DA-BF66-57DE08C43FBB.json"
+      }
+    ]
+  },
+  "_projectType" : 1,
+  "_projectData" : {
+    "c_" : "IUProjectDjangoData",
+    "buildPath" : "\/Users\/choi\/lapista\/templates",
+    "resourcePrefix" : "\/static\/resource",
+    "resourceBuildPath" : "\/Users\/choi\/lapista\/static\/resource",
+    "IncludeTemplatePrefix" : "."
+  },
+  "_htmlData" : {
+    "c_" : "IUProjectHTMLData",
+    "enableHashForCSS" : true,
+    "buildPath" : "$CurrentFolder\/$AppName_build",
+    "resourcePrefix" : "\/resource",
+    "resourceBuildPath" : "$CurrentFolder\/$AppName_build\/resource",
+    "_port" : 29713
+  },
+  "_favoriteColors" : [
+    {
+      "c_" : "NSColor",
+      "R" : 0.3333333432674408,
+      "G" : 0.6745098233222961,
+      "B" : 0.9333333373069763,
+      "A" : 1
+    },
+    {
+      "c_" : "NSColor",
+      "R" : 0.2313725501298904,
+      "G" : 0.3490196168422699,
+      "B" : 0.5960784554481506,
+      "A" : 1
+    }
+  ],
+  "_documentPath" : "$CurrentFolder\/$AppName_document",
+  "_enableMinWidth" : true,
+  "defaultLayout" : 2,
+  "idPrefix" : "",
+  "googleMapApiKey" : "AIzaSyAMQ-x96aS6dyp_Txngu7SJZhELW2c7SDM"
+}

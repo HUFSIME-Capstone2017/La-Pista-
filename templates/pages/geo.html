@@ -1,0 +1,227 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+    <link rel="stylesheet" type="text/css" href="/static/resource/css/pages/result.css">
+    <script type="text/JavaScript" scrc = "jquery-3.2.0.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+.scrollspy-example {
+height: 580px;
+overflow: auto;
+position: relative;
+}
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .fc-event{
+     background:red;
+     border-color:red;
+  }
+</style>
+<script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+
+</head>
+<body>
+<header class="iu-header header">
+{% include './compositions/header.html' %}
+</header>
+
+<!-- 달력 -->
+<div id="calendar" style="position:absolute; border-width:1px; border:solid; width:467px; height:300px; top:100px; left:50px; border-radius:5px">
+</div>
+
+<!-- 지도 -->
+<div id="myMap" style="position:absolute; border-width:1px; border:solid; width:467px; height:300px; top:100px; left:531px; border-radius:5px">
+</div>
+
+<!-- 순서 -->
+<div style="position:absolute; width:950px; height:180px; top:400px; left:50px" >
+<img src="{% static '나의유럽여행.jpg' %}" style="position:relative; width:950px; height:180px; ">
+<span style="top:75px; position:relative; font-size: 40px; font-style:bold; left:100px; top:-100px">$ ???</span>
+<span style="position:relative; left:150px; top:-135px">인천</span>
+<img src="{% static 'point.jpg' %}" style="position:relative; left:125px; top:-115px; width:20px; height:20px">
+<ul style="position:absolute; left:280px; top:3px; list-style:none; margin:0; padding:0;">
+{% for a in "123" %}
+<li style="margin:1px 30px 1px 1px; padding:0 0 0 0; border:0; float:left;">
+<div style="text-align:right; font-size:15px">
+<span style="top:65px; position:relative; left:107px">{{a}}</span>
+<img src="{% static 'next.jpg' %}" style="width:80px; height:20px; top:85px; position:relative;"><br>
+<img src="{% static 'point.jpg' %}" style="width:20px; height:20px; left:55px; position:relative; top:65px">
+<span style="top:95px; position:relative; left:31px">{{a}}일</span>
+</div>
+</li>
+{% endfor %}
+<li style="margin:1px 30px 1px 1px; padding:0 0 0 0; border:0; float:left;">
+<div style="text-align:right; font-size:15px">
+<span style="top:60px; position:relative; left:118px">인천</span>
+<img src="{% static 'next.jpg' %}" style="width:80px; height:20px; top:85px; position:relative;"><br>
+<img src="{% static 'point.jpg' %}" style="width:20px; height:20px; left:32px; position:relative; top:63px">
+</div>
+</li>
+</ul>
+<div style="display: block" id="hOpen01">
+<a onclick="paragraph_toggle(document.getElementById('hOpen01')); paragraph_toggle(document.getElementById('hClose01')); return false;" href="#">
+<img src="{% static '화살표1.png' %}" style="position:absolute; left:850px; top:150px; width:25px; height:15px;">
+</a>
+</div>
+<div style="display: none" id="hClose01" style="position:absolute;">
+<!-- 추가정보 -->
+<div>
+<ul>
+{% for i in "123" %}
+<li style="padding: 0 -60px 0 0;">
+<img src="{% static '박스1.png' %}" style="position:relative; width:950px; height:180px; position:relative; top:-100px">
+</li>
+{% endfor %}
+</ul>
+</div>
+<a onclick="paragraph_toggle(document.getElementById('hOpen01')); paragraph_toggle(document.getElementById('hClose01')); return false;" href="#">
+<img src="{% static '화살표2.png' %}" style="position:absolute; left:850px; top:150px; width:25px; height:15px;">
+</a>
+</div>
+<script language="JavaScript" type="text/javascript">
+function paragraph_toggle(obj) {
+  if (obj.style.display == 'none')
+    obj.style.display = 'block';
+  else if (obj.style.display == 'block')
+    obj.style.display = 'none';
+};
+</script>
+<!-- 사이드바 -->
+<div style="position:absolute; border-width:thin; border-style:dotted; border-color:lightgrey; width:350px; height:700px; top:-300px; left:960px; border-radius:10px" class="container">
+<section>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <ul class="nav navbar-nav">
+    {% for i in "123"%}
+      <li><a href="#{{i}}">{{i}}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+
+</nav>
+<div data-spy="scroll" data-target="#navbarExample1" data-offset="0" class="scrollspy-example">
+  {% for i in "123" %}
+  <h3 style="font-color:lightgrey" id={{i}}>{{i}}</h3>
+
+  {% endfor %}
+</div>
+</div>
+</section>
+</div>
+<script>
+  function myMap() {
+  var ICN = new google.maps.LatLng(37.2808,126.2701);
+  var FCO = new google.maps.LatLng(41.8,12.25);
+  var LHR = new google.maps.LatLng(51.27159,-0.20443);
+  var MAD = new google.maps.LatLng(40.4820,-3.56);
+  var CDG = new google.maps.LatLng(48.646,2.330);
+  var Center = new google.maps.LatLng(43.961702, 3.375080);
+  var mapCanvas = document.getElementById("myMap");
+  var mapOptions = {center: Center, zoom: 3};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var start = '../../../static/markera.png'
+  var marker = new google.maps.Marker({
+    position: FCO});
+
+  marker.setMap(map);
+  // var marker = new google.maps.Marker({position:FCO});
+  //             marker.setIcon("../../../static/markerb.jpeg");
+  //             marker.setMap(map);
+  var flightPath = new google.maps.Polyline({
+    path: [FCO,CDG,LHR,MAD],
+    strokeColor: "#0000FF",
+    strokeOpacity: 0.8,
+    strokeWeight: 2
+  });
+  flightPath.setMap(map);
+  }
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      defaultDate: '2014-09-12',
+      editable: false,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'Long Event',
+          start: '2014-09-07',
+          end: '2014-09-10',
+            url: 'http://google.com/'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2014-09-09T16:00:00'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2014-09-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2014-09-11',
+          end: '2014-09-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2014-09-12T10:30:00',
+          end: '2014-09-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2014-09-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2014-09-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2014-09-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2014-09-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2014-09-13T07:00:00'
+        }
+      ],
+
+        eventClick: function(event) {
+          if (event.url) {
+            $.magnificPopup.open({
+                items: {                    
+                  iframe: event.url,
+                  type: 'iframe'
+                }
+         
+            });
+          }
+        }
+      
+    });
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZArLA-li5nkjRx3v0MOPGn0BAyBcjK8&callback=myMap"></script>
+</body>

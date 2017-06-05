@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/resource/common/iu.css?iuv=1.3">
+    <link rel="stylesheet" type="text/css" href="/resource/css/pages/main.css?iusha=0a960ff">
+    <script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header" );
+        document.createElement("footer" );
+        document.createElement("section");
+        document.createElement("nav"    );
+        document.createElement("article");
+      </script>
+      <noscript>
+        <strong>Warning !</strong>
+        Because your browser does not support HTML5, some elements are simulated using JScript.
+        Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+      </noscript>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- iuname : main -->
+    <div class="iu-page main">
+      <header class="iu-header header">
+        <div class="iu-center-box center-box">
+          <div class="iu-text text-4"></div>
+          <div class="iu-floating-image floating-image">
+            <a class="iux-inner-link" href="/index">
+            </a>
+          </div>
+          <input class="iu-pg-button pg-button" type="button" value="Sign In">
+          <div class="iu-fb-like fb-like">
+            <iframe src="//www.facebook.com/plugins/like.php?href=http://www.iueditor.org+&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;colorscheme=light&amp;" scrolling="no" frameborder="0" allowTransparency="true" style="border:none;overflow:hidden;height:80px"></iframe>
+          </div>
+        </div>
+      </header>
+      <section class="iu-page-content page-content">
+        <section class="iu-section section">
+          <div class="iu-center-box center-box-13">
+            <div class="iu-box box">
+              <div class="iu-box box-19"></div>
+              <div class="iu-html html">
+                <html lang="en">
+                <head>
+                <meta charset="utf-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+                    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+                    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+                    <script src="bootstrap/js/bootstrap.min.js"></script>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                <style>
+                .mySlides1 {display:none;}
+                /* The Modal (background) */
+                /* Add Animation */
+                @-webkit-keyframes animatetop {
+                    from {top:-300px; opacity:0} 
+                    to {top:0; opacity:1}
+                }
+                @keyframes animatetop {
+                    from {top:-300px; opacity:0}
+                    to {top:0; opacity:1}
+                }
+                .left{
+                position:relative;
+                left:20px;
+                }
+                
+                </style>
+                </head>
+                
+                <body>
+                {% load staticfiles %}
+                <div class="container">
+                  <!-- Modal London -->
+                  <div class="modal fade" id="LHR_modal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">London Heathrow Airport</h4>
+                        </div>
+                        <div class="modal-body">
+                        <center>
+                <div class="w3-content w3-section" style="max-width:600px">
+                      <img class="mySlides1" src="{% static 'london1.jpeg' %}" style="width:500px; height: 300px; ">
+                      <img class="mySlides1" src="{% static 'london2.jpeg' %}" style="width:500px; height: 300px; ">
+                      <img class="mySlides1" src="{% static 'london3.jpg' %}" style="width:500px; height: 300px; ">
+                      <img class="mySlides1" src="{% static 'london4.jpeg' %}" style="width:500px; height: 300px; ">
+                      </div>
+                      </center>
+                        </div></p>
+                        <div class="left" >
+                        <h4>Event</h4>
+                        <div style="height:auto; width:370px; border:1px solid blue;">
+                        <ul>
+                        <li>세인트 패트릭스 데이 행사 (3/17)<a href="http://justcuration.tistory.com/92" target="_blank"> (상세보기) </a><input type="checkbox" name="vehicle2" value="event1"></li>
+                        <li>큐 가든 봄 꽃 축제 (3/21 ~ 24)<a href="http://www.kew.org/kew-gardens/whats-on" target="_blank"> (상세보기) </a><input type="checkbox" name="vehicle1" value="event2"></li>
+                        <li>옥스퍼드&캠브리지 대학 보트 경주 (4/2) <a href="https://www.britishrowing.org/2017/02/a-guide-to-the-university-boat-races-2017/" target="_blank"> (상세보기) </a><input type="checkbox" name="vehicle2" value="event3"></li>
+                        </ul>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="reset" id="LHR_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                          <button type="submit" id="LHR" class="btn btn-default" data-dismiss="modal">Submit</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                  <!-- Modal Paris -->
+                <div class="container">
+                  <div class="modal fade" id="CDG_modal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Paris charles de gaulle Airport</h4>
+                        </div>
+                        <div class="modal-body">
+                      </center>
+                        </div></p>
+                        <div class="modal-footer">
+                          <button type="reset" id="CDG_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                          <button type="submit" id="CDG" class="btn btn-default" data-dismiss="modal">Submit</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                  <!-- Modal Roma -->
+                <div class="container">
+                  <div class="modal fade" id="FCO_modal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Paris charles de gaulle Airport</h4>
+                        </div>
+                        <div class="modal-body">
+                      </center>
+                        </div></p>
+                        <div class="modal-footer">
+                          <button type="reset" id="FCO_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                          <button type="submit" id="FCO" class="btn btn-default" data-dismiss="modal">Submit</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                  <!-- Modal Madrid -->
+                <div class="container">
+                  <div class="modal fade" id="MAD_modal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Paris charles de gaulle Airport</h4>
+                        </div>
+                        <div class="modal-body">
+                      </center>
+                        </div></p>
+                        <div class="modal-footer">
+                          <button type="reset" id="MAD_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                          <button type="submit" id="MAD" class="btn btn-default" data-dismiss="modal">Submit</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                  <!-- Modal Berlin -->
+                <div class="container">
+                  <div class="modal fade" id="TXL_modal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Paris charles de gaulle Airport</h4>
+                        </div>
+                        <div class="modal-body">
+                      </center>
+                        </div></p>
+                        <div class="modal-footer">
+                          <button type="reset" id="TXL_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                          <button type="submit" id="TXL" class="btn btn-default" data-dismiss="modal">Submit</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div id="map" style="width:60%;height:600px;background:yellow"></div>
+                
+                <script>
+                var myIndex = 0;
+                carousel();
+                
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides1");
+                    for (i = 0; i < x.length; i++) {
+                       x[i].style.display = "none";  
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}    
+                    x[myIndex-1].style.display = "block";  
+                    setTimeout(carousel, 2000); // Change image every 2 seconds
+                }
+                
+                function myMap() {
+                  var myCenter = new google.maps.LatLng(51.650,14.709);
+                  var mapCanvas = document.getElementById("map");
+                  var mapOptions = {center: myCenter, zoom: 4};
+                  var map = new google.maps.Map(mapCanvas, mapOptions);
+                  var image = '../../../static/dot9.png'
+                  var marker1 = new google.maps.Marker({position:{lat: 51.27159, lng: -0.20443}, icon:image});
+                    marker1.setMap(map);
+                  google.maps.event.addListener(marker1, 'click', function() {
+                    $('#LHR_modal').modal('toggle')
+                    });
+                    $('#LHR').on({ 
+                    'click': function(){ 
+                    marker1.setIcon("../../../static/dot10.png");}
+                  });
+                    $('#LHR_cancel').on({ 
+                    'click': function(){ 
+                    marker1.setIcon("../../../static/dot9.png");}
+                  });
+                  var marker2 = new google.maps.Marker({position:{lat: 48.646, lng: 2.330},
+                                icon:image});
+                    marker2.setMap(map);
+                  google.maps.event.addListener(marker2, 'click', function() {
+                    $('#CDG_modal').modal('toggle')
+                    });
+                    $('#CDG').on({ 
+                    'click': function(){ 
+                    marker2.setIcon("../../../static/dot10.png");}
+                  });
+                    $('#CDG_cancel').on({ 
+                    'click': function(){ 
+                    marker2.setIcon("../../../static/dot9.png");}
+                  });
+                  var marker3 = new google.maps.Marker({position:{lat: 41.8, lng: 12.25},
+                                icon:image});
+                    marker3.setMap(map);
+                  google.maps.event.addListener(marker3, 'click', function() {
+                    $('#FCO_modal').modal('toggle')
+                    });
+                    $('#FCO').on({ 
+                    'click': function(){ 
+                    marker3.setIcon("../../../static/dot10.png");}
+                  });
+                    $('#FCO_cancel').on({ 
+                    'click': function(){ 
+                    marker3.setIcon("../../../static/dot9.png");}
+                  });
+                  var marker4 = new google.maps.Marker({position:{lat: 40.5, lng: -3.567},
+                                icon:image});
+                    marker4.setMap(map);
+                  google.maps.event.addListener(marker4, 'click', function() {
+                    $('#MAD_modal').modal('toggle')
+                    });
+                    $('#MAD').on({ 
+                    'click': function(){ 
+                    marker4.setIcon("../../../static/dot10.png");}
+                  });
+                    $('#MAD_cancel').on({ 
+                    'click': function(){ 
+                    marker4.setIcon("../../../static/dot9.png");}
+                  });
+                      var marker5 = new google.maps.Marker({position:{lat: 52.56, lng: 13.29},
+                                icon:image});
+                    marker5.setMap(map);
+                  google.maps.event.addListener(marker5, 'click', function() {
+                    $('#TXL_modal').modal('toggle')
+                    });
+                    $('#TXL').on({ 
+                    'click': function(){ 
+                    marker5.setIcon("../../../static/dot10.png");}
+                  });
+                    $('#TXL_cancel').on({ 
+                    'click': function(){ 
+                    marker5.setIcon("../../../static/dot9.png");}
+                  });
+                }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZArLA-li5nkjRx3v0MOPGn0BAyBcjK8&callback=myMap"></script>
+                
+                <!— The Modal —>
+                <!— The Modal —>
+                
+                </body>
+              </div>
+              <!-- iuname : MainForm -->
+              <form class="iu-pg-form MainForm pg-form" enctype="multipart/form-data" name="MainForm" action="result" method="post">
+                <div class="iu-box box-21">
+                  <div class="iu-cell cell">
+                    <p><span style="font-size: 24px; color: #ffffff;">Departure &amp; Arrival</span></p>
+                  </div>
+                </div>
+                <!-- iuname : calendar_Image -->
+                <div class="iu-floating-image floating-image-23"></div>
+                <!-- iuname : calendar_image -->
+                <div class="iu-floating-image floating-image-24"></div>
+                <div class="iu-text text-24">
+                  <p>&nbsp;<span style="font-size: 18px;">Departure Day</span></p>
+                </div>
+                <div class="iu-text text-26">
+                  <p><span style="font-size: 18px;">Arrival Day</span></p>
+                </div>
+                <!-- iuname : input_dep -->
+                <input class="iu-pg-text-field depday pg-text-field-49" type="date" name="depday" placeholder="YY/MM/DD" maxlength="8" max="20201231">
+                <!-- iuname : Input_arr -->
+                <input class="iu-pg-text-field arrday pg-text-field-28" type="date" name="arrday" placeholder="YY/MM/DD" maxlength="8" max="20201231">
+                <!-- iuname : adult_image -->
+                <div class="iu-floating-image floating-image-29"></div>
+                <div class="iu-text text-30">
+                  <p><span style="font-size: 18px;">Adult</span></p>
+                </div>
+                <!-- iuname : kid_image -->
+                <div class="iu-floating-image floating-image-31"></div>
+                <div class="iu-text text-32">
+                  <p>Kid</p>
+                </div>
+                <!-- iuname : select_adult_num -->
+                <select id="pg-select" class="iu-pg-select adult_num pg-select" name="adult_num">
+                  <option value="0">value0</option>
+                  <option value="1">value1</option>
+                  <option value="2">value2</option>
+                  <option value="3">value3</option>
+                  <option value="4">value4</option>
+                  <option value="5">value5</option>
+                  <option value="6">value6</option>
+                  <option value="7">value7</option>
+                  <option value="8">value8</option>
+                  <option value="9">value9</option>
+                </select>
+                <!-- iuname : select_kid_num -->
+                <select class="iu-pg-select kid_num pg-select-34" name="kid_num">
+                  <option value="0">value0</option>
+                  <option value="1">value1</option>
+                  <option value="2">value2</option>
+                  <option value="3">value3</option>
+                  <option value="4">value4</option>
+                  <option value="5">value5</option>
+                  <option value="6">value6</option>
+                  <option value="7">value7</option>
+                  <option value="8">value8</option>
+                  <option value="9">value9</option>
+                </select>
+                <div class="iu-cell cell-35">
+                  <p>Options</p>
+                </div>
+                <div class="iu-cell cell-36">
+                  <p>Stop :&nbsp;</p>
+                </div>
+                <!-- iuname : Checkbox_Non_stop -->
+                <input class="iu-pg-check-box pg-check-box" checked type="checkbox" name="Non_stop" value="1">
+                <div class="iu-cell cell-38">
+                  <p>Non-Stop</p>
+                </div>
+                <!-- iuname : Checkbox_1_stop -->
+                <input class="iu-pg-check-box pg-check-box-39" checked type="checkbox" name="1_stop" value="2">
+                <div class="iu-cell cell-40">
+                  <p>1 Stop</p>
+                </div>
+                <div class="iu-cell cell-43">
+                  <p>Daytime Landing</p>
+                </div>
+                <!-- iuname : Checkbox_daytime_Landing -->
+                <input class="iu-pg-check-box pg-check-box-44" type="checkbox">
+                <div class="iu-cell cell-45">
+                  <p>Max Flight Time</p>
+                </div>
+                <div class="iu-cell cell-46">
+                  <p>Max Layover Time</p>
+                </div>
+                <!-- iuname : Select_Max_Layover_Time -->
+                <select class="iu-pg-select pg-select-47">
+                  <option value="Error">Nothing</option>
+                </select>
+                <!-- iuname : Select_Max_Flight_Time -->
+                <select class="iu-pg-select pg-select-48">
+                  <option value="Error">Nothing</option>
+                </select>
+                <input class="iu-pg-button pg-button-49" type="submit" value="Search">
+              </form>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </body>
+</HTML>

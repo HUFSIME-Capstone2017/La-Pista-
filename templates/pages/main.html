@@ -1,0 +1,922 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<HTML>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+<link rel="stylesheet" type="text/css" href="/static/resource/css/pages/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/static/resource/css/compositions/header.css">
+<script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+  
+     <div class="iu-page list">
+<header class="iu-header header">
+{% include './compositions/header.html' %}
+
+</header>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<style>
+
+.mySlides1 {display:none;}
+    /* The Modal (background) */
+    /* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
+@keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+ul#myUL li {
+  padding: 12px 8px 12px 40px;
+  font-size: 16px;
+  transition: 1s;
+  text-align:left;
+  width:100px;
+}
+
+}
+.left{
+position:relative;
+left:20px;
+}
+.bs-docs-example {
+position: relative;
+margin: 15px 0;
+padding: 39px 19px 14px;
+background-color: #fff;
+border: 1px solid #ddd;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+.scrollspy-example {
+height: 320px;
+overflow: auto;
+position: relative;
+}
+
+button {margin-top:2em;}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 1rem;
+  position: relative;
+  width: 220px;
+}
+.card2 {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 1rem;
+  position: relative;
+  width: 220px;
+}
+.card-1 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12), 0 6px 6px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+
+.slides {
+    padding: 0;
+    width: 450px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 450px;
+    height: 300px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 100px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+  background: rgba(0, 0, 0, 0.8);
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+.range-slider {
+  position:relative;
+  width: 300px;
+  top:5px;
+  left:30px;
+}
+
+.range-slider__range {
+  -webkit-appearance: none;
+  width: 300px;
+  height: 5px;
+  border-radius: 5px;
+  background: #d7dcdf;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+.range-slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2c3e50;
+  cursor: pointer;
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+.range-slider__range::-webkit-slider-thumb:hover {
+  background: #1abc9c;
+}
+.range-slider__range:active::-webkit-slider-thumb {
+  background: #1abc9c;
+}
+.range-slider__range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  background: #2c3e50;
+  cursor: pointer;
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+.range-slider__range::-moz-range-thumb:hover {
+  background: #1abc9c;
+}
+.range-slider__range:active::-moz-range-thumb {
+  background: #1abc9c;
+}
+
+.range-slider__value {
+  display: inline-block;
+  position: absolute;
+  left:310px;
+  top:-10px;
+  width: 30px;
+  height:20px;
+  color: #fff;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 3px;
+  background: #2c3e50;
+  padding: 3px 7px;
+  margin-left: 5px;
+}
+.range-slider__value:after {
+  position: absolute;
+  top: -3px;
+  left: 300px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #2c3e50;
+  border-bottom: 7px solid transparent;
+  content: '';
+}
+
+::-moz-range-track {
+  background: #d7dcdf;
+  border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
+}
+.tags-input 
+{
+    list-style : none;   
+    border:1px solid #ccc;
+    display:inline-block;
+    padding:5px;
+    height: 40px;
+    font-size:14px;
+    background:#f3f3f3;
+    width: 600px;
+    border-radius:2px;
+    overflow:hidden;
+}
+
+.tags-input li
+{
+    float:left;
+}
+
+.tags
+{
+    background:#28343d;
+    padding:5px 20px 5px 8px;
+    border-radius:2px;
+    margin-right: 5px;
+    position: relative;
+}
+</style>
+
+</head>
+<body>
+<div class="iu-page main">
+<section class="iu-page-content page-content">
+<section class="iu-section section">
+<div class="iu-center-box center-box-13">
+<div class="iu-box box">
+<div class="iu-box box-19"></div>
+<div class="iu-html html">
+<html lang="en">
+<div id="map" style="width:60%;height:550px;background:yellow;position:relative;">
+</div>
+<ul class="tags-input">
+    <li class="tags" style="color:white;">선택된 도시 : </li>
+    <li class="tags" style="color:white;" id="show"></li>
+  </ul>
+<div class="over">
+<ul id="myUL">
+</ul> 
+
+</div>
+</div>
+<!-- iuname : MainForm -->
+<form class="iu-pg-form MainForm pg-form" enctype="multipart/form-data" name="MainForm" action="/result" method="post">
+{% csrf_token %}
+<div class="iu-box box-21">
+<p><span style=" position:absolute; left:10px; top:5px; font-size: 25px; color: #ffffff;">여행정보입력</span></p>
+<input type="hidden" name="clickOrder"/>
+</div>
+<span style="position:absolute; font-size:20px; font-style:bold; left:20px; top:50px;">General Option</span>
+<!-- iuname : calendar_Image -->
+<div class="iu-floating-image floating-image-23"></div>
+<!-- iuname : calendar_image -->
+<div class="iu-floating-image floating-image-24"></div>
+<!-- iuname : 출발일 -->
+<div class="iu-text text-24" data-iu-text='[
+"<p>출발일<\/p>",
+"<p>&nbsp;<span style=\"font-size: 18px;\">Departure Day<\/span><\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+</div>
+<!-- iuname : 도착일 -->
+<div class="iu-text text-26" data-iu-text='[
+"<p>도착일<\/p>",
+"<p><span style=\"font-size: 18px;\">Arrival Day<\/span><\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+</div>
+<!-- iuname : input_dep -->
+<input class="iu-pg-text-field depday pg-text-field-49" value="{{depday}}" type="date" name="depday" placeholder="YY/MM/DD" default="17/05/01" maxlength="8" max="20201231" tooltip=출발시간:{{departure}} tooltip=도착시간:{{arrival}} flow="down" required>
+<!-- iuname : Input_arr -->
+<input class="iu-pg-text-field arrday pg-text-field-28" value="{{arrday}}" type="date" name="arrday" placeholder="YY/MM/DD" maxlength="8" max="20201231" id="tooltip-8" title="도착날짜를 입력해주세요" required>
+<!-- iuname : adult_image -->
+<div class="iu-floating-image floating-image-29"></div>
+<div class="iu-text text-30" data-iu-text='[
+"<p>성인<\/p>",
+"<p><span style=\"font-size: 18px;\">Adult<\/span><\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p><span style="font-size: 18px;">Adult</span></p>
+</div>
+<!-- iuname : kid_image -->
+<div class="iu-floating-image floating-image-31"></div>
+<div class="iu-text text-32" data-iu-text='[
+"<p>유아<\/p>",
+"<p>Kid<\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p>Kid</p>
+</div>
+<!-- iuname : select_adult_num -->
+<select id="pg-select" class="iu-pg-select adult_num pg-select" name="adult_num">
+{% for represented_iu_option in adult_num %}
+<option {% ifequal selected_value represented_iu_option.value %}selected{% endifequal %} value="{{represented_iu_option.value}}">
+{{represented_iu_option.label}}
+</option>
+{% endfor %}
+</select>
+<!-- iuname : select_kid_num -->
+<select class="iu-pg-select kid_num pg-select-34" name="kid_num">
+{% for represented_iu_option in kid_num %}
+<option {% ifequal selected_value_kids represented_iu_option.value %}selected{% endifequal %} value="{{represented_iu_option.value}}">
+{{represented_iu_option.label}}
+</option>
+{% endfor %}인
+</select>
+<div class="iu-cell cell-35" data-iu-text='[
+"<p>Cutomized Option<\/p>",
+"<p>Options<\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p>Options</p>
+</div>
+<div>
+<span style="height:25px; left:20px; top:305px; width:200px;position:absolute; font-size:15px">마지막으로 방문하고 싶은 도시 : </span>
+<select style="position:absolute;left:230px; top:305px;" id="order" name="lastcity">
+  <option id="lastcity" name="lastcity">상관없음</option>
+</select>
+</div>
+<span style="position:absolute; left:20px; top:400px; font-size:18px; font-style:bold">여러분의 중요도를 선택해주세요!!🔊</span>
+<input class="iu-pg-button pg-button-49" type="submit" value="Search">
+<script>
+
+var checkboxClicks =  new Array(10);
+function updateClickOrder(checkbox) {
+    if (checkbox.checked) {
+        if (checkboxClicks[0] ==null) {
+            checkboxClicks[0]  = checkbox.value;
+        }else if (checkboxClicks[1] ==null) {
+            checkboxClicks[1]  = checkbox.value;
+        }else if (checkboxClicks[2] ==null) {
+            checkboxClicks[2]  = checkbox.value;
+        }else if (checkboxClicks[3] ==null) {
+            checkboxClicks[3]  = checkbox.value;
+        }else if (checkboxClicks[4] ==null) {
+            checkboxClicks[4]  = checkbox.value;
+        }else if (checkboxClicks[5] ==null) {
+            checkboxClicks[5]  = checkbox.value;
+        }else if (checkboxClicks[6] ==null) {
+            checkboxClicks[6]  = checkbox.value;
+        }else if (checkboxClicks[7] ==null) {
+            checkboxClicks[7]  = checkbox.value;
+        }else if (checkboxClicks[8] ==null) {
+            checkboxClicks[8]  = checkbox.value;
+        }else if (checkboxClicks[9] ==null) {
+            checkboxClicks[9]  = checkbox.value;
+        }
+    }
+ 
+    // alert(document.forms[0].clickOrder.value);
+    //alert("Clicked " + checkbox.value);
+var fix_orderlist = new Array();
+var orderlist= new Array();
+for(var i = 0; i < checkboxClicks.length; i++)
+{
+   if (checkboxClicks[i] != null) {  
+         orderlist.push(checkboxClicks[i])
+         fix_orderlist.push(checkboxClicks[i])
+}  
+  var json_orderlist = JSON.stringify(orderlist)
+   document.forms[0].clickOrder.value = json_orderlist;
+}
+$('#order').empty();
+var option = $("<option>"+"상관없음"+"</option>");
+$('#order').append(option);
+
+
+var new_orderlist= new Array();
+var new_orderlist_kor = new Array();
+var korlist_show=[]
+var korlist=['암스테르담','바르셀로나','부르가스','브뤼셀','부다페스트','파리','더블린','로마','프랑크푸르트','크라쿠프','런던','리스본','마드리드','뮌헨','니스','부쿠레슈티','프라하','소피아','베를린','바르샤바','취리히']
+var portlist=['AMS','BCN','BOJ','BRU','BUD','CDG','DUB','FCO','FRA','KRK','LHR','LIS','MAD','MUC','NCE','OTP','PRG','SOF','SXF','WAW','ZRH']
+for(var b=0; b<korlist.length;b++){
+  for(var c=0; c<korlist.length;c++){
+  if (fix_orderlist[b]==portlist[c]){
+    new_orderlist.push(korlist[c])
+    new_orderlist_kor.push(korlist[c])
+  }
+  
+  
+}
+}
+
+for(var a = 0; a < new_orderlist_kor.length; a++)
+{                
+    // var option = $("<option>"+orderlist[a]+"</option>");
+    // $('#order').append(option);
+    var option = $('<option value="'+orderlist[a]+'">'+new_orderlist_kor[a]+'</option>');
+    $('#order').append(option);
+
+    // var option = $("<option value="+orderlist[a]+">"+orderlist[a]+"</option>");
+    // $('#order').append(option);
+}
+    document.getElementById("show").innerHTML = new_orderlist;
+}
+
+</script>
+
+<div style="border-radius:6px; background-color:#D4EDFF; width:400px; height:110px;position:absolute; top:430px; left:20px;" id="mypista">
+<img src="{% static 'inf.jpg' %}" style="position:absolute; left:380px; top:10px; width:15px; height:15px;" href="#" title="항공권을 검색하기전에 가격이 중요한지, 기간이 중요한지, 여러분이 중요하게 생각하는것에 높은 점수를 주세요!">
+<br/>머무르는 기간 : &nbsp;&nbsp;
+<div class="range-slider">
+  <input class="range-slider__range" name="st" type="range" value="3" min="1" max="5">
+  <span class="range-slider__value">0</span>
+</div><br />
+가격 : &nbsp;&nbsp;
+
+<div class="range-slider">
+  <input class="range-slider__range" name="pc" type="range" value="3" min="1" max="5">
+  <span class="range-slider__value">0</span>
+</div>
+
+<script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+</script>
+</div>
+
+<div class="container">
+{% load staticfiles %}
+{% include './compositions/LHR_inf.html' %}
+{% include './compositions/CDG_inf.html' %}
+{% include './compositions/FCO_inf.html' %}
+{% include './compositions/MAD_inf.html' %}
+{% include './compositions/SXF_inf.html' %}
+{% include './compositions/BRU_inf.html' %}
+{% include './compositions/FRA_inf.html' %}
+{% include './compositions/MUC_inf.html' %}
+{% include './compositions/AMS_inf.html' %}
+{% include './compositions/DUB_inf.html' %}
+{% include './compositions/KRK_inf.html' %}
+{% include './compositions/WAW_inf.html' %}
+{% include './compositions/BOJ_inf.html' %}
+{% include './compositions/SOF_inf.html' %}
+{% include './compositions/NCE_inf.html' %}
+{% include './compositions/BUD_inf.html' %}
+{% include './compositions/PRG_inf.html' %}
+{% include './compositions/LIS_inf.html' %}
+{% include './compositions/OTP_inf.html' %}
+{% include './compositions/ZRH_inf.html' %}
+{% include './compositions/BCN_inf.html' %}
+
+
+
+</div>
+</div>
+</section>
+</section>
+</div>
+<div style="position:absolute; top:560px; left:530px; width:100px; height:100px;">
+     <input type=checkbox name="order_fix" value="order_fix"> 순서고정
+     </div>
+</form>
+<script>
+var rangeSlider = function(){
+  var slider = $('.range-slider'),
+      range = $('.range-slider__range'),
+      value = $('.range-slider__value');
+    
+  slider.each(function(){
+
+    value.each(function(){
+      var value = $(this).prev().attr('value');
+      $(this).html(value);
+    });
+
+    range.on('input', function(){
+      $(this).next(value).html(this.value);
+    });
+  });
+};
+
+rangeSlider();
+
+// Click on a close button to hide the current list item
+
+          var myIndex = 0;
+          carousel();
+          
+          function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides1");
+              for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 2000); // Change image every 2 seconds
+          }
+
+
+          function myMap() {
+            var myCenter = new google.maps.LatLng(51.650,14.709);
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {center: myCenter, zoom: 4};
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var image = '../../../static/dot.png'
+            var image2 = '../../../static/dot2.png'
+            var marker1 = new google.maps.Marker({position:{lat: 51.27159, lng: -0.20443}, icon:image});
+              marker1.setMap(map);
+            google.maps.event.addListener(marker1, 'click', function() {
+              $('#LHR_modal').modal('toggle')
+              });
+              $('#LHR').on({ 
+              'click': function(){ 
+              marker1.setIcon("../../../static/dot2.png");}
+            });
+              $('#LHR_cancel').on({ 
+              'click': function(){ 
+              marker1.setIcon("../../../static/dot.png");}
+            });
+            var marker2 = new google.maps.Marker({position:{lat: 48.646, lng: 2.330},
+                          icon:image});
+              marker2.setMap(map);
+            google.maps.event.addListener(marker2, 'click', function() {
+              $('#CDG_modal').modal('toggle')
+              });
+              $('#CDG').on({ 
+              'click': function(){ 
+              marker2.setIcon("../../../static/dot2.png");}
+            });
+              $('#CDG_cancel').on({ 
+              'click': function(){ 
+              marker2.setIcon("../../../static/dot.png");}
+            });
+            var marker3 = new google.maps.Marker({position:{lat: 41.8, lng: 12.25},
+                          icon:image});
+              marker3.setMap(map);
+            google.maps.event.addListener(marker3, 'click', function() {
+              $('#FCO_modal').modal('toggle')
+              });
+              $('#FCO').on({ 
+              'click': function(){ 
+              marker3.setIcon("../../../static/dot2.png");}
+            });
+              $('#FCO_cancel').on({ 
+              'click': function(){ 
+              marker3.setIcon("../../../static/dot.png");}
+            });
+            var marker4 = new google.maps.Marker({position:{lat: 40.5, lng: -3.567},
+                          icon:image});
+              marker4.setMap(map);
+            google.maps.event.addListener(marker4, 'click', function() {
+              $('#MAD_modal').modal('toggle')
+              });
+              $('#MAD').on({ 
+              'click': function(){ 
+              marker4.setIcon("../../../static/dot2.png");}
+            });
+              $('#MAD_cancel').on({ 
+              'click': function(){ 
+              marker4.setIcon("../../../static/dot0.png");}
+            });
+                var marker5 = new google.maps.Marker({position:{lat: 52.56, lng: 13.29},
+                          icon:image});
+              marker5.setMap(map);
+            google.maps.event.addListener(marker5, 'click', function() {
+              $('#SXF_modal').modal('toggle')
+              });
+              $('#SXF').on({ 
+              'click': function(){ 
+              marker5.setIcon("../../../static/dot2.png");}
+            });
+              $('#SXF_cancel').on({ 
+              'click': function(){ 
+              marker5.setIcon("../../../static/dot.png");}
+            });
+              var marker6 = new google.maps.Marker({position:{lat: 50.900755, lng: 4.479653},
+                          icon:image});
+              marker6.setMap(map);
+            google.maps.event.addListener(marker6, 'click', function() {
+              $('#BRU_modal').modal('toggle')
+              });
+              $('#BRU').on({ 
+              'click': function(){ 
+              marker6.setIcon("../../../static/dot2.png");}
+            });
+              $('#BRU_cancel').on({ 
+              'click': function(){ 
+              marker6.setIcon("../../../static/dot.png");}
+            });
+              var marker7 = new google.maps.Marker({position:{lat: 50.038105, lng: 8.562474},
+                          icon:image});
+              marker7.setMap(map);
+            google.maps.event.addListener(marker7, 'click', function() {
+              $('#FRA_modal').modal('toggle')
+              });
+              $('#FRA').on({ 
+              'click': function(){ 
+              marker7.setIcon("../../../static/dot2.png");}
+            });
+              $('#FRA_cancel').on({ 
+              'click': function(){ 
+              marker7.setIcon("../../../static/dot.png");}
+            });
+              var marker8 = new google.maps.Marker({position:{lat: 48.358051, lng: 11.784187},
+                          icon:image});
+              marker8.setMap(map);
+            google.maps.event.addListener(marker8, 'click', function() {
+              $('#MUC_modal').modal('toggle')
+              });
+              $('#MUC').on({ 
+              'click': function(){ 
+              marker8.setIcon("../../../static/dot2.png");}
+            });
+              $('#MUC_cancel').on({ 
+              'click': function(){ 
+              marker8.setIcon("../../../static/dot.png");}
+            });
+              var marker9 = new google.maps.Marker({position:{lat: 52.310834, lng: 4.768071},
+                          icon:image});
+              marker9.setMap(map);
+            google.maps.event.addListener(marker9, 'click', function() {
+              $('#AMS_modal').modal('toggle')
+              });
+              $('#AMS').on({ 
+              'click': function(){ 
+              marker9.setIcon("../../../static/dot2.png");}
+            });
+              $('#AMS_cancel').on({ 
+              'click': function(){ 
+              marker9.setIcon("../../../static/dot.png");}
+            });
+              var marker10 = new google.maps.Marker({position:{lat: 53.426646, lng: -6.250135},
+                          icon:image});
+              marker10.setMap(map);
+            google.maps.event.addListener(marker10, 'click', function() {
+              $('#DUB_modal').modal('toggle')
+              });
+              $('#DUB').on({ 
+              'click': function(){ 
+              marker10.setIcon("../../../static/dot2.png");}
+            });
+              $('#DUB_cancel').on({ 
+              'click': function(){ 
+              marker10.setIcon("../../../static/dot.png");}
+            });
+              var marker11 = new google.maps.Marker({position:{lat: 50.077095, lng: 19.787271},
+                          icon:image});
+              marker11.setMap(map);
+            google.maps.event.addListener(marker11, 'click', function() {
+              $('#KRK_modal').modal('toggle')
+              });
+              $('#KRK').on({ 
+              'click': function(){ 
+              marker11.setIcon("../../../static/dot2.png");}
+            });
+              $('#KRK_cancel').on({ 
+              'click': function(){ 
+              marker11.setIcon("../../../static/dot.png");}
+            });
+              var marker12 = new google.maps.Marker({position:{lat: 52.167526, lng: 20.967440},
+                          icon:image});
+              marker12.setMap(map);
+            google.maps.event.addListener(marker12, 'click', function() {
+              $('#WAW_modal').modal('toggle')
+              });
+              $('#WAW').on({ 
+              'click': function(){ 
+              marker12.setIcon("../../../static/dot2.png");}
+            });
+              $('#WAW_cancel').on({ 
+              'click': function(){ 
+              marker12.setIcon("../../../static/dot.png");}
+            });
+              var marker13 = new google.maps.Marker({position:{lat: 42.565492, lng: 27.516538},
+                          icon:image});
+              marker13.setMap(map);
+            google.maps.event.addListener(marker13, 'click', function() {
+              $('#BOJ_modal').modal('toggle')
+              });
+              $('#BOJ').on({ 
+              'click': function(){ 
+              marker13.setIcon("../../../static/dot2.png");}
+            });
+              $('#BOJ_cancel').on({ 
+              'click': function(){ 
+              marker13.setIcon("../../../static/dot.png");}
+            });
+              var marker14 = new google.maps.Marker({position:{lat: 42.689235, lng: 23.414747},
+                          icon:image});
+              marker14.setMap(map);
+            google.maps.event.addListener(marker14, 'click', function() {
+              $('#SOF_modal').modal('toggle')
+              });
+              $('#SOF').on({ 
+              'click': function(){ 
+              marker14.setIcon("../../../static/dot2.png");}
+            });
+              $('#SOF_cancel').on({ 
+              'click': function(){ 
+              marker14.setIcon("../../../static/dot.png");}
+            });
+              var marker15 = new google.maps.Marker({position:{lat: 43.660048, lng: 7.214049},
+                          icon:image});
+              marker15.setMap(map);
+            google.maps.event.addListener(marker15, 'click', function() {
+              $('#NCE_modal').modal('toggle')
+              });
+              $('#NCE').on({ 
+              'click': function(){ 
+              marker15.setIcon("../../../static/dot2.png");}
+            });
+              $('#NCE_cancel').on({ 
+              'click': function(){ 
+              marker15.setIcon("../../../static/dot.png");}
+            });
+              var marker16 = new google.maps.Marker({position:{lat: 47.438604, lng: 19.251588},
+                          icon:image});
+              marker16.setMap(map);
+            google.maps.event.addListener(marker16, 'click', function() {
+              $('#BUD_modal').modal('toggle')
+              });
+              $('#BUD').on({ 
+              'click': function(){ 
+              marker16.setIcon("../../../static/dot2.png");}
+            });
+              $('#BUD_cancel').on({ 
+              'click': function(){ 
+              marker16.setIcon("../../../static/dot.png");}
+            });
+              var marker17 = new google.maps.Marker({position:{lat: 50.102101, lng: 14.262849},
+                          icon:image});
+              marker17.setMap(map);
+            google.maps.event.addListener(marker17, 'click', function() {
+              $('#PRG_modal').modal('toggle')
+              });
+              $('#PRG').on({ 
+              'click': function(){ 
+              marker17.setIcon("../../../static/dot2.png");}
+            });
+              $('#PRG_cancel').on({ 
+              'click': function(){ 
+              marker17.setIcon("../../../static/dot.png");}
+            });
+              var marker18 = new google.maps.Marker({position:{lat: 38.775953, lng: -9.135495},
+                          icon:image});
+              marker18.setMap(map);
+            google.maps.event.addListener(marker18, 'click', function() {
+              $('#LIS_modal').modal('toggle')
+              });
+              $('#LIS').on({ 
+              'click': function(){ 
+              marker18.setIcon("../../../static/dot2.png");}
+            });
+              $('#LIS_cancel').on({ 
+              'click': function(){ 
+              marker18.setIcon("../../../static/dot.png");}
+            });
+              var marker19 = new google.maps.Marker({position:{lat: 44.571227, lng: 26.084412},
+                          icon:image});
+              marker19.setMap(map);
+            google.maps.event.addListener(marker19, 'click', function() {
+              $('#OTP_modal').modal('toggle')
+              });
+              $('#OTP').on({ 
+              'click': function(){ 
+              marker19.setIcon("../../../static/dot2.png");}
+            });
+              $('#OTP_cancel').on({ 
+              'click': function(){ 
+              marker19.setIcon("../../../static/dot.png");}
+            });
+              var marker20 = new google.maps.Marker({position:{lat: 47.458362, lng: 8.554821},
+                          icon:image});
+              marker20.setMap(map);
+            google.maps.event.addListener(marker20, 'click', function() {
+              $('#ZRH_modal').modal('toggle')
+              });
+              $('#ZRH').on({ 
+              'click': function(){ 
+              marker20.setIcon("../../../static/dot2.png");}
+            });
+              $('#ZRH_cancel').on({ 
+              'click': function(){ 
+              marker20.setIcon("../../../static/dot.png");}
+            });
+              var marker21 = new google.maps.Marker({position:{lat: 41.297308, lng: 2.082811},
+                          icon:image});
+              marker21.setMap(map);
+            google.maps.event.addListener(marker21, 'click', function() {
+              $('#BCN_modal').modal('toggle')
+              });
+              $('#BCN').on({ 
+              'click': function(){ 
+              marker21.setIcon("../../../static/dot2.png");}
+            });
+              $('#BCN_cancel').on({ 
+              'click': function(){ 
+              marker21.setIcon("../../../static/dot.png");}
+            });
+          }
+          $(function() {
+            $('#navbarExample2').scrollspy();
+            $('#pop').modal();
+
+            $('#myModal').on('shown', function(){
+            $('[data-spy="scroll"]').each(function () {
+            var $spy = $(this).scrollspy('refresh')
+            })
+            $('#navbarExample1').scrollspy();
+            });
+
+
+            $('#myModal').mCustomScrollbar({
+            theme : 'dark-thick'
+          });
+          });
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZArLA-li5nkjRx3v0MOPGn0BAyBcjK8&callback=myMap"></script>
+</body>
+</HTML>

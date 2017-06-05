@@ -1,0 +1,23 @@
+.iu-center-box {
+  width:1280px;
+}
+
+.pg-button {
+  background-color:#FFFFFF;
+  border-color:#FFFFFF;
+  border-width:-1px;
+  color:#6D6D6D;
+  height:30px;
+  left:1130px;
+  opacity:1;
+  top:22px;
+  width:100px;
+}
+.fb-like > iframe {
+  position:relative;
+}
+.fb-like {
+  left:800px;
+  top:0px;
+}
+

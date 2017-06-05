@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+  <link rel="stylesheet" type="text/css" href="/static/resource/css/pages/detail.css">
+  <link rel="stylesheet" type="text/css" href="/static/resource/css/compositions/header.css">
+  <script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+  <title></title>
+  <style>
+#chartdiv {
+  width : 100%;
+  height  : 500px;
+}
+</style>
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<style>
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+.row {
+
+  margin: 0 auto;
+  padding: 60px 30px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.row:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: -5000px;
+  height: 100%;
+  width: 15000px;
+  z-index: -1;
+  background: inherit;
+}
+.row span {
+  position: relative;
+  display: inline-block;
+  margin: 30px 10px;
+}
+
++ label {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  background: #7AB893;
+  transition: all .3s ease-in-out;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.swing {
+  display: inline-block;
+  width: 300px;
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #6799FF;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 60px;
+  transition: all .3s ease-in-out;
+}
+.swing::-webkit-input-placeholder {
+  color: #efefef;
+  text-indent: 0;
+  font-weight: 300;
+}
+.swing + label {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  background: #6799FF;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  transform-origin: 2px 2px;
+  transform: rotate(0);
+  animation: swing-back .4s 1 ease-in-out;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(116deg);
+  }
+  40% {
+    transform: rotate(60deg);
+  }
+  60% {
+    transform: rotate(98deg);
+  }
+  80% {
+    transform: rotate(76deg);
+  }
+  100% {
+    transform: rotate(82deg);
+  }
+}
+@keyframes swing-back {
+  0% {
+    transform: rotate(82deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.swing:focus,
+.swing:active {
+  color: #377D6A;
+  text-indent: 0;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.swing:focus::-webkit-input-placeholder,
+.swing:active::-webkit-input-placeholder {
+  color: #aaa;
+}
+.swing:focus + label,
+.swing:active + label {
+  animation: swing 1.4s 1 ease-in-out;
+  transform: rotate(82deg);
+}
+
+</style>
+<!-- Chart code -->
+<script>
+var axis={{axis|safe}}
+var chart = AmCharts.makeChart("chartdiv", {
+    "type": "serial",
+    "theme": "light",
+    "marginRight":80,
+    "autoMarginOffset":20,
+    "dataDateFormat": "YYYY-MM-DD HH:NN",
+    "dataProvider": axis,
+    "valueAxes": [{
+        "axisAlpha": 0,
+        "guides": [{
+            "fillAlpha": 0.1,
+            "fillColor": "#888888",
+            "lineAlpha": 0,
+            "toValue": 95,
+            "value": 105
+        }],
+        "position": "left",
+        "tickLength": 0
+    }],
+    "graphs": [{
+        "balloonText": "[[date]]일에 발권 시,<br><b><span style='font-size:14px;'>오늘 예매하는 것 보다 <br>약 [[value2]]% 증가합니다. </span></b>",
+        "bullet": "round",
+        "dashLength": 3,
+        "colorField":"color",
+        "valueField": "value"
+    }],
+
+    "chartScrollbar": {
+        "scrollbarHeight":2,
+        "offset":-1,
+        "backgroundAlpha":0.1,
+        "backgroundColor":"#888888",
+        "selectedBackgroundColor":"#67b7dc",
+        "selectedBackgroundAlpha":1
+    },
+    "chartCursor": {
+        "fullWidth":true,
+        "valueLineEabled":true,
+        "valueLineBalloonEnabled":true,
+        "valueLineAlpha":0.5,
+        "cursorAlpha":0
+    },
+    "categoryField": "date",
+    "categoryAxis": {
+        "parseDates": true,
+        "axisAlpha": 0,
+        "gridAlpha": 0.1,
+        "minorGridAlpha": 0.1,
+        "minorGridEnabled": true
+    },
+    "export": {
+        "enabled": true
+     }
+});
+
+chart.addListener("dataUpdated", zoomChart);
+
+
+</script>
+</head>
+<body>
+{% load staticfiles %}
+    <header class="iu-header header">
+      {% include './compositions/header.html' %}
+    </header>
+    <img src="{% static '핵꿀팁4.png' %}" style="width: 1100px; height: 170px; position:absolute; left:170px; top:40px">
+          <form name="TrendForm" action="" method="get" target="graph">
+<div class="row" style="top:70px">
+  <span>
+    <input class="swing" name="origin" id="origin" type="text" placeholder="출발 도시를 입력하세요." autocomplete="on" /><label for="origin">출발도시</label>
+  </span>
+  <span>
+    <input class="swing"  name="destination" id="destination" type="text" placeholder="도착 도시를 입력하세요." autocomplete="on"/><label for="destination">도착도시</label>
+  </span>
+  <span>
+    <input class="swing"  name="dep"  id="dep" type="date" placeholder="" /><label for="dep">출발 날짜</label>
+  </span>
+ <button type="submit" value="submit" style="width:50px; height:40px; border-radius:5px">검색</div>
+  </div>
+  </form>
+ <div id="chartdiv" name="graph" style="width:1200px; height:400px;position:relative; left:100px"></div>
+
+
+</body>
+</html>

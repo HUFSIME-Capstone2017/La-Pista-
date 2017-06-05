@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+    <link rel="stylesheet" type="text/css" href="/static/resource/css/pages/result.css">
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header" );
+        document.createElement("footer" );
+        document.createElement("section");
+        document.createElement("nav"    );
+        document.createElement("article");
+      </script>
+      <noscript>
+        <strong>Warning !</strong>
+        Because your browser does not support HTML5, some elements are simulated using JScript.
+        Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+      </noscript>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- iuname : result -->
+    <div class="iu-page result">
+      <section class="iu-page-content page-content">
+        <section class="iu-section section" style="<div style= "overflow:hidden;"></div>">
+          <div class="iu-center-box center-box-14">
+            <form class="iu-pg-form pg-form" enctype="multipart/form-data" method="post">
+              {% csrf_token %}
+              <div class="iu-text text-34">
+                <p><em><span style="color: #ffffff;">Filter</span></em></p>
+              </div>
+              <div class="iu-text text-35">
+                <p><strong><span style="color: #ffffff;">머무는 기간(Day)</span></strong></p>
+              </div>
+              <div class="iu-box box">
+                <div class="iu-html html-168">
+                  <div style="text-align:center;"> {{city2}} </div>
+                </div>
+                <div class="iu-pg-slide pg-slide" data-iu-slide-min-value="0" data-iu-slide-max-value="15" data-iu-slide-default-value="4">
+                  <div class="iu-pg-slide-bar pg-slide-bar">
+                    <div class="iux-pg-slidebar-innerbar">
+                      <div class="iu-pg-slide-point pg-slide-point">
+                        <div class="iux-pg-slidepoint-toucharea"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="iu-pg-slide-text-field pg-slide-text-field" type="text" value="4">
+                </div>
+              </div>
+              <div class="iu-box box-44">
+                <div class="iu-text text-46">
+                  <h1><span style="color: #ffffff;"><strong>경유여부</strong></span></h1>
+                </div>
+                <div class="iu-text text-48">
+                  <p><span style="color: #ffffff;">Non-Stop</span></p>
+                </div>
+                <div class="iu-text text-49">
+                  <p><span style="color: #ffffff;">Stop</span></p>
+                </div>
+                <div class="iu-box box-156">
+                  <input class="iu-pg-check-box pg-check-box" type="checkbox">
+                  <input class="iu-pg-check-box pg-check-box-51" type="checkbox">
+                  <div class="iu-html html-158">
+                    <div style="text-align:center;"> {{Destination1}} </div>
+                  </div>
+                </div>
+                <div class="iu-box box-158">
+                  <div class="iu-html html-159">
+                    <div style="text-align:center;"> {{city3}} </div>
+                  </div>
+                  <input class="iu-pg-check-box pg-check-box-160" type="checkbox">
+                  <input class="iu-pg-check-box pg-check-box-161" type="checkbox">
+                </div>
+                <div class="iu-box box-162">
+                  <div class="iu-html html-163">
+                    <div style="text-align:center;"> {{city4}} </div>
+                  </div>
+                  <input class="iu-pg-check-box pg-check-box-164" type="checkbox">
+                  <input class="iu-pg-check-box pg-check-box-165" type="checkbox">
+                </div>
+                <div class="iu-box box-176">
+                  <div class="iu-html html-184">
+                    <div style="text-align:center;"> {{city2}} </div>
+                  </div>
+                  <input class="iu-pg-check-box pg-check-box-178" type="checkbox">
+                  <input class="iu-pg-check-box pg-check-box-179" type="checkbox">
+                </div>
+                <div class="iu-box box-203">
+                  <div class="iu-html html-204">
+                    <div style="text-align:center;"> {{city5}} </div>
+                  </div>
+                  <input class="iu-pg-check-box pg-check-box-205" type="checkbox">
+                  <input class="iu-pg-check-box pg-check-box-206" type="checkbox">
+                </div>
+              </div>
+              <input class="iu-pg-button pg-button-45" type="submit" value="Search">
+              <div class="iu-box box-150"></div>
+              <div class="iu-text text-151">
+                <h1><span style="color: #ffffff;">순서변경</span></h1>
+              </div>
+              <select class="iu-pg-select pg-select">
+                <option value="Error">Nothing</option>
+              </select>
+              <select class="iu-pg-select pg-select-153">
+                <option value="Error">Nothing</option>
+              </select>
+              <div class="iu-text text-154">
+                <p><span style="font-size: 12px;">마지막으로 방문하고 싶은 도시</span></p>
+              </div>
+              <div class="iu-box box-155"></div>
+              <div class="iu-box box-166">
+                <div class="iu-html html-167">
+                  <div style="text-align:center;"> {{city3}} </div>
+                </div>
+                <div class="iu-pg-slide pg-slide-200" data-iu-slide-min-value="0" data-iu-slide-max-value="15" data-iu-slide-default-value="4">
+                  <div class="iu-pg-slide-bar pg-slide-bar-201">
+                    <div class="iux-pg-slidebar-innerbar">
+                      <div class="iu-pg-slide-point pg-slide-point-203">
+                        <div class="iux-pg-slidepoint-toucharea"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="iu-pg-slide-text-field pg-slide-text-field-202" type="text" value="4">
+                </div>
+              </div>
+              <div class="iu-box box-167">
+                <div class="iu-html html-169">
+                  <div style="text-align:center;"> {{city4}} </div>
+                </div>
+                <div class="iu-pg-slide pg-slide-198" data-iu-slide-min-value="0" data-iu-slide-max-value="15" data-iu-slide-default-value="4">
+                  <div class="iu-pg-slide-bar pg-slide-bar-199">
+                    <div class="iux-pg-slidebar-innerbar">
+                      <div class="iu-pg-slide-point pg-slide-point-201">
+                        <div class="iux-pg-slidepoint-toucharea"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="iu-pg-slide-text-field pg-slide-text-field-200" type="text" value="4">
+                </div>
+              </div>
+              <div class="iu-box box-195">
+                <div class="iu-html html-202">
+                  <div style="text-align:center;"> {{city5}} </div>
+                </div>
+                <div class="iu-pg-slide pg-slide-196" data-iu-slide-min-value="0" data-iu-slide-max-value="15" data-iu-slide-default-value="4">
+                  <div class="iu-pg-slide-bar pg-slide-bar-197">
+                    <div class="iux-pg-slidebar-innerbar">
+                      <div class="iu-pg-slide-point pg-slide-point-199">
+                        <div class="iux-pg-slidepoint-toucharea"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="iu-pg-slide-text-field pg-slide-text-field-198" type="text" value="4">
+                </div>
+              </div>
+              <input class="iu-pg-button pg-button-208" type="button" value="Button">
+            </form>
+            <div class="iu-simple-tabview simple-tabview" data-iu-show-animation="transition.slideDownIn">
+              <div class="iu-simple-tab-header simple-tab-header">
+                <div class="iu-simple-tab-button simple-tab-button">
+                  <!-- iuname : 최적경로 -->
+                  <div class="iu-cell cell">
+                    <p>La Pista의 추천 경로</p>
+                  </div>
+                </div>
+                <div class="iu-simple-tab-button simple-tab-button-21">
+                  <div class="iu-cell cell-25">
+                    <p>머무르는 기간을 더 고려</p>
+                  </div>
+                </div>
+                <div class="iu-simple-tab-button simple-tab-button-27">
+                  <div class="iu-cell cell-28">
+                    <p>항공권 가격을 더 고려</p>
+                  </div>
+                </div>
+              </div>
+              <div class="iu-simple-tab-content simple-tab-content">
+                <div class="iu-simple-tab-content-item simple-tab-content-item">
+                  <div class="iu-box box-59">
+                    <div class="iu-box box-70">
+                      <!-- iuname : depcity -->
+                      <div class="iu-floating-image floating-image-60"></div>
+                      <div class="iu-html html-71">
+                        <div style="text-align:center;">  </div>
+                      </div>
+                      <div class="iu-html html-179">
+                        <div style="text-align:center;"> 인천({{city1}}) </div>
+                      </div>
+                    </div>
+                    <!-- iuname : city1_arrow -->
+                    <div class="iu-floating-image floating-image-61"></div>
+                    <!-- iuname : city2_arrow -->
+                    <div class="iu-floating-image floating-image-63"></div>
+                    <!-- iuname : city3_arrow -->
+                    <div class="iu-floating-image floating-image-65"></div>
+                    <!-- iuname : dep_arrow -->
+                    <div class="iu-floating-image floating-image-67"></div>
+                    <!-- iuname : dep_arrow -->
+                    <div class="iu-floating-image floating-image-210"></div>
+                    <div class="iu-box box-72">
+                      <!-- iuname : city1 -->
+                      <div class="iu-floating-image floating-image-62"></div>
+                      <div class="iu-html html-74">
+                        <div style="text-align:center;"> 6일 </div>
+                      </div>
+                      <div class="iu-html html-180">
+                        <div style="text-align:center;"> 로마({{city2}}) </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-75">
+                      <!-- iuname : city2 -->
+                      <div class="iu-floating-image floating-image-64"></div>
+                      <div class="iu-html html-77">
+                        <div style="text-align:center;"> 3일 </div>
+                      </div>
+                      <div class="iu-html html-181">
+                        <div style="text-align:center;"> 런던({{city3}}) </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-78">
+                      <!-- iuname : city3 -->
+                      <div class="iu-floating-image floating-image-66"></div>
+                      <div class="iu-html html-80">
+                        <div style="text-align:center;"> 5일 </div>
+                      </div>
+                      <div class="iu-html html-182">
+                        <div style="text-align:center;"> 파리({{city4}}) </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-206">
+                      <!-- iuname : city3 -->
+                      <div class="iu-floating-image floating-image-207"></div>
+                      <div class="iu-html html-209">
+                        <div style="text-align:center;"> 3일 </div>
+                      </div>
+                      <div class="iu-html html-208">
+                        <div style="text-align:center;"> 마드리드({{city5}}) </div>
+                      </div>
+                    </div>
+                    <div class="iu-floating-image floating-image-132"></div>
+                    <div class="iu-box box-200">
+                      <div class="iu-floating-image floating-image-201"></div>
+                      <div class="iu-html html-203">
+                        <div style="text-align:center;"> 인천({{city1}}) </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iu-box box-58">
+                    <div class="iu-html html-59">
+                      <div style="text-align:center;">$ {{totalcost}} </div>
+                    </div>
+                  </div>
+                  <div class="iu-box box-84">
+                    <div class="iu-box box-128">
+                      <div class="iu-html html-141">
+                        <div style="text-align:center;"> {{Price12}} </div>
+                      </div>
+                      <div class="iu-html html-142">
+                        <div style="text-align:center;"> {{Carriers12}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route3_box2 -->
+                    <div class="iu-box box-105">
+                      <div class="iu-html html-139">
+                        <div style="text-align:center;"> {{Price11}} </div>
+                      </div>
+                      <div class="iu-html html-140">
+                        <div style="text-align:center;"> {{Carriers11}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-floating-image floating-image-87"></div>
+                    <div class="iu-floating-image floating-image-94"></div>
+                    <div class="iu-floating-image floating-image-102"></div>
+                    <div class="iu-floating-image floating-image-110"></div>
+                    <div class="iu-floating-image floating-image-183"></div>
+                    <!-- iuname : route1_box1 -->
+                    <div class="iu-box box-89">
+                      <div class="iu-html html-148">
+                        <div style="text-align:center;"> {{Price1}} </div>
+                      </div>
+                      <div class="iu-html html-170">
+                        <div style="text-align:center;"> {{Carriers1}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route2_box1 -->
+                    <div class="iu-box box-96">
+                      <div class="iu-html html-123">
+                        <div style="text-align:center;"> {{Price5}} </div>
+                      </div>
+                      <div class="iu-html html-124">
+                        <div style="text-align:center;"> {{Carriers5}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route3_box1 -->
+                    <div class="iu-box box-104">
+                      <div class="iu-html html-135">
+                        <div style="text-align:center;"> {{Price9}} </div>
+                      </div>
+                      <div class="iu-html html-136">
+                        <div style="text-align:center;"> {{Carriers9}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route4_box1 -->
+                    <div class="iu-box box-112">
+                      <div class="iu-html html-143">
+                        <div style="text-align:center;"> {{Price13}} </div>
+                      </div>
+                      <div class="iu-html html-144">
+                        <div style="text-align:center;"> {{Carriers13}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route2_box2 -->
+                    <div class="iu-box box-90">
+                      <div class="iu-html html-149">
+                        <div style="text-align:center;"> {{Price3}} </div>
+                      </div>
+                      <div class="iu-html html-173">
+                        <div style="text-align:center;"> {{Carriers3}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route2_box2 -->
+                    <div class="iu-box box-97">
+                      <div class="iu-html html-131">
+                        <div style="text-align:center;"> {{Price7}} </div>
+                      </div>
+                      <div class="iu-html html-132">
+                        <div style="text-align:center;"> {{Carriers7}} </div>
+                      </div>
+                    </div>
+                    <!-- iuname : route4_box2 -->
+                    <div class="iu-box box-113">
+                      <div class="iu-html html-147">
+                        <div style="text-align:center;"> {{Price15}} </div>
+                      </div>
+                      <div class="iu-html html-150">
+                        <div style="text-align:center;"> {{Carriers15}} </div>
+                      </div>
+                    </div>
+                    <input class="iu-pg-button pg-button-171" type="submit" value="submit">
+                    <div class="iu-box box-129">
+                      <div class="iu-html html-127">
+                        <div style="text-align:center;"> {{Price2}} </div>
+                      </div>
+                      <div class="iu-html html-128">
+                        <div style="text-align:center;"> {{Carriers2}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-124">
+                      <div class="iu-html html-125">
+                        <div style="text-align:center;"> {{Price6}} </div>
+                      </div>
+                      <div class="iu-html html-126">
+                        <div style="text-align:center;"> {{Carriers6}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-125">
+                      <div class="iu-html html-137">
+                        <div style="text-align:center;"> {{Price10}} </div>
+                      </div>
+                      <div class="iu-html html-138">
+                        <div style="text-align:center;"> {{Carriers10}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-126">
+                      <div class="iu-html html-145">
+                        <div style="text-align:center;"> {{Price14}} </div>
+                      </div>
+                      <div class="iu-html html-146">
+                        <div style="text-align:center;"> {{Carriers14}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-123">
+                      <div class="iu-html html-129">
+                        <div style="text-align:center;"> {{Price4}} </div>
+                      </div>
+                      <div class="iu-html html-130">
+                        <div style="text-align:center;"> {{Carriers4}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-127">
+                      <div class="iu-html html-133">
+                        <div style="text-align:center;"> {{Price8}} </div>
+                      </div>
+                      <div class="iu-html html-134">
+                        <div style="text-align:center;"> {{Carriers8}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-130">
+                      <div class="iu-html html-151">
+                        <div style="text-align:center;"> {{Price16}} </div>
+                      </div>
+                      <div class="iu-html html-152">
+                        <div style="text-align:center;"> {{Carriers16}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-html html-154">
+                      <div style="text-align:center;"> {{city1}} </div>
+                    </div>
+                    <div class="iu-html html-155">
+                      <div style="text-align:center;"> {{city2}} </div>
+                    </div>
+                    <div class="iu-html html-156">
+                      <div style="text-align:center;"> {{city2}} </div>
+                    </div>
+                    <div class="iu-html html-157">
+                      <div style="text-align:center;"> {{city3}} </div>
+                    </div>
+                    <div class="iu-html html-175">
+                      <div style="text-align:center;"> {{city3}} </div>
+                    </div>
+                    <div class="iu-html html-176">
+                      <div style="text-align:center;"> {{city4}} </div>
+                    </div>
+                    <div class="iu-html html-177">
+                      <div style="text-align:center;"> {{city4}} </div>
+                    </div>
+                    <div class="iu-html html-178">
+                      <div style="text-align:center;"> {{city5}} </div>
+                    </div>
+                    <div class="iu-html html-185">
+                      <div style="text-align:center;"> {{city5}} </div>
+                    </div>
+                    <div class="iu-box box-181">
+                      <div class="iu-html html-186">
+                        <div style="text-align:center;"> {{Price17}} </div>
+                      </div>
+                      <div class="iu-html html-187">
+                        <div style="text-align:center;"> {{Carriers17}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-html html-188">
+                      <div style="text-align:center;"> {{city1}} </div>
+                    </div>
+                    <div class="iu-box box-186">
+                      <div class="iu-html html-189">
+                        <div style="text-align:center;"> {{Price18}} </div>
+                      </div>
+                      <div class="iu-html html-190">
+                        <div style="text-align:center;"> {{Carriers18}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-187">
+                      <div class="iu-html html-191">
+                        <div style="text-align:center;"> {{Price19}} </div>
+                      </div>
+                      <div class="iu-html html-192">
+                        <div style="text-align:center;"> {{Carriers19}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-188">
+                      <div class="iu-html html-193">
+                        <div style="text-align:center;"> {{Price20}} </div>
+                      </div>
+                      <div class="iu-html html-194">
+                        <div style="text-align:center;"> {{Carriers20}} </div>
+                      </div>
+                    </div>
+                    <div class="iu-html html-205">
+                      <div style="text-align:center;"> {{depday}} </div>
+                    </div>
+                    <div class="iu-html html-206">
+                      <div style="text-align:center;"> 2017-05-0{{date2}} </div>
+                    </div>
+                    <div class="iu-html html-207">
+                      <div style="text-align:center;"> 2017-05-0{{date3}} </div>
+                    </div>
+                    <div class="iu-html html-210">
+                      <div style="text-align:center;"> 2017-05-{{date4}} </div>
+                    </div>
+                    <div class="iu-html html-211">
+                      <div style="text-align:center;"> {{arrday}} </div>
+                    </div>
+                  </div>
+                  <div class="iu-googlemap googlemap" data-iu-map-apikey="AIzaSyAMQ-x96aS6dyp_Txngu7SJZhELW2c7SDM" data-iu-map-longitude="-74.0059413" data-iu-map-latitude="40.7127837" data-iu-map-zoom-level="12" data-iu-map-street="false" data-iu-map-zoom="false" data-iu-map-icon="true" data-iu-map-title="New York"></div>
+                </div>
+                <div class="iu-simple-tab-content-item simple-tab-content-item-24">
+                  <div class="iu-text text-27">
+                    <p>Tab Contents 2</p>
+                  </div>
+                  <div class="iu-html html-174">
+                    <div style="text-align:center;"> {{result_st)) </div>
+                  </div>
+                </div>
+                <div class="iu-tab-content-item tab-content-item">
+                  <div class="iu-text text-30">
+                    <p>Tab Contents 3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="iu-box box-141">
+              <div class="iu-html html">
+                <div style="text-align:center;"> {{depday}}  ~  {{arrday}} </div>
+              </div>
+              <div class="iu-text text-143">
+                <p>From : Seoul (ICN)</p>
+              </div>
+              <div class="iu-html html-153">
+                <div style="text-align:center;"> {{city2}},   {{city3}},   {{city4}},   {{city5}}  </div>
+              </div>
+              <div class="iu-cell cell-175">
+                <p>To :</p>
+              </div>
+            </div>
+            <div class="iu-floating-image floating-image-175">
+              <a class="iux-inner-link" href="/index">
+              </a>
+            </div>
+            <div class="iu-fb-like fb-like-209">
+              <iframe src="//www.facebook.com/plugins/like.php?href=http://www.iueditor.org+&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;colorscheme=light&amp;" scrolling="no" frameborder="0" allowTransparency="true" style="border:none;overflow:hidden;height:80px"></iframe>
+            </div>
+            <div class="iu-tweet-button tweet-button">
+              <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
+                Tweet
+              </a>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </body>
+</HTML>

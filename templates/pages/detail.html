@@ -1,0 +1,403 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<HTML  style="overflow-x:scroll;">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+<link rel="stylesheet" type="text/css" href="/static/resource/css/pages/result.css">
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/moment.min.js'></script>
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery.min.js'></script>
+<script src="http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery-ui.custom.min.js"></script>
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/fullcalendar.min.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+<style>
+.scrollspy-example {
+height: 580px;
+overflow: auto;
+position: relative;
+}
+
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+        font-size:7px;
+  }
+
+  .fc-event{
+     border-color:red;
+  }
+
+
+</style>
+<script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+
+</head>
+<body scroll="yes">
+<header class="iu-header header">
+{% include './compositions/header.html' %}
+</header>
+<img src="{% static '여행상세정보3.png' %}" style="width: 800px; height: 90px; position:absolute; left:350px; top:60px">
+<!-- 달력 -->
+<div style="position:absolute; border-width:1px; border:solid; border-color:lightgrey; width:467px; height:300px; top:170px; left:50px; border-radius:5px;">
+<div id="calendar" >
+<div class="fc-left" style="position:relative; top:1000px; left:200px"><div class="fc-button-group"><button type="button" class="fc-prev-button fc-button fc-state-default fc-corner-left"><span class="fc-icon fc-icon-left-single-arrow"></span></button><button type="button" class="fc-next-button fc-button fc-state-default fc-corner-right"><span class="fc-icon fc-icon-right-single-arrow"></span></button></div><button type="button" class="fc-today-button fc-button fc-state-default fc-corner-left fc-corner-right fc-state-disabled" disabled="">today</button></div>
+</div>
+</div>
+<meta charset="euc-kr" />
+<script charset='euc-kr'>
+
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'today prev,next',
+        center: 'title',
+        right: 'month',
+
+      },
+      navLinks:true,
+      editable: false,
+      eventLimit: true, // allow "more" link when too many events
+      events: {{event|safe}},
+      eventColor: 'black',
+      defaultDate: '2017-06-12',
+
+
+        eventClick: function(event) {
+          if (event.url) {
+            $.magnificPopup.open({
+                items: {                    
+                  iframe: event.url,
+                  type: 'iframe'
+                }
+            });
+          }
+        }
+    });
+
+</script>
+<!-- 지도 -->
+<div id="map" style="position:absolute; border-width:1px; border:solid; border-color:lightgrey; width:467px; height:300px; top:170px; left:531px; border-radius:5px">
+</div>
+<!-- 순서 -->
+<div style="position:absolute; width:950px; height:180px; top:480px; left:50px" >
+<img src="{% static '나의유럽여행.jpg' %}" style="position:relative; width:950px; height:180px; z-index:-2">
+<span style="top:75px; position:relative; font-size: 35px; font-style:bold; left:75px; top:-100px">${{my_list.total_cost}}</span>
+<span style="position:relative; left:100px; top:-148px">인천</span>
+<img src="{% static 'point.jpg' %}" style="position:relative; left:75px; top:-115px; width:20px; height:20px">
+<ul style="position:absolute; left:270px; top:-7px; list-style:none; margin:0; padding:0;">
+{%if list_num <= 4%}
+{% for city,stay in big_zip %}
+<li style="margin:1px 20px 0px 10px;float:left;">
+<div style="text-align:right; font-size:15px">
+<div style="position:relative;  left:calc(100px/{{list_num}}); top:60px; width:80px">{{city}}</div>
+<img src="{% static 'next.jpg' %}" style="width:calc(300px/{{list_num}}); height:15px; position:relative;top:70px"><br>
+<img src="{% static 'point.jpg' %}" style="left:20px; top:50px; width:20px; height:20px;position:relative;">
+<div style="position:relative; top:60px; left:calc(200px/{{list_num}}); width:80px">{{stay}}일</span>
+</div>
+</li>
+{% endfor %}
+{% else%}
+{% for city,stay in big_zip %}
+<li style="margin:1px 20px 0px -20px;float:left;">
+<div style="text-align:right; font-size:15px">
+<div style="position:relative;  left:calc(100px/{{list_num}}); top:60px; width:80px">{{city}}</div>
+<img src="{% static 'next.jpg' %}" style="width:calc(300px/{{list_num}}); height:15px; position:relative;top:70px"><br>
+<img src="{% static 'point.jpg' %}" style="left:20px; top:50px; width:20px; height:20px;position:relative;">
+<div style="position:relative; top:60px; left:calc(200px/{{list_num}}); width:80px">{{stay}}일</span>
+</div>
+</li>
+{% endfor %}
+{%endif%}
+<li style="margin:1px 20px 10px 1px; padding:0 0 0 0; border:0; float:left;">
+<div style="text-align:right; font-size:15px">
+<span style="top:60px; position:relative; left:calc(320px/{{list_num}})">인천</span>
+<img src="{% static 'next.jpg' %}" style="width:calc(300px/{{list_num}}); height:15px; top:93px; left:-10px; position:relative;"><br>
+<img src="{% static 'point.jpg' %}" style="width:20px; height:20px; left:12px; position:relative; top:70px">
+</div>
+</li>
+</ul>
+<div style="display: block" id="hOpen01">
+<a onclick="paragraph_toggle(document.getElementById('hOpen01')); paragraph_toggle(document.getElementById('hClose01')); return false;" href="#">
+<img src="{% static '화살표2.png' %}" style="position:absolute; left:850px; top:140px; width:25px; height:15px;">
+</a>
+</div>
+<div style="display: none" id="hClose01" style="position:absolute;">
+<!-- 추가정보 -->
+<div style="position:relative; top:285px">
+<ul>
+{% for price,stop,arr_date,dep_date,duration1,second_dep,second_arr,duration2,layover, dep_city,arr_city,trend,text,dep_cut,my_dep in li_de_zip %}
+
+
+{% if stop == '20000' %}
+<!-- 직항 -->
+<li style="margin-top:-275px;">
+<img src="{% static '박스1.png' %}" style="position:relative; width:950px; height:180px; position:relative; top:-100px; z-index:-1">
+<img src="{% static 'background.png' %}" style="top:-225px; left:850px; width:40px; height: 40px; position:relative; z-index:-3">
+<img src="{% static 'point.jpg' %}" style="width:20px; height:20px; left:150px; position:relative; top:-200px">
+<img src="{% static 'next4.png' %}" style="width:100px; height:20px; left:150px; position:relative; top:-200px">
+<img src="{% static 'point.jpg' %}" style="width:20px; height:20px; left:150px; position:relative; top:-200px">
+<h1 style="position:relative; left:60px; top:-240px; z-index:10">$ {{price}}</h1>
+<span style="position:relative; font-size: 15px; font-style:bold; left:320px; top:-310px">
+{{arr_city}}</span>
+<span style="position:relative; font-size: 15px; font-style:bold; left:150px; top:-310px">
+{{dep_city}}</span>
+<span style="left:185px; position:relative; top:-290px;">직항</span>
+<div style="position:relative; width:370px; height:15px;  top:-330px; left:400px">
+✔︎ 출발시간 : {{dep_date}}
+</div>
+<div style="position:relative; width:370px; height:15px; top:-320px; left:400px">
+✔︎ 도착시간 : {{arr_date}}
+</div>
+<div style="position:relative; width:370px; height:15px;  top:-310px; left:400px">
+✔︎ 비행시간 : {{duration1}}
+</div>
+<div style="position:relative; width:370px; height:15px;  top:-300px; left:400px">
+</div>
+
+<img src="{{trend}}" style="position:relative; width:60px; height:60px;  top:-380px; left:800px" href="#" title="{{text}}">
+<a href="https://www.google.com/flights/#search;f={{dep_city}};t={{arr_city}};d={{my_dep}};tt=o"><img src="{% static 'ticket2.png' %}" style="position:relative; width:60px; height:60px;  top:-380px; left:800px" href="#" title="지금바로 예매하세요!"></a>
+
+</li>
+{% elif stop == '30000' %}
+<!-- 유레일 -->
+<li style="margin-top:-275px;">
+<img src="{% static '박스1.png' %}" style="position:relative; width:950px; height:180px; position:relative; top:-100px; z-index:-1">
+<img src="{% static 'background.png' %}" style="top:-225px; left:850px; width:40px; height: 40px; position:relative; z-index:-3">
+<img src="{% static 'point.jpg' %}" style="width:20px; height:20px; left:150px; position:relative; top:-200px">
+<img src="{% static 'next4.png' %}" style="width:100px; height:20px; left:150px; position:relative; top:-200px">
+<img src="{% static 'point.jpg' %}" style="width:20px; height:20px; left:150px; position:relative; top:-200px">
+<h1 style="position:relative; left:60px; top:-240px; z-index:10">$ {{price}}</h1>
+<span style="position:relative; font-size: 15px; font-style:bold; left:320px; top:-310px">
+{{arr_city}}</span>
+<span style="position:relative; font-size: 15px; font-style:bold; left:150px; top:-310px">
+{{dep_city}}</span>
+<span style="left:185px; position:relative; top:-290px;">유레일</span>
+<div style="position:relative; width:370px; height:15px;  top:-330px; left:400px">
+✔︎ 출발시간 : {{dep_date}}
+</div>
+<div style="position:relative; width:370px; height:15px; top:-320px; left:400px">
+✔︎ 도착시간 : {{arr_date}}
+</div>
+<div style="position:relative; width:370px; height:15px;  top:-310px; left:400px">
+✔︎ 소요시간 : {{duration1}}
+</div>
+<div style="position:relative; width:370px; height:15px;  top:-300px; left:400px">
+</div>
+<img src="{% static 'eurail.png' %}" style="position:relative; width:60px; height:60px;  top:-380px; left:800px" href="#" title="유레일~">
+<a href="https://www.google.com/flights/#search;f={{dep_city}};t={{arr_city}};d={{my_dep}};tt=o"><img src="{% static 'ticket2.png' %}" style="position:relative; width:60px; height:60px;  top:-380px; left:800px" href="#" title="지금 바로 예매하세요!"></a>
+
+</li>
+{% else %}
+<!-- 경유 -->
+<li style="margin-top:-275px;">
+<img src="{% static '박스1.png' %}" style="position:relative; width:950px; height:180px; position:relative; top:-100px; z-index:-1">
+<img src="{% static 'background.png' %}" style="top:-225px; left:850px; width:40px; height: 40px; position:relative; z-index:-3">
+<img src="{% static 'point.jpg' %}" style="width:20px; height:20px; left:150px; position:relative; top:-200px">
+<img src="{% static 'next4.png' %}" style="width:100px; height:20px; left:150px; position:relative; top:-200px">
+<img src="{% static 'point.jpg' %}" style="width:20px; height:20px; left:150px; position:relative; top:-200px">
+<h1 style="position:relative; left:60px; top:-240px; z-index:10">$ {{price}}</h1>
+<span style="position:relative; font-size: 15px; font-style:bold; left:320px; top:-310px">
+{{arr_city}}</span>
+<span style="position:relative; font-size: 15px; font-style:bold; left:150px; top:-310px">
+{{dep_city}}</span>
+<img src="{% static 'point_stop.png' %}" style="width:15px; height:15px; left:190px; position:relative; top:-283px; z-index:100">
+<span style="position:relative; font-size: 15px; font-style:bold; left:160px; top:-300px">
+{{layover}}</span>
+<div style="position:relative; width:370px; height:15px;  top:-330px; left:400px">
+✔︎ 출발시간 : {{dep_date}}
+</div>
+<div style="position:relative; width:370px; height:15px;  top:-320px; left:400px">
+✔︎ 도착시간(경유지) : {{arr_date}}
+</div>
+<div style="position:relative; width:370px; height:15px;  top:-310px; left:400px">
+✔︎ 출발시간(경유지) : {{second_dep}}
+</div>
+<div style="position:relative; width:370px; height:15px;  top:-300px; left:400px">
+✔︎ 도착시간 : {{second_arr}}
+</div>
+<img src="{{trend}}" style="position:relative; width:60px; height:60px;  top:-380px; left:800px" href="#" title="{{text}}">
+<a href="https://www.google.com/flights/#search;f={{dep_city}};t={{arr_city}};d={{my_dep}};tt=o"><img src="{% static 'ticket2.png' %}" style="position:relative; width:60px; height:60px;  top:-380px; left:800px" href="#" title="지금 바로 예매하세요!"></a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+</div>
+<a onclick="paragraph_toggle(document.getElementById('hOpen01')); paragraph_toggle(document.getElementById('hClose01')); return false;" href="#">
+<img src="{% static '화살표1.png' %}" style="position:absolute; left:850px; top:150px; width:25px; height:15px;">
+</a>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+
+function paragraph_toggle(obj) {
+  if (obj.style.display == 'none')
+    obj.style.display = 'block';
+  else if (obj.style.display == 'block')
+    obj.style.display = 'none';
+};
+</script>
+<!-- 사이드바 -->
+<div style="position:absolute; border-width:thin; border-style:dotted; border-color:lightgrey; width:400px; height:800px; top:-310px; left:960px; border-radius:10px" class="container">
+
+    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+      
+      <ul id="myTab" class="nav nav-tabs nav-tabs-responsive" role="tablist">
+        {% for key,values in menus.items %}
+
+        <li role="presentation" class="dropdown">
+          <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">
+            <span class="text">{{key}}</span>
+            <span class="caret">
+            </span>
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                  {%for k in values %}
+            <li>
+              <a href=#{{k}} tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">
+                <span>{{k}}일 추천여행</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+      <div id="myTabContent" class="tab-content">
+<!--         {% for a in menus2%}
+        <div role="tabpanel" class="tab-pane fade" id={{a}}>
+{{a}}
+        </div>
+        {%endfor%}
+ -->
+      {% for a,b in tab_zip%}
+
+        <div role="tabpanel" class="tab-pane fade" id={{a}}>
+      <img src="{{b}}" style="width:380px; height:710px">
+        </div>
+
+        {%endfor%}
+      </div>
+
+      
+    </div>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+</script>
+    <script>
+    (function($) {
+
+  'use strict';
+
+  $(document).on('show.bs.tab', '.nav-tabs-responsive [data-toggle="tab"]', function(e) {
+    var $target = $(e.target);
+    var $tabs = $target.closest('.nav-tabs-responsive');
+    var $current = $target.closest('li');
+    var $parent = $current.closest('li.dropdown');
+    $current = $parent.length > 0 ? $parent : $current;
+    var $next = $current.next();
+    var $prev = $current.prev();
+    var updateDropdownMenu = function($el, position){
+      $el
+        .find('.dropdown-menu')
+        .removeClass('pull-xs-left pull-xs-center pull-xs-right')
+        .addClass( 'pull-xs-' + position );
+    };
+
+    $tabs.find('>li').removeClass('next prev');
+    $prev.addClass('prev');
+    $next.addClass('next');
+    
+    updateDropdownMenu( $prev, 'left' );
+    updateDropdownMenu( $current, 'center' );
+    updateDropdownMenu( $next, 'right' );
+  });
+
+})(jQuery);
+    </script>
+</div>
+<script>
+(function($) {
+
+  'use strict';
+
+  $(document).on('show.bs.tab', '.nav-tabs-responsive [data-toggle="tab"]', function(e) {
+    var $target = $(e.target);
+    var $tabs = $target.closest('.nav-tabs-responsive');
+    var $current = $target.closest('li');
+    var $parent = $current.closest('li.dropdown');
+    $current = $parent.length > 0 ? $parent : $current;
+    var $next = $current.next();
+    var $prev = $current.prev();
+    var updateDropdownMenu = function($el, position){
+      $el
+        .find('.dropdown-menu')
+        .removeClass('pull-xs-left pull-xs-center pull-xs-right')
+        .addClass( 'pull-xs-' + position );
+    };
+
+    $tabs.find('>li').removeClass('next prev');
+    $prev.addClass('prev');
+    $next.addClass('next');
+    
+    updateDropdownMenu( $prev, 'left' );
+    updateDropdownMenu( $current, 'center' );
+    updateDropdownMenu( $next, 'right' );
+  });
+
+})(jQuery);
+</script>
+</div>
+    <div style="position:absolute;left:800px; top:480px">
+    저장한 날짜 : {{savedate}}
+    </div>
+    <a href="desearch" ><img src="{% static 'desearch.png' %}" style="position:absolute;left:60px; top:560px; z-index:99"><a>
+<script>
+  function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 3,
+          center: {lat: 43.961702, lng: 3.375080},
+          mapTypeId: 'terrain'
+        });
+
+        var flightPlanCoordinates = {{location_detail|safe}};
+        var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: 'blue',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+        var s_marker = '../../../static/s_marker.png'
+        var first_dep = {{first_dep|safe}};
+        var marker = new google.maps.Marker({
+        position: first_dep,icon:s_marker,map:map,animation:google.maps.Animation.BOUNCE
+        });
+        marker.setMap(map);
+        flightPath.setMap(map);
+      }
+
+
+</script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZArLA-li5nkjRx3v0MOPGn0BAyBcjK8&callback=initMap">
+  </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZArLA-li5nkjRx3v0MOPGn0BAyBcjK8&callback=myMap"></script>
+</body>
+</HTML>

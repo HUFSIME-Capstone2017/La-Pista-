@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+<link rel="stylesheet" type="text/css" href="/static/resource/css/pages/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/static/resource/css/compositions/header.css">
+<script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+  <div class="iu-page main">
+<header class="iu-header header">
+  {% include './compositions/header.html' %}
+                  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+
+<style>
+
+.mySlides1 {display:none;}
+    /* The Modal (background) */
+    /* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
+@keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+ul#myUL li {
+  padding: 12px 8px 12px 40px;
+  font-size: 16px;
+  transition: 1s;
+  width: 200px;
+}
+ul#myUL li:nth-child(odd) {
+  background: #f9f9f9;
+}
+.left{
+position:relative;
+left:20px;
+}
+.bs-docs-example {
+position: relative;
+margin: 15px 0;
+padding: 39px 19px 14px;
+background-color: #fff;
+border: 1px solid #ddd;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+.scrollspy-example {
+height: 320px;
+overflow: auto;
+position: relative;
+}
+
+button {margin-top:2em;}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 220px;
+  margin: 1rem;
+  position: relative;
+  width: 220px;
+}
+.card2 {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 240px;
+  margin: 1rem;
+  position: relative;
+  width: 220px;
+}
+.card-1 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12), 0 6px 6px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+
+.slides {
+    padding: 0;
+    width: 450px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 450px;
+    height: 300px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 100px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.ui-tooltip-content::after, .ui-tooltip-content::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  display: block;
+  left: 90px;
+}
+.ui-tooltip-content::before {
+  bottom: -10px;
+  border-color: #AAA transparent;
+  border-width: 10px 10px 0;
+}
+.ui-tooltip-content::after {
+  bottom: -7px;
+  border-color: white transparent;
+  border-width: 10px 10px 0;
+}
+</style>
+</header>
+</head>
+<body>
+<div class="iu-page main">
+<section class="iu-page-content page-content">
+<section class="iu-section section">
+<div class="iu-center-box center-box-13">
+<div class="iu-box box">
+<div class="iu-box box-19"></div>
+<div class="iu-html html">
+<html lang="en">
+<div id="map" style="width:60%;height:600px;background:yellow"></div>
+<div class="over">
+<ul id="myUL">
+</ul>
+</div>
+</div>
+<!-- iuname : MainForm -->
+<form class="iu-pg-form MainForm pg-form" enctype="multipart/form-data" name="MainForm" action="result" method="post">
+{% csrf_token %}
+<div class="iu-box box-21">
+<div class="iu-cell cell" data-iu-text='[
+"<p><span style=\"font-size: 21px;\"><span style=\"color: #ffffff; font-size: x-large;\">여행정보입력<\/span><\/span><\/p>",
+"<p><span style=\"font-size: 24px; color: #ffffff;\">Departure &amp; Arrival<\/span><\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p><span style="font-size: 24px; color: #ffffff;">Departure &amp; Arrival</span></p>
+</div>
+<div class="iu-floating-image floating-image-46"></div>
+</div>
+<!-- iuname : calendar_Image -->
+<div class="iu-floating-image floating-image-23"></div>
+<!-- iuname : calendar_image -->
+<div class="iu-floating-image floating-image-24"></div>
+<!-- iuname : 출발일 -->
+<div class="iu-text text-24" data-iu-text='[
+"<p>출발일<\/p>",
+"<p>&nbsp;<span style=\"font-size: 18px;\">Departure Day<\/span><\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p>&nbsp;<span style="font-size: 18px;">Departure Day</span></p>
+</div>
+<!-- iuname : 도착일 -->
+<div class="iu-text text-26" data-iu-text='[
+"<p>도착일<\/p>",
+"<p><span style=\"font-size: 18px;\">Arrival Day<\/span><\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p><span style="font-size: 18px;">Arrival Day</span></p>
+</div>
+<!-- iuname : input_dep -->
+<input class="iu-pg-text-field depday pg-text-field-49" value="{{depday}}" type="date" name="depday" placeholder="YY/MM/DD" maxlength="8" max="20201231" id="tooltip-7" title="출발날짜를 입력해주세요">
+<!-- iuname : Input_arr -->
+<input class="iu-pg-text-field arrday pg-text-field-28" value="{{arrday}}" type="date" name="arrday" placeholder="YY/MM/DD" maxlength="8" max="20201231" id="tooltip-8" title="도착날짜를 입력해주세요">
+<!-- iuname : adult_image -->
+<div class="iu-floating-image floating-image-29"></div>
+<div class="iu-text text-30" data-iu-text='[
+"<p>성인<\/p>",
+"<p><span style=\"font-size: 18px;\">Adult<\/span><\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p><span style="font-size: 18px;">Adult</span></p>
+</div>
+<!-- iuname : kid_image -->
+<div class="iu-floating-image floating-image-31"></div>
+<div class="iu-text text-32" data-iu-text='[
+"<p>유아<\/p>",
+"<p>Kid<\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p>Kid</p>
+</div>
+<!-- iuname : select_adult_num -->
+<select id="pg-select" class="iu-pg-select adult_num pg-select" name="adult_num">
+{% for represented_iu_option in adult_num %}
+<option {% ifequal selected_value represented_iu_option.value %}selected{% endifequal %} value="{{represented_iu_option.value}}">
+{{represented_iu_option.label}}
+</option>
+{% endfor %}
+</select>
+<!-- iuname : select_kid_num -->
+<select class="iu-pg-select kid_num pg-select-34" name="kid_num">
+{% for represented_iu_option in kid_num %}
+<option {% ifequal selected_value_kids represented_iu_option.value %}selected{% endifequal %} value="{{represented_iu_option.value}}">
+{{represented_iu_option.label}}
+</option>
+{% endfor %}인
+</select>
+<div class="iu-cell cell-35" data-iu-text='[
+"<p>Cutomized Option<\/p>",
+"<p>Options<\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p>Options</p>
+</div>
+<div class="iu-cell cell-36" data-iu-text='[
+"<p>경유여부 :&nbsp;<\/p>",
+"<p>Stop :&nbsp;<\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p>Stop :&nbsp;</p>
+</div>
+<!-- iuname : Checkbox_Non_stop -->
+<input class="iu-pg-check-box pg-check-box" checked type="checkbox" name="Non_stop" value="1">
+<div class="iu-cell cell-38" data-iu-text='[
+"<p>직항<\/p>",
+"<p>Non-Stop<\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p>Non-Stop</p>
+</div>
+<!-- iuname : Checkbox_1_stop -->
+<input class="iu-pg-check-box pg-check-box-39" checked type="checkbox" name="1_stop" value="2">
+<div class="iu-cell cell-40" data-iu-text='[
+"<p>경유<\/p>",
+"<p>1 Stop<\/p>"
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1">
+<p>1 Stop</p>
+</div>
+<input class="iu-pg-button pg-button-49" type="submit" value="Search">
+<div class="iu-cell cell-47" data-iu-text='[
+"<p>General Option<\/p>",
+""
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1"></div>
+<div class="iu-text text-42" data-iu-text='[
+"<p>마지막으로 방문하고 싶은 도시<\/p>",
+""
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1"></div>
+<select class="iu-pg-select pg-select-43">
+ <option value="lapista">상관없음</option>
+  <option value="stay_cost">로마</option>
+  <option value="cost_stay">런던</option>
+  <option value="flight_time">파리</option>
+  <option value="cost">마드리드</option>
+</option>
+{% endfor %}
+</select>
+<div class="iu-text text-44" data-iu-text='[
+"<p>나는<\/p>",
+""
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1"></div>
+<select class="iu-pg-select pg-select-45">
+  <option value="lapista">La pista의 추천경로</option>
+  <option value="stay_cost">머무르는 기간 + 가격</option>
+  <option value="cost_stay">가격 + 머무르는 기간</option>
+  <option value="flight_time">비행시간</option>
+  <option value="cost">가격</option>
+</option>
+</select>
+<div class="iu-text text-46" data-iu-text='[
+"<p>선호합니다.<\/p>",
+""
+]' data-iu-text-slot="[[0, 2800],[2800, 9999]]" data-iu-text-index="1"></div>
+
+<div class="container">
+{% load staticfiles %}
+<!-- Modal London -->
+<div class="modal fade" id="LHR_modal" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">London Heathrow Airport</h4>
+</div>
+<div class="modal-body">
+<center>
+<div class="w3-content w3-section" style="max-width:600px">
+<img class="mySlides1" src="{% static 'london1.jpeg' %}" style="width:500px; height: 300px; ">
+<img class="mySlides1" src="{% static 'london2.jpeg' %}" style="width:500px; height: 300px; ">
+<img class="mySlides1" src="{% static 'london3.jpg' %}" style="width:500px; height: 300px; ">
+<img class="mySlides1" src="{% static 'london4.jpeg' %}" style="width:500px; height: 300px; ">
+</div>
+</center>
+</div></p>
+<div class="left" >
+<h4>Event</h4>
+<div style="height:auto; width:370px; border:1px solid blue;">
+<ul>
+<li>세인트 패트릭스 데이 행사 (3/17)<a href="http://justcuration.tistory.com/92" target="_blank"> (상세보기) </a><input type="checkbox" name="vehicle2" value="event1"></li>
+<li>큐 가든 봄 꽃 축제 (3/21 ~ 24)<a href="http://www.kew.org/kew-gardens/whats-on" target="_blank"> (상세보기) </a><input type="checkbox" name="vehicle1" value="event2"></li>
+<li>옥스퍼드&캠브리지 대학 보트 경주 (4/2) <a href="https://www.britishrowing.org/2017/02/a-guide-to-the-university-boat-races-2017/" target="_blank"> (상세보기) </a><input type="checkbox" name="vehicle2" value="event3"></li>
+</ul>
+</div>
+</div>
+<div class="modal-footer">
+  <input type="checkbox" name="LHR" value="LHR"> 
+  <button type="reset" id="LHR_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+  <button type="submit" id="LHR" value="LHR" class="btn btn-default" data-dismiss="modal" onclick="newElement()">Submit</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Paris -->
+<div class="container">
+<!-- Modal Paris -->
+<div class="container"> 
+<div class="modal fade" id="CDG_modal" role="dialog">
+<div class="modal-dialog">                    
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">파리</h4>
+    </div>
+    <div class="modal-body">
+    <section>
+        <div id="navbarExample1" class="navbar navbar-static">
+     <div class="navbar-inner">
+      <div class="container" style="width:auto; height:350px;">
+      <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#CDG0"><span class="glyphicon glyphicon-fire"> 축제</a></li>
+      <li role="presentation"><a href="#CDG1"><span class="glyphicon glyphicon-sunglasses"> 여행지</a></li>
+      <li role="presentation"><a href="#CDG2"><span class="glyphicon glyphicon-cutlery"> 음식</a></li>
+      <li role="presentation"><a href="#CDG3"><span class="glyphicon glyphicon-picture"> 사진</a></li>
+      </ul>
+        <div data-spy="scroll" data-target="#navbarExample1" data-offset="0" class="scrollspy-example">
+            <h4 id="CDG0">축제</h4>
+            <div class="card2 card-1">
+            <img src="{% static 'paris9.jpg' %}" style="width:220px; height: 150px; ">
+            <h4> NY Chamber Festival</h4>
+            <p style="color:grey";>Ari 2017 Dates Unconfirmed
+            <br>Paris, France</p>
+            </div>
+            <div class="card2 card-1">
+            <img src="{% static 'paris10.jpg' %}" style="width:220px; height: 150px; ">
+            <h4> Independent Film Festival</h4>
+            <p style="color:grey";>Apr 21-23, 2017<br>Paris, France</p>
+            </div>
+            <div class="card2 card-1">
+            <img src="{% static 'paris11.jpg' %}" style="width:220px; height: 150px; ">
+            <h4> Marvellous Island</h4>
+            <p style="color:grey";>May 6-7, 2017<br>Torcy, France</p>
+            </div>
+            <div class="card2 card-1">
+            <img src="{% static 'paris12.jpg' %}" style="width:220px; height: 150px; ">
+            <h4> The Villette Sonique</h4>
+            <p style="color:grey";>May 2017 Dates Unconfirmed<br>Paris, France</p>
+            </div>
+            <h4 id="CDG1">볼거리</h4>
+            <div class="card card-1">
+            <img src="{% static 'paris1.jpeg' %}" style="width:220px; height: 150px; ">
+            <h4> 몽마르뜨 언덕</h4>
+            </div>
+            <div class="card card-1">
+            <img src="{% static 'paris2.jpg' %}" style="width:220px; height: 150px; ">
+            <h4> 에펠탑</h4>
+            </div>
+            <div class="card card-1">
+            <img src="{% static 'paris3.jpg' %}" style="width:220px; height: 150px; ">
+            <h4> 루브르 박물관</h4>
+            </div>
+            <div class="card card-1">
+            <img src="{% static 'paris4.jpg' %}" style="width:220px; height: 150px; ">
+            <h4> 개선문</h4>
+            </div>
+            <h4 id="CDG2">맛집</h4>
+            <p>맛집</p>
+            <div class="card card-1">
+            <img src="{% static 'paris5.jpg' %}" style="width:220px; height: 150px; ">
+            <h4> 쉐 자누(Chez Janou)</h4>
+            </div>
+            <div class="card card-1">
+            <img src="{% static 'paris6.jpg' %}" style="width:220px; height: 150px; ">
+            <h4> 앙젤리나(Angelina)</h4>
+            </div>
+            <div class="card card-1">
+            <img src="{% static 'paris7.jpg' %}" style="width:220px; height: 150px; ">
+            <h4> 프런치(Flunch)</h4>
+            </div>
+            <div class="card card-1">
+            <img src="{% static 'paris8.jpg' %}" style="width:220px; height: 150px; ">
+            <h4> 라 뒤레(La Duree)</h4>
+            </div>
+            <h4 id="CDG3">사진</h4>
+            <ul class="slides">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+    <div class="slide">
+      <img src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" />
+        </div>
+    <div class="nav">
+      <label for="img-6" class="prev">&#x2039;</label>
+      <label for="img-2" class="next">&#x203a;</label>
+    </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" />
+        </div>
+    <div class="nav">
+      <label for="img-1" class="prev">&#x2039;</label>
+      <label for="img-3" class="next">&#x203a;</label>
+    </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" />
+        </div>
+    <div class="nav">
+      <label for="img-2" class="prev">&#x2039;</label>
+      <label for="img-4" class="next">&#x203a;</label>
+    </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-4" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" />
+        </div>
+    <div class="nav">
+      <label for="img-3" class="prev">&#x2039;</label>
+      <label for="img-5" class="next">&#x203a;</label>
+    </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-5" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" />
+        </div>
+    <div class="nav">
+      <label for="img-4" class="prev">&#x2039;</label>
+      <label for="img-6" class="next">&#x203a;</label>
+    </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-6" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8195/8098750703_797e102da2_z.jpg" />
+        </div>
+    <div class="nav">
+      <label for="img-5" class="prev">&#x2039;</label>
+      <label for="img-1" class="next">&#x203a;</label>
+    </div>
+    </li>
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+      <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+    </li>
+</ul>
+</div>
+</div>
+</section>
+</center>
+<br>
+<br>
+            <h4><b>나의 이벤트</b></h4>
+            <h5> 이 도시에 특별히 머무를 날짜를 입력해 주세요 :-) </h5>
+           <span class="glyphicon glyphicon-calendar"></span>
+            <input style="border:1px solid skyblue;" value="{{cdg_day}}" type="date" name="cdg_day" placeholder="Special Day" maxlength="8" max="20201231" id="tooltip-7" titlie="특정한 일정을 입력해주세요!">
+              </div></p>
+              <div class="modal-footer">
+                <input type="checkbox" name="CDG" value="CDG">
+                <button id="CDG_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button id="CDG" value="CDG" class="btn btn-default" data-dismiss="modal" onclick="newElement1()">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        </div>
+<!-- Modal Madrid -->
+<div class="container">
+<div class="modal fade" id="MAD_modal" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">Paris charles de gaulle Airport</h4>
+</div>
+<div class="modal-body">
+</center>
+</div></p>
+<div class="modal-footer">
+<input type="checkbox" name="MAD" value="MAD">
+  <button type="reset" id="MAD_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+  <button type="submit" value="MAD" id="MAD" class="btn btn-default" data-dismiss="modal" onclick="newElement3()">Submit</button>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<!-- Modal Berlin -->
+<div class="container">
+<div class="modal fade" id="TXL_modal" role="dialog">
+<div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">베를린</h4>
+</div>
+<div class="modal-body">
+</center>
+</div></p>
+<div class="modal-footer">
+<input type="checkbox" name="TXL" value="TXL">
+  <button type="reset" id="TXL_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+  <button type="submit" id="TXL" value="TXL" class="btn btn-default" data-dismiss="modal" onclick="newElement4()">Submit</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Roma -->
+<div class="container">
+<div class="modal fade" id="FCO_modal" role="dialog">
+<div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">로마</h4>
+</div>
+<div class="modal-body">
+</center>
+</div></p>
+<div class="modal-footer">
+<input type="checkbox" name="FCO" value="FCO">
+  <button type="reset" id="FCO_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+  <button type="submit" value="FCO" id="FCO" class="btn btn-default" data-dismiss="modal" onclick="newElement2()">Submit</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+</section>
+</div>
+<script>
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var input = document.getElementById('LHR').value
+  var li = document.createElement("li");
+  var t = document.createTextNode(input);
+  li.appendChild(t);
+  document.getElementById("myUL").appendChild(li);
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+function newElement1() {
+  var input = document.getElementById('CDG').value
+  // input2 = document.getElementById('myInput2').value
+  // input3 = document.getElementById('myInput3').value
+  var li = document.createElement("li");
+  var t = document.createTextNode(input);
+  li.appendChild(t);
+  document.getElementById("myUL").appendChild(li);
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+function newElement2() {
+  var input = document.getElementById('FCO').value
+  // input2 = document.getElementById('myInput2').value
+  // input3 = document.getElementById('myInput3').value
+  var li = document.createElement("li");
+  var t = document.createTextNode(input);
+  li.appendChild(t);
+  document.getElementById("myUL").appendChild(li);
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+function newElement3() {
+  var input = document.getElementById('MAD').value
+  // input2 = document.getElementById('myInput2').value
+  // input3 = document.getElementById('myInput3').value
+  var li = document.createElement("li");
+  var t = document.createTextNode(input);
+  li.appendChild(t);
+  document.getElementById("myUL").appendChild(li);
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+function newElement4() {
+  var input = document.getElementById('TXL').value
+  // input2 = document.getElementById('myInput2').value
+  // input3 = document.getElementById('myInput3').value
+  var li = document.createElement("li");
+  var t = document.createTextNode(input);
+  li.appendChild(t);
+  document.getElementById("myUL").appendChild(li);
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+          var myIndex = 0;
+          carousel();
+          
+          function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides1");
+              for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 2000); // Change image every 2 seconds
+          }
+
+
+          function myMap() {
+            var myCenter = new google.maps.LatLng(51.650,14.709);
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {center: myCenter, zoom: 4};
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var image = '../../../static/dot9.png'
+            var marker1 = new google.maps.Marker({position:{lat: 51.27159, lng: -0.20443}, icon:image});
+              marker1.setMap(map);
+            google.maps.event.addListener(marker1, 'click', function() {
+              $('#LHR_modal').modal('toggle')
+              });
+              $('#LHR').on({ 
+              'click': function(){ 
+              marker1.setIcon("../../../static/dot10.png");}
+            });
+              $('#LHR_cancel').on({ 
+              'click': function(){ 
+              marker1.setIcon("../../../static/dot9.png");}
+            });
+            var marker2 = new google.maps.Marker({position:{lat: 48.646, lng: 2.330},
+                          icon:image});
+              marker2.setMap(map);
+            google.maps.event.addListener(marker2, 'click', function() {
+              $('#CDG_modal').modal('toggle')
+              });
+              $('#CDG').on({ 
+              'click': function(){ 
+              marker2.setIcon("../../../static/dot10.png");}
+            });
+              $('#CDG_cancel').on({ 
+              'click': function(){ 
+              marker2.setIcon("../../../static/dot9.png");}
+            });
+            var marker3 = new google.maps.Marker({position:{lat: 41.8, lng: 12.25},
+                          icon:image});
+              marker3.setMap(map);
+            google.maps.event.addListener(marker3, 'click', function() {
+              $('#FCO_modal').modal('toggle')
+              });
+              $('#FCO').on({ 
+              'click': function(){ 
+              marker3.setIcon("../../../static/dot10.png");}
+            });
+              $('#FCO_cancel').on({ 
+              'click': function(){ 
+              marker3.setIcon("../../../static/dot9.png");}
+            });
+            var marker4 = new google.maps.Marker({position:{lat: 40.5, lng: -3.567},
+                          icon:image});
+              marker4.setMap(map);
+            google.maps.event.addListener(marker4, 'click', function() {
+              $('#MAD_modal').modal('toggle')
+              });
+              $('#MAD').on({ 
+              'click': function(){ 
+              marker4.setIcon("../../../static/dot10.png");}
+            });
+              $('#MAD_cancel').on({ 
+              'click': function(){ 
+              marker4.setIcon("../../../static/dot9.png");}
+            });
+                var marker5 = new google.maps.Marker({position:{lat: 52.56, lng: 13.29},
+                          icon:image});
+              marker5.setMap(map);
+            google.maps.event.addListener(marker5, 'click', function() {
+              $('#TXL_modal').modal('toggle')
+              });
+              $('#TXL').on({ 
+              'click': function(){ 
+              marker5.setIcon("../../../static/dot10.png");}
+            });
+              $('#TXL_cancel').on({ 
+              'click': function(){ 
+              marker5.setIcon("../../../static/dot9.png");}
+            });
+          }
+          $(function() {
+            $('#navbarExample2').scrollspy();
+            $('#pop').modal();
+
+            $('#myModal').on('shown', function(){
+            $('[data-spy="scroll"]').each(function () {
+            var $spy = $(this).scrollspy('refresh')
+            })
+            $('#navbarExample1').scrollspy();
+            });
+
+
+            $('#myModal').mCustomScrollbar({
+            theme : 'dark-thick'
+          });
+          });
+$(function() {
+  $( "#tooltip-7" ).tooltip({
+     position: {
+        my: "center bottom",
+        at: "center top-10",
+        collision: "none"
+     }
+  });
+});
+$(function() {
+$( "#tooltip-8" ).tooltip({
+     position: {
+        my: "center bottom",
+        at: "center top-10",
+        collision: "none"
+     }
+  });
+});
+
+$(document).ready(function(){
+    $("#tooltip").mouseover(function(){
+        $("#tooltip").css("background-color", "yellow");
+    });
+    $("#tooltip").mouseout(function(){
+        $("#tooltip").css("background-color", "lightgray");
+    });
+});
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZArLA-li5nkjRx3v0MOPGn0BAyBcjK8&callback=myMap"></script>
+</body>
+</HTML>

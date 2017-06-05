@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/resource/common/iu.css">
+    <link rel="stylesheet" type="text/css" href="/static/resource/css/pages/result.css">
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js" defer></script>
+    <style>
+    #cont {position:relative; max-width: 920px; width: 100%; margin: 0 auto; left:200px;}
+.four { width: 18%; max-width: 17%;}
+/* COLUMNS */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-of-type { margin-left: 0; }
+/* CLEARFIX */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+.form .plan input, .form .payment-plan input, .form .payment-type input{
+  display: none;
+}
+.form label{
+  position: relative;
+  background-color: lightgrey;
+  text-align: center;
+  font-size:13px;
+  height: 67px;
+  display: block;
+  cursor: pointer;
+  border: 1px solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form .plan input:checked + label, .form .payment-plan input:checked + label, .form .payment-type input:checked + label{
+  border: 3px solid #333;
+  background-color: skyblue;
+}
+.form .plan input:checked + label:after, form .payment-plan input:checked + label:after, .form .payment-type input:checked + label:after{
+  content: "\2713";
+  color: #fff;
+  font-size:20px;
+  line-height: 14px;
+  width: 30px;
+  height: 30px;
+  line-height: 40px;
+  border-radius: 100%;
+  border: 2px solid #333;
+  background-color: #2fcc71;
+  z-index: 999;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+    </style>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header" );
+        document.createElement("footer" );
+        document.createElement("section");
+        document.createElement("nav"    );
+        document.createElement("article");
+      </script>
+      <noscript>
+        <strong>Warning !</strong>
+        Because your browser does not support HTML5, some elements are simulated using JScript.
+        Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+      </noscript>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- iuname : result -->
+    <div class="iu-page result">
+      <section class="iu-page-content page-content">
+        <section class="iu-section section" style="<div style= "overflow:hidden;"></div>">
+          <div class="iu-center-box center-box-14">
+            <form class="iu-pg-form pg-form" enctype="multipart/form-data" method="post">
+              {% csrf_token %}
+              <div class="iu-text text-34">
+                <p><em><span style="color: #ffffff;">Filter</span></em></p>
+              </div>
+              <div class="iu-text text-35">
+                <p><strong><span style="color: #ffffff;">머무는 기간(Day)</span></strong></p>
+              </div>
+              <div class="iu-box box">
+                <div class="iu-html html-168">
+                  <div style="text-align:center;"> {{city2}} </div>
+                </div>
+                <div class="iu-pg-slide pg-slide" data-iu-slide-min-value="0" data-iu-slide-max-value="15" data-iu-slide-default-value="4">
+                  <div class="iu-pg-slide-bar pg-slide-bar">
+                    <div class="iux-pg-slidebar-innerbar">
+                      <div class="iu-pg-slide-point pg-slide-point">
+                        <div class="iux-pg-slidepoint-toucharea"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="iu-pg-slide-text-field pg-slide-text-field" type="text" value="4">
+                </div>
+              </div>
+              <div class="iu-box box-44">
+                <div class="iu-text text-46">
+                  <h1><span style="color: #ffffff;"><strong>경유여부</strong></span></h1>
+                </div>
+                <div class="iu-text text-48">
+                  <p><span style="color: #ffffff;">Non-Stop</span></p>
+                </div>
+                <div class="iu-text text-49">
+                  <p><span style="color: #ffffff;">Stop</span></p>
+                </div>
+                <div class="iu-box box-156">
+                  <input class="iu-pg-check-box pg-check-box" type="checkbox">
+                  <input class="iu-pg-check-box pg-check-box-51" type="checkbox">
+                  <div class="iu-html html-158">
+                    <div style="text-align:center;"> {{Destination1}} </div>
+                  </div>
+                </div>
+                <div class="iu-box box-158">
+                  <div class="iu-html html-159">
+                    <div style="text-align:center;"> {{city3}} </div>
+                  </div>
+                  <input class="iu-pg-check-box pg-check-box-160" type="checkbox">
+                  <input class="iu-pg-check-box pg-check-box-161" type="checkbox">
+                </div>
+                <div class="iu-box box-162">
+                  <div class="iu-html html-163">
+                    <div style="text-align:center;"> {{city4}} </div>
+                  </div>
+                  <input class="iu-pg-check-box pg-check-box-164" type="checkbox">
+                  <input class="iu-pg-check-box pg-check-box-165" type="checkbox">
+                </div>
+                <div class="iu-box box-176">
+                  <div class="iu-html html-184">
+                    <div style="text-align:center;"> {{city2}} </div>
+                  </div>
+                  <input class="iu-pg-check-box pg-check-box-178" type="checkbox">
+                  <input class="iu-pg-check-box pg-check-box-179" type="checkbox">
+                </div>
+                <div class="iu-box box-203">
+                  <div class="iu-html html-204">
+                    <div style="text-align:center;"> {{city5}} </div>
+                  </div>
+                  <input class="iu-pg-check-box pg-check-box-205" type="checkbox">
+                  <input class="iu-pg-check-box pg-check-box-206" type="checkbox">
+                </div>
+              </div>
+              <input class="iu-pg-button pg-button-45" type="submit" value="Search">
+              <div class="iu-box box-150"></div>
+              <div class="iu-text text-151">
+                <h1><span style="color: #ffffff;">순서변경</span></h1>
+              </div>
+              <select class="iu-pg-select pg-select">
+                <option value="Error">Nothing</option>
+              </select>
+              <select class="iu-pg-select pg-select-153">
+                <option value="Error">Nothing</option>
+              </select>
+              <div class="iu-text text-154">
+                <p><span style="font-size: 12px;">마지막으로 방문하고 싶은 도시</span></p>
+              </div>
+              <div class="iu-box box-155"></div>
+              <div class="iu-box box-166">
+                <div class="iu-html html-167">
+                  <div style="text-align:center;"> {{city3}} </div>
+                </div>
+                <div class="iu-pg-slide pg-slide-200" data-iu-slide-min-value="0" data-iu-slide-max-value="15" data-iu-slide-default-value="4">
+                  <div class="iu-pg-slide-bar pg-slide-bar-201">
+                    <div class="iux-pg-slidebar-innerbar">
+                      <div class="iu-pg-slide-point pg-slide-point-203">
+                        <div class="iux-pg-slidepoint-toucharea"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="iu-pg-slide-text-field pg-slide-text-field-202" type="text" value="4">
+                </div>
+              </div>
+              <div class="iu-box box-167">
+                <div class="iu-html html-169">
+                  <div style="text-align:center;"> {{city4}} </div>
+                </div>
+                <div class="iu-pg-slide pg-slide-198" data-iu-slide-min-value="0" data-iu-slide-max-value="15" data-iu-slide-default-value="4">
+                  <div class="iu-pg-slide-bar pg-slide-bar-199">
+                    <div class="iux-pg-slidebar-innerbar">
+                      <div class="iu-pg-slide-point pg-slide-point-201">
+                        <div class="iux-pg-slidepoint-toucharea"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="iu-pg-slide-text-field pg-slide-text-field-200" type="text" value="4">
+                </div>
+              </div>
+              <div class="iu-box box-195">
+                <div class="iu-html html-202">
+                  <div style="text-align:center;"> {{city5}} </div>
+                </div>
+                <div class="iu-pg-slide pg-slide-196" data-iu-slide-min-value="0" data-iu-slide-max-value="15" data-iu-slide-default-value="4">
+                  <div class="iu-pg-slide-bar pg-slide-bar-197">
+                    <div class="iux-pg-slidebar-innerbar">
+                      <div class="iu-pg-slide-point pg-slide-point-199">
+                        <div class="iux-pg-slidepoint-toucharea"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="iu-pg-slide-text-field pg-slide-text-field-198" type="text" value="4">
+                </div>
+              </div>
+              <input class="iu-pg-button pg-button-208" type="button" value="Button">
+            </form>
+            <div class="iu-simple-tabview simple-tabview" data-iu-show-animation="transition.slideDownIn">
+              <div class="iu-simple-tab-header simple-tab-header">
+                <div class="iu-simple-tab-button simple-tab-button">
+                  <!-- iuname : 최적경로 -->
+                  <div class="iu-cell cell">
+                    <p>La Pista의 추천 경로</p>
+                  </div>
+                </div>
+                <div class="iu-simple-tab-button simple-tab-button-21">
+                  <div class="iu-cell cell-25">
+                    <p>머무르는 기간을 더 고려</p>
+                  </div>
+                </div>
+                <div class="iu-simple-tab-button simple-tab-button-27">
+                  <div class="iu-cell cell-28">
+                    <p>항공권 가격을 더 고려</p>
+                  </div>
+                </div>
+              </div>
+              <div class="iu-simple-tab-content simple-tab-content">
+                <div class="iu-simple-tab-content-item simple-tab-content-item">
+                  <div class="iu-box box-59">
+                    <div class="iu-box box-70">
+                      <!-- iuname : depcity -->
+                      <div class="iu-floating-image floating-image-60"></div>
+                      <div class="iu-html html-71">
+                        <div style="text-align:center;">  </div>
+                      </div>
+                      <div class="iu-html html-179">
+                        <div style="text-align:center;"> 인천({{city1}}) </div>
+                      </div>
+                    </div>
+                    <!-- iuname : city1_arrow -->
+                    <div class="iu-floating-image floating-image-61"></div>
+                    <!-- iuname : city2_arrow -->
+                    <div class="iu-floating-image floating-image-63"></div>
+                    <!-- iuname : city3_arrow -->
+                    <div class="iu-floating-image floating-image-65"></div>
+                    <!-- iuname : dep_arrow -->
+                    <div class="iu-floating-image floating-image-67"></div>
+                    <!-- iuname : dep_arrow -->
+                    <div class="iu-floating-image floating-image-210"></div>
+                    <div class="iu-box box-72">
+                      <!-- iuname : city1 -->
+                      <div class="iu-floating-image floating-image-62"></div>
+                      <div class="iu-html html-74">
+                        <div style="text-align:center;"> 6일 </div>
+                      </div>
+                      <div class="iu-html html-180">
+                        <div style="text-align:center;"> 로마({{city2}}) </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-75">
+                      <!-- iuname : city2 -->
+                      <div class="iu-floating-image floating-image-64"></div>
+                      <div class="iu-html html-77">
+                        <div style="text-align:center;"> 3일 </div>
+                      </div>
+                      <div class="iu-html html-181">
+                        <div style="text-align:center;"> 런던({{city3}}) </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-78">
+                      <!-- iuname : city3 -->
+                      <div class="iu-floating-image floating-image-66"></div>
+                      <div class="iu-html html-80">
+                        <div style="text-align:center;"> 5일 </div>
+                      </div>
+                      <div class="iu-html html-182">
+                        <div style="text-align:center;"> 파리({{city4}}) </div>
+                      </div>
+                    </div>
+                    <div class="iu-box box-206">
+                      <!-- iuname : city3 -->
+                      <div class="iu-floating-image floating-image-207"></div>
+                      <div class="iu-html html-209">
+                        <div style="text-align:center;"> 3일 </div>
+                      </div>
+                      <div class="iu-html html-208">
+                        <div style="text-align:center;"> 마드리드({{city5}}) </div>
+                      </div>
+                    </div>
+                    <div class="iu-floating-image floating-image-132"></div>
+                    <div class="iu-box box-200">
+                      <div class="iu-floating-image floating-image-201"></div>
+                      <div class="iu-html html-203">
+                        <div style="text-align:center;"> 인천({{city1}}) </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iu-box box-58">
+                    <div class="iu-html html-59">
+                      <div style="text-align:center;">$ {{totalcost}} </div>
+                    </div>
+                  </div>
+                  <div class="iu-box box-84">
+<div id="cont">
+    <form class="form cf">
+      <section class="plan cf">
+        <input type="radio" name="radio1" id="1" value="1" checked><label class="free-label four col" for="1" >{{Price1}}</p>{{Carriers1}}</label>
+        <input type="radio" name="radio1" id="2" value="2"><label class="basic-label four col" for="2">{{Price2}}</p>{{Carriers2}}</label>
+        <input type="radio" name="radio1" id="3" value="3"><label class="premium-label four col" for="3">{{Price3}}</p>{{Carriers3}}</label>
+        <input type="radio" name="radio1" id="4" value="4"><label class="premium-label four col" for="4">{{Price4}}</p>{{Carriers4}}</label>
+      </section>
+    </form>
+  </div>
+<div id="cont">
+    <form class="form cf">
+      <section class="plan cf">
+        <input type="radio" name="radio1" id="5" value="5" checked><label class="free-label four col" for="5">{{Price5}}</p>{{Carriers5}}</label>
+        <input type="radio" name="radio1" id="6" value="6"><label class="basic-label four col" for="6">{{Price6}}</p>{{Carriers6}}</label>
+        <input type="radio" name="radio1" id="7" value="7"><label class="premium-label four col" for="7">{{Price7}}</p>{{Carriers7}}</label>
+        <input type="radio" name="radio1" id="8" value="8"><label class="premium-label four col" for="8">{{Price8}}</p>{{Carriers8}}</label>
+      </section>
+    </form>
+  </div>
+<div id="cont">
+    <form class="form cf">
+      <section class="plan cf">
+        <input type="radio" name="radio1" id="9" value="9" checked><label class="free-label four col" for="9">{{Price9}}</p>{{Carriers9}}</label>
+        <input type="radio" name="radio1" id="10" value="10"><label class="basic-label four col" for="10">{{Price10}}</p>{{Carriers10}}</label>
+        <input type="radio" name="radio1" id="11" value="11"><label class="premium-label four col" for="11">{{Price11}}</p>{{Carriers11}}</label>
+        <input type="radio" name="radio1" id="12" value="12"><label class="premium-label four col" for="12">{{Price12}}</p>{{Carriers12}}</label>
+      </section>
+    </form>
+  </div>
+<div id="cont">
+    <form class="form cf">
+      <section class="plan cf">
+        <input type="radio" name="radio1" id="13" value="13" checked><label class="free-label four col" for="13">{{Price13}}</p>{{Carriers13}}</label>
+        <input type="radio" name="radio1" id="14" value="14"><label class="basic-label four col" for="14">{{Price14}}</p>{{Carriers14}}</label>
+        <input type="radio" name="radio1" id="15" value="15"><label class="premium-label four col" for="15">{{Price15}}</p>{{Carriers15}}</label>
+        <input type="radio" name="radio1" id="16" value="16"><label class="premium-label four col" for="16">{{Price16}}</p>{{Carriers16}}</label>
+      </section>
+    </form>
+  </div>
+  <div id="cont">
+    <form class="form cf">
+      <section class="plan cf">
+        <input type="radio" name="radio1" id="17" value="17" checked><label class="free-label four col" for="17">{{Price17}}</p>{{Carriers17}}</label>
+        <input type="radio" name="radio1" id="18" value="18"><label class="basic-label four col" for="18">{{Price18}}</p>{{Carriers18}}</label>
+        <input type="radio" name="radio1" id="19" value="19"><label class="premium-label four col" for="19">{{Price19}}</p>{{Carriers19}}</label>
+        <input type="radio" name="radio1" id="20" value="20"><label class="premium-label four col" for="20">{{Price20}}</p>{{Carriers20}}</label>
+      </section>
+    </form>
+  </div>
+                    <div class="iu-floating-image floating-image-87"></div>
+                    <div class="iu-floating-image floating-image-94"></div>
+                    <div class="iu-floating-image floating-image-102"></div>
+                    <div class="iu-floating-image floating-image-110"></div>
+                    <div class="iu-floating-image floating-image-183"></div>
+                    <input class="iu-pg-button pg-button-171" type="submit" value="submit">
+
+                    <div class="iu-html html-154">
+                      <div style="text-align:center;"> {{city1}} </div>
+                    </div>
+                    <div class="iu-html html-155">
+                      <div style="text-align:center;"> {{city2}} </div>
+                    </div>
+                    <div class="iu-html html-156">
+                      <div style="text-align:center;"> {{city2}} </div>
+                    </div>
+                    <div class="iu-html html-157">
+                      <div style="text-align:center;"> {{city3}} </div>
+                    </div>
+                    <div class="iu-html html-175">
+                      <div style="text-align:center;"> {{city3}} </div>
+                    </div>
+                    <div class="iu-html html-176">
+                      <div style="text-align:center;"> {{city4}} </div>
+                    </div>
+                    <div class="iu-html html-177">
+                      <div style="text-align:center;"> {{city4}} </div>
+                    </div>
+                    <div class="iu-html html-178">
+                      <div style="text-align:center;"> {{city5}} </div>
+                    </div>
+                    <div class="iu-html html-185">
+                      <div style="text-align:center;"> {{city5}} </div>
+                    </div>
+                    <div class="iu-html html-188">
+                      <div style="text-align:center;"> {{city1}} </div>
+                    </div>
+                    <div class="iu-html html-205">
+                      <div style="text-align:center;"> {{depday}} </div>
+                    </div>
+                    <div class="iu-html html-206">
+                      <div style="text-align:center;"> 2017-05-0{{date2}} </div>
+                    </div>
+                    <div class="iu-html html-207">
+                      <div style="text-align:center;"> 2017-05-0{{date3}} </div>
+                    </div>
+                    <div class="iu-html html-210">
+                      <div style="text-align:center;"> 2017-05-{{date4}} </div>
+                    </div>
+                    <div class="iu-html html-211">
+                      <div style="text-align:center;"> {{arrday}} </div>
+                    </div>
+                  </div>
+                  <div id="myMap" style="position:relative; width:100%; height:175px; top:130px;"></div>
+                </div>
+                <div class="iu-simple-tab-content-item simple-tab-content-item-24">
+                  <div class="iu-text text-27">
+                    <p>Tab Contents 2</p>
+                  </div>
+                  <div class="iu-html html-174">
+                    <div style="text-align:center;"> {{result_st)) </div>
+                  </div>
+                </div>
+                <div class="iu-tab-content-item tab-content-item">
+                  <div class="iu-text text-30">
+                    <p>Tab Contents 3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="iu-box box-141">
+              <div class="iu-html html">
+                <div style="text-align:center;"> {{depday}}  ~  {{arrday}} </div>
+              </div>
+              <div class="iu-text text-143">
+                <p>From : Seoul (ICN)</p>
+              </div>
+              <div class="iu-html html-153">
+                <div style="text-align:center;"> {{city2}},   {{city3}},   {{city4}},   {{city5}}  </div>
+              </div>
+              <div class="iu-cell cell-175">
+                <p>To :</p>
+              </div>
+            </div>
+            <div class="iu-floating-image floating-image-175">
+              <a class="iux-inner-link" href="/index">
+              </a>
+            </div>
+            <div class="iu-fb-like fb-like-209">
+              <iframe src="//www.facebook.com/plugins/like.php?href=http://www.iueditor.org+&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;colorscheme=light&amp;" scrolling="no" frameborder="0" allowTransparency="true" style="border:none;overflow:hidden;height:80px"></iframe>
+            </div>
+            <div class="iu-tweet-button tweet-button">
+              <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
+                Tweet
+              </a>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+    <script>
+    function myMap() {
+  var ICN = new google.maps.LatLng(37.2808,126.2701);
+  var FCO = new google.maps.LatLng(41.8,12.25);
+  var LHR = new google.maps.LatLng(51.27159,-0.20443);
+  var MAD = new google.maps.LatLng(40.4820,-3.56);
+  var CDG = new google.maps.LatLng(48.646,2.330);
+  var Center = new google.maps.LatLng(51.650,14.709)
+  var mapCanvas = document.getElementById("myMap");
+  var mapOptions = {center: Center, zoom: 3};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var start = '../../../static/markera.png'
+  var marker = new google.maps.Marker({
+    position: FCO});
+  marker.setMap(map);
+  // var marker = new google.maps.Marker({position:FCO});
+  //             marker.setIcon("../../../static/markerb.jpeg");
+  //             marker.setMap(map);
+
+  var flightPath = new google.maps.Polyline({
+    path: [FCO,LHR,CDG,MAD],
+    strokeColor: "#0000FF",
+    strokeOpacity: 0.8,
+    strokeWeight: 2
+  });
+  flightPath.setMap(map);
+}
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZArLA-li5nkjRx3v0MOPGn0BAyBcjK8&callback=myMap"></script>
+  </body>
+</HTML>

@@ -1,0 +1,81 @@
+{
+  "htmlID" : "list_image",
+  "name" : "list_image",
+  "children" : [
+    {
+      "c_" : "IUFloatingImage",
+      "htmlID" : "floating-image-156",
+      "positionStorages" : {
+        "c_" : "JDMutableArrayDict",
+        "array" : [
+          {
+            "c_" : "IUPositionStorage",
+            "position" : 0,
+            "xUnit" : 0,
+            "yUnit" : 0,
+            "top" : 0,
+            "left" : 0
+          }
+        ],
+        "keys" : [
+          1280
+        ]
+      },
+      "styleStorages" : {
+        "c_" : "JDMutableArrayDict",
+        "array" : [
+          {
+            "c_" : "IUStyleStorage",
+            "widthUnit" : true,
+            "heightUnit" : 0,
+            "width" : 100,
+            "height" : 320,
+            "imageHPosition" : 1,
+            "imageVPosition" : 1,
+            "imageSizeType" : 2
+          }
+        ],
+        "keys" : [
+          1280
+        ]
+      }
+    }
+  ],
+  "positionStorages" : {
+    "c_" : "JDMutableArrayDict",
+    "array" : [
+      {
+        "c_" : "IUPositionStorage",
+        "position" : 0,
+        "xUnit" : 0,
+        "yUnit" : 0,
+        "top" : 0,
+        "left" : 0
+      }
+    ],
+    "keys" : [
+      1280
+    ]
+  },
+  "styleStorages" : {
+    "c_" : "JDMutableArrayDict",
+    "array" : [
+      {
+        "c_" : "IUStyleStorage",
+        "widthUnit" : 0,
+        "heightUnit" : 0,
+        "width" : 320,
+        "height" : 320
+      }
+    ],
+    "keys" : [
+      1280
+    ]
+  },
+  "eventVariable" : {
+
+  },
+  "ghostOpacity" : 0.5,
+  "m_" : "30F3CA24-5389-47DA-BF66-57DE08C43FBB",
+  "c_" : "IUClass"
+}

@@ -1,0 +1,41 @@
+{
+  "htmlID" : "composition-1",
+  "name" : "composition-1",
+  "positionStorages" : {
+    "c_" : "JDMutableArrayDict",
+    "array" : [
+      {
+        "c_" : "IUPositionStorage",
+        "position" : 0,
+        "xUnit" : 0,
+        "yUnit" : 0,
+        "top" : 0,
+        "left" : 0
+      }
+    ],
+    "keys" : [
+      1280
+    ]
+  },
+  "styleStorages" : {
+    "c_" : "JDMutableArrayDict",
+    "array" : [
+      {
+        "c_" : "IUStyleStorage",
+        "widthUnit" : 0,
+        "heightUnit" : 0,
+        "width" : 320,
+        "height" : 320
+      }
+    ],
+    "keys" : [
+      1280
+    ]
+  },
+  "eventVariable" : {
+
+  },
+  "ghostOpacity" : 0.5,
+  "m_" : "F774D3DD-40CF-45F2-88AD-DC5E091CB975",
+  "c_" : "IUClass"
+}

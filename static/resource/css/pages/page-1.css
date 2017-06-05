@@ -1,0 +1,27 @@
+.iu-center-box {
+  width:1280px;
+}
+.iu-page {
+  min-width:1280px;
+}
+.header {
+  color:#333333;
+  height:75px;
+  left:0px;
+  position:relative;
+  top:0px;
+  width:100%;
+}
+.page-content {
+  background-color:#FFFFFF;
+}
+.section {
+  height:720px;
+}
+.box {
+  background-color:#000000;
+  height:8px;
+  left:130px;
+  top:50px;
+  width:1020px;
+}

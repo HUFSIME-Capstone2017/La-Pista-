@@ -1,0 +1,379 @@
+{
+  "htmlID" : "page-1",
+  "name" : "page-1",
+  "positionStorages" : {
+    "c_" : "JDMutableArrayDict",
+    "array" : [
+      {
+        "c_" : "IUPositionStorage",
+        "position" : 0,
+        "xUnit" : 0,
+        "yUnit" : 0
+      }
+    ],
+    "keys" : [
+      1280
+    ]
+  },
+  "styleStorages" : {
+    "c_" : "JDMutableArrayDict",
+    "array" : [
+      {
+        "c_" : "IUStyleStorage",
+        "widthUnit" : 0,
+        "heightUnit" : 0
+      }
+    ],
+    "keys" : [
+      1280
+    ]
+  },
+  "eventVariable" : {
+
+  },
+  "ghostOpacity" : 0.5,
+  "pageContent" : {
+    "c_" : "IUPageContent",
+    "htmlID" : "page-content",
+    "children" : [
+      {
+        "c_" : "IUSection",
+        "htmlID" : "section",
+        "children" : [
+          {
+            "c_" : "IUCenterBox",
+            "htmlID" : "center-box-14",
+            "positionStorages" : {
+              "c_" : "JDMutableArrayDict",
+              "array" : [
+                {
+                  "c_" : "IUPositionStorage",
+                  "position" : 1,
+                  "horizontalCenter" : true,
+                  "xUnit" : 0,
+                  "yUnit" : 0,
+                  "top" : 0,
+                  "left" : 0
+                }
+              ],
+              "keys" : [
+                1280
+              ]
+            },
+            "styleStorages" : {
+              "c_" : "JDMutableArrayDict",
+              "array" : [
+                {
+                  "c_" : "IUStyleStorage",
+                  "widthUnit" : 0,
+                  "heightUnit" : 0
+                }
+              ],
+              "keys" : [
+                1280
+              ]
+            }
+          }
+        ],
+        "positionStorages" : {
+          "c_" : "JDMutableArrayDict",
+          "array" : [
+            {
+              "c_" : "IUPositionStorage",
+              "position" : 1,
+              "xUnit" : 0,
+              "yUnit" : 0,
+              "top" : 0,
+              "left" : 0
+            }
+          ],
+          "keys" : [
+            1280
+          ]
+        },
+        "styleStorages" : {
+          "c_" : "JDMutableArrayDict",
+          "array" : [
+            {
+              "c_" : "IUStyleStorage",
+              "widthUnit" : 0,
+              "heightUnit" : 0,
+              "height" : 720
+            }
+          ],
+          "keys" : [
+            1280
+          ]
+        }
+      },
+      {
+        "c_" : "IUBox",
+        "htmlID" : "box",
+        "positionStorages" : {
+          "c_" : "JDMutableArrayDict",
+          "array" : [
+            {
+              "c_" : "IUPositionStorage",
+              "position" : 0,
+              "xUnit" : 0,
+              "yUnit" : 0,
+              "top" : 50,
+              "left" : 130
+            }
+          ],
+          "keys" : [
+            1280
+          ]
+        },
+        "styleStorages" : {
+          "c_" : "JDMutableArrayDict",
+          "array" : [
+            {
+              "c_" : "IUStyleStorage",
+              "widthUnit" : 0,
+              "heightUnit" : 0,
+              "width" : 1020,
+              "height" : 8,
+              "bgColor1" : {
+                "c_" : "NSColor",
+                "A" : 1
+              }
+            }
+          ],
+          "keys" : [
+            1280
+          ]
+        }
+      }
+    ],
+    "positionStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUPositionStorage",
+          "position" : 1,
+          "xUnit" : 0,
+          "yUnit" : 0,
+          "top" : 0,
+          "left" : 0
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    },
+    "styleStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUStyleStorage",
+          "widthUnit" : 0,
+          "heightUnit" : 0,
+          "bgColor1" : {
+            "c_" : "NSColor",
+            "R" : 1,
+            "G" : 1,
+            "B" : 1,
+            "A" : 1
+          }
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    }
+  },
+  "header" : {
+    "c_" : "IUHeader",
+    "htmlID" : "header",
+    "positionStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUPositionStorage",
+          "position" : 1,
+          "xUnit" : 0,
+          "yUnit" : 0,
+          "top" : 0,
+          "left" : 0
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    },
+    "styleStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUStyleStorage",
+          "widthUnit" : 1,
+          "heightUnit" : 0,
+          "width" : 100,
+          "height" : 75,
+          "fontColor" : {
+            "c_" : "NSColor",
+            "R" : 0.2000000029802322,
+            "G" : 0.2000000029802322,
+            "B" : 0.2000000029802322,
+            "A" : 1
+          }
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    },
+    "_prototypeClass" : "51675C5C-FF38-4311-9BDF-29FAE260CF5A"
+  },
+  "footer" : {
+    "c_" : "IUFooter",
+    "htmlID" : "footer",
+    "positionStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUPositionStorage",
+          "position" : 1,
+          "xUnit" : 0,
+          "yUnit" : 0,
+          "top" : 0,
+          "left" : 0
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    },
+    "styleStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUStyleStorage",
+          "widthUnit" : 1,
+          "heightUnit" : 0,
+          "width" : 100,
+          "height" : 120
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    },
+    "_prototypeClass" : "CDFECF87-5B9C-4FE6-9065-4E02A21CC6C6"
+  },
+  "sidebar" : {
+    "c_" : "IUSidebar",
+    "htmlID" : "sidebar",
+    "positionStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUPositionStorage",
+          "position" : 1,
+          "secondPosition" : 1,
+          "xUnit" : 0,
+          "yUnit" : 0,
+          "top" : 0,
+          "left" : 0
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    },
+    "styleStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUStyleStorage",
+          "widthUnit" : 1,
+          "heightUnit" : 0,
+          "width" : 100,
+          "height" : 500
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    },
+    "_prototypeClass" : "D625CBA4-14AF-4667-9AD8-4821C449C9A6"
+  },
+  "popupGroup" : {
+    "c_" : "IUGroup",
+    "htmlID" : "",
+    "name" : "Popup Group",
+    "positionStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUPositionStorage",
+          "position" : 0,
+          "xUnit" : 0,
+          "yUnit" : 0,
+          "top" : 0,
+          "left" : 0
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    },
+    "styleStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUStyleStorage",
+          "widthUnit" : 0,
+          "heightUnit" : 0,
+          "width" : 0,
+          "height" : 0
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    },
+    "_groupType" : 2
+  },
+  "panelGroup" : {
+    "c_" : "IUGroup",
+    "htmlID" : "",
+    "name" : "Panel Group",
+    "positionStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUPositionStorage",
+          "position" : 0,
+          "xUnit" : 0,
+          "yUnit" : 0,
+          "top" : 0,
+          "left" : 0
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    },
+    "styleStorages" : {
+      "c_" : "JDMutableArrayDict",
+      "array" : [
+        {
+          "c_" : "IUStyleStorage",
+          "widthUnit" : 0,
+          "heightUnit" : 0,
+          "width" : 0,
+          "height" : 0
+        }
+      ],
+      "keys" : [
+        1280
+      ]
+    },
+    "_groupType" : 1
+  },
+  "layout" : 2,
+  "m_" : "6288BC14-51AA-4349-BEDD-1029774DC344",
+  "c_" : "IUPage"
+}

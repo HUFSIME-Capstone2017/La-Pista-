@@ -1,0 +1,33 @@
+.iu-center-box {
+  width:1280px;
+}
+.iu-page {
+  min-width:1280px;
+}
+.header {
+  color:#333333;
+  height:75px;
+  left:0px;
+  position:relative;
+  top:0px;
+  width:100%;
+}
+.page-content {
+  background-color:#FFFFFF;
+}
+.section {
+  height:720px;
+}
+.text-15 {
+  bottom:0px;
+  color:#B4B4B4;
+  font-family:'Helvetica', sans-serif;
+  font-size:36px;
+  height:50px;
+  left:0px;
+  margin-bottom:auto;
+  margin-top:auto;
+  text-align:center;
+  top:0px;
+  width:100%;
+}

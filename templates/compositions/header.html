@@ -1,0 +1,111 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style >
+
+#navigation {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  line-height: 50px;
+}
+#navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#navigation ul li a {
+  height: inherit;
+  padding: 0 25px;
+  display: inline-block;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+  line-height: inherit;
+  text-transform: uppercase;
+}
+#navigation ul li a:hover {
+  background: #00b6e3;
+  color: #fff;
+}
+#navigation.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#container {
+  min-height: 300%;
+}
+
+.floating-image {
+  background-image:url('/static/resource/project/LaPista_logo_navy.png');
+  background-position:center center;
+  background-size:contain;
+  height:30px;
+  left:30px;
+  top:15px;
+  width:150px;
+}
+
+</style>
+
+<script>
+ 
+$(document).ready(function () {
+  var $nav = $('#navigation'),
+      posTop = $nav.position().top;
+  $(window).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > posTop) { $nav.addClass('fixed'); }
+    else { $nav.removeClass('fixed'); }
+  });
+});
+
+</script>
+	<title></title>
+
+
+
+<nav id="navigation">
+  <div class="iu-floating-image floating-image">
+    <a class="iux-inner-link" href="/index">
+    </a>  </div>
+  <ul>
+    <li><a href="/index">Home</a></li>
+    <li><a href="/main">항공권 검색</a></li>
+    <li><a href="/list">My List</a></li>
+    <li><a href="/course">여행코스 추천</a></li>
+    <li><a href="/trend">도시별 가격추세 그래프</a></li>
+   <div style="position: absolute;right: 120px; ">
+{%if not user.is_anonymous  %}
+{{ request.user }}님 <a href="/logout">logout</a>
+
+  </div>
+
+
+</div> 
+{%else%}
+ <a href="/login" style="color: white;background:skyblue; width: 100px;">Login</a>
+{%endif%}
+</div>
+
+  </ul>
+
+</nav>
+</body>
+</html>

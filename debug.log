@@ -1,0 +1,3 @@
+[0317/214445.073:ERROR:process_reader_win.cc(114)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다.  (0xc0000022)
+[0317/214445.088:ERROR:exception_snapshot_win.cc(87)] thread ID 11724 not found in process
+[0317/214445.088:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed

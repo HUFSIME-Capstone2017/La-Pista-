@@ -1,0 +1,71 @@
+{% load staticfiles %}
+<!-- Modal Paris -->
+<div class="container">
+<!-- Modal Paris -->
+<div class="container"> 
+<div class="modal fade" id="FCO_modal" role="dialog">
+<div class="modal-dialog">                    
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">로마</h4>
+    </div>
+    <div class="modal-body" style="height:550px">
+    <section>
+        <div id="navbarExample1" class="navbar navbar-static">
+     <div class="navbar-inner">
+      <div class="container" style="width:auto; height:350px;">
+      <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#FCO0"><span class="glyphicon glyphicon-fire"> 축제</a></li>
+      <li role="presentation"><a href="#FCO1"><span class="glyphicon glyphicon-sunglasses"> 먹거리</a></li>
+      <li role="presentation"><a href="#FCO2"><span class="glyphicon glyphicon-cutlery"> 관광지</a></li>
+      </ul>
+        <div data-spy="scroll" data-target="#navbarExample1" data-offset="0" class="scrollspy-example">
+            <h4 id="FCO0">축제</h4>
+           {% for item in event_ita %}
+            <div class="card2 card-1">
+            <img src="{{ item.e_pic }}" style="width:220px; height: 150px; ">
+            <h4>{{item.e_name}}</h4>
+            <p style="color:grey font-size:13px";><span style="font-size:11px; font-color:black;">축제기간 : {{item.e_date}} <br> 장소 : {{item.e_name}},{{item.country_name}}</span><br>{{item.e_info}}</p>
+            </div>
+            {% endfor %}
+            <h4 id="FCO1">먹거리</h4>
+            {% for item1 in food_ita %}
+            <div class="card2 card-1">
+            <img src="{{ item1.f_pic }}" style="width:220px; height: 150px; ">
+            <h4>{{item1.f_name}}</h4>
+            <p style="color:grey";>{{item1.f_info}}</p>
+            </div>
+            {% endfor %}
+            <h4 id="FCO2">관광지</h4>
+            {% for item2 in att_ita %}
+            <div class="card2 card-1">
+            <img src="{{ item2.a_pic }}" style="width:220px; height: 150px; ">
+            <h4>{{item2.a_name}}</h4>
+            <p style="color:grey";>{{item2.a_info}}</p>
+            </div>
+            {% endfor %}
+</div>
+<h4><b>추천 기간</b></h4>
+<h5> 많은 사람들이 <span style="color:red">3일</span>을 추천했습니다.나는 <select style="color:red" name="stfco"><option value="1">1일</option><option value="2" >2일</option><option value="3" selected="selected">3일</option><option value="4">4일</option><option value="5">5일</option><option value="6">6일</option><option value="7">7일</option><option value="8">8일</option><option value="9">9일</option><option value="10">10일</option></select>가고 싶습니다.</h5>
+<br>
+            <h4><b>나의 이벤트</b></h4>
+            <h5> 이 도시에 특별히 머무를 날짜를 입력해 주세요 :-) </h5>
+           <span class="glyphicon glyphicon-calendar" style="left:280px; top:-27px"></span>
+            <input style="border:1px solid skyblue; position:relative; left:280px; top:-25px" value="{{sdfco}" type="date" name="sdfco" placeholder="Special Day" maxlength="8" max="20201231" id="tooltip-7" titlie="특정한 일정을 입력해주세요!">
+</div>
+</section>
+</center>
+<br>
+<br>
+              </div></p>
+              <div class="modal-footer">
+                <input type="checkbox" name="FCO" checked="checked" value="FCO" onchange="updateClickOrder(this);">
+                <button id="FCO_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button id="FCO" value="로마" class="btn btn-default" data-dismiss="modal" onclick="newElement2()">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        </div>

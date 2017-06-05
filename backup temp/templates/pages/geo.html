@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <table>
+    <tr>
+      <th>R_DEST</th>
+      <th>SCH_COST</th>
+      <th>AIR_INFO</th>
+    </tr>
+    {% for b in obj %}
+    <tr>
+      <td>{{ b.r_dest }}</td>
+      <td>{{ b.sch_cost }}</td>
+      <td>{{ b.air_info }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</html>
